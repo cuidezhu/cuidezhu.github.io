@@ -6,10 +6,20 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Apr 2018 00:59:22 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Apr 2018 21:27:08 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo 的使用</title>
+      <link>http://ijs.me/2018/04/22/hugo-usage/</link>
+      <pubDate>Sun, 22 Apr 2018 21:27:08 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/04/22/hugo-usage/</guid>
+      <description>创建一篇文章 hugo new post/2018/hugo-usage.md  生成的markdown文档头部信息加上 slug 字段表示URL链接信息
+本地生成预览 hugo server  生成静态页到 public 文件夹 hugo  部署到Github Pages上 把public文件夹下的内容推送到相应的Github Pages仓库里。</description>
+    </item>
     
     <item>
       <title>存储React组件中的数据何时用State或者This</title>

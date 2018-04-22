@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hugo 的使用</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>Hugo 的使用</h1>
+      <span class="blog-post-date">April 22, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<h2 id="创建一篇文章">创建一篇文章</h2>
+
+<pre><code>hugo new post/2018/hugo-usage.md
+</code></pre>
+
+<p>生成的markdown文档头部信息加上 <code>slug</code> 字段表示URL链接信息</p>
+
+<h2 id="本地生成预览">本地生成预览</h2>
+
+<pre><code>hugo server
+</code></pre>
+
+<h2 id="生成静态页到-public-文件夹">生成静态页到 <code>public</code> 文件夹</h2>
+
+<pre><code>hugo
+</code></pre>
+
+<h2 id="部署到github-pages上">部署到Github Pages上</h2>
+
+<p>把public文件夹下的内容推送到相应的Github Pages仓库里。</p>
+
+    </div>
+  </main>
+
+</body>
+</html>
