@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Git合并某个分支下的某个文件</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>Git合并某个分支下的某个文件</h1>
+      <span class="blog-post-date">April 23, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<h2 id="查看远程分支">查看远程分支</h2>
+
+<pre><code>git branch -r
+</code></pre>
+
+<h2 id="拉取远程分支并创建本地分支">拉取远程分支并创建本地分支</h2>
+
+<pre><code>git checkout -b 本地分支名x origin/远程分支名x
+</code></pre>
+
+<h2 id="合并分支的某个文件">合并分支的某个文件</h2>
+
+<p>现在我们想把我们刚创建的本地分支 <code>x</code> 的某个文件 <code>file</code> 或者文件夹 <code>folder</code> 内的文件合并到本地开发的分支 <code>develop</code> 上，而不是把整个分支都合并过来，方法如下：</p>
+
+<p>先切换到分支 <code>develop</code> 上</p>
+
+<pre><code>git checkout develop
+</code></pre>
+
+<p>然后执行</p>
+
+<pre><code>git checkout --patch A file
+</code></pre>
+
+<p>其中 <code>file</code> 可以换成某个文件夹 <code>folder</code>，然后根据自己的需要按 <code>y</code> 或者 <code>n</code>。</p>
+
+    </div>
+  </main>
+
+</body>
+</html>
