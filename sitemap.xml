@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/04/25/git-reset-hard/</loc>
+    <lastmod>2018-04-25T00:32:03+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/04/23/git-merge-branch-file/</loc>
     <lastmod>2018-04-23T23:22:52+08:00</lastmod>
   </url>
@@ -29,7 +34,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-04-23T23:22:52+08:00</lastmod>
+    <lastmod>2018-04-25T00:32:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -40,7 +45,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-04-23T23:22:52+08:00</lastmod>
+    <lastmod>2018-04-25T00:32:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   

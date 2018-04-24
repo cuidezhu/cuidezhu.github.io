@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Git 回滚到某一版本</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>Git 回滚到某一版本</h1>
+      <span class="blog-post-date">April 25, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<h2 id="起因">起因</h2>
+
+<p>这两天写练习项目时用了eslint, 然后发现 <code>yarn add eslint</code> 或者 <code>yarn global add eslint</code> 无效，只能使用 <code>npm install -g eslint</code> 来按安装， <code>eslint --init</code>才会在命令行里起作用，随后发现带来了一些问题，并且感觉Eslint并不是理想的代码规范方式，而且还有丑陋的错误误报，遂决定暂时弃用 Eslint，卸载Eslint后，项目跑的时候总是时不时奇怪的就因为Eslint跑不起来了，所以决定把代码回滚到使用Eslint以前的版本。</p>
+
+<h2 id="显示提交的log">显示提交的log</h2>
+
+<pre><code>$ git log -5
+commit 2497b4715fad2f022e5fee3e83341b19d7fa8bf7 
+Author: xxx &lt;xxx@xxx.com&gt;
+Date:   Mon Apr 23 01:26:54 2018 +0800
+
+    aaa
+
+commit 23faaf5ba3b5104c3f93275d9441439d31e06a74
+Author: xxx &lt;xxx@xxx.com&gt;
+Date:   Sun Apr 22 21:09:42 2018 +0800
+
+    bbb
+
+commit a0c8880200f8de959a12686faa7ce3b2d37b24b4
+Author: xxx &lt;xxx@xxx.com&gt;
+Date:   Sun Apr 22 15:27:55 2018 +0800
+
+    ccc
+
+commit b736de663899dc24d362d93ebb32f7548402cc5b
+Author: xxx &lt;xxx@xxx.com&gt;
+Date:   Sat Apr 21 23:19:45 2018 +0800
+
+    ddd
+
+commit ee7c7a7a6c3bc7f2698b2a0b4b1bcbe0dce93722
+Author: xxx &lt;xxx@xxx.com&gt;
+Date:   Wed Apr 18 16:56:53 2018 +0800
+
+    eee
+</code></pre>
+
+<h2 id="回滚到某个版本">回滚到某个版本</h2>
+
+<p>复制上面log信息中你想回到某个 <code>commit</code> 后面的那串字符串</p>
+
+<pre><code>git reset --hard ee7c7a7a6c3bc7f2698b2a0b4b1bcbe0dce93722
+</code></pre>
+
+<h2 id="强制提交">强制提交</h2>
+
+<pre><code>git push -f origin master
+</code></pre>
+
+    </div>
+  </main>
+
+</body>
+</html>
