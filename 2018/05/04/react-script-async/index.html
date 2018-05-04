@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>React 异步引入外部js</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>React 异步引入外部js</h1>
+      <span class="blog-post-date">May 4, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<h2 id="起因">起因</h2>
+
+<p>最近在做项目时，需要用到第三方的人机验证码服务，而这项服务没有npm包，所以就需要引入 <code>&lt;script&gt;</code>，我们只需要在需要在用到这个人机验证服务的component里加入以下代码就可以实现异步加载 <code>&lt;script&gt;</code>：</p>
+
+<pre><code>componentDidMount () {
+  const script = document.createElement(&quot;script&quot;)
+
+  script.src = &quot;//captcha.luosimao.com/static/dist/api.js&quot;
+  script.async = true
+
+  document.body.appendChild(script)
+}
+
+</code></pre>
+
+<h2 id="更进一步">更进一步</h2>
+
+<p>你有没有思考过为啥引入外部文件时经常省略 <code>http:</code> 或者 <code>https:</code> 呢，其实这样做是有原因的：</p>
+
+<p><code>//captcha.luosimao.com/static/dist/api.js</code> 这种写法是相对路径写法，浏览器会自动加上 <code>http:</code> 或者 <code>https:</code>补全为绝对路径，补全原则是与我们当前页面使用的协议相同。</p>
+
+    </div>
+  </main>
+
+</body>
+</html>
