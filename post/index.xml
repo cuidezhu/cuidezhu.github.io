@@ -6,10 +6,24 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 May 2018 18:47:26 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 May 2018 13:14:20 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>当React State 为 Array 时如何 setState</title>
+      <link>http://ijs.me/2018/05/08/react-state-array-setstate/</link>
+      <pubDate>Tue, 08 May 2018 13:14:20 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/05/08/react-state-array-setstate/</guid>
+      <description>某个数据类型为 Array 的 state，这里我们假设这个 state 名为 test，然后我们在组件的 constructor 里初始化这个 state:
+constructor(props) { super(props) this.state = { test: [] } }  数据使用 WebSocket 通信，当来了新数据时，比如我们接收到的数据为 data, data里有一个或者多个对象的数组，类似于这样 [{},{}], 我们想把data里的数据存到 this.state.test 数组的头部，该怎么做呢，我们不能直接用 unshift 操作，因为 setState 才会触发 render() 函数重新渲染UI。
+也不能这样做：
+this.setState({ test: this.state.test.unshift(...data) })  因为 unshift 返回的是新的长度，所以上面的做法是错误的。
+正确的做法是：
+this.setState({ test: [...data, ...this.state.test] })  ... 是扩展运算符，可以把数组转为用逗号分隔的参数序列。</description>
+    </item>
     
     <item>
       <title>React 异步引入外部js</title>

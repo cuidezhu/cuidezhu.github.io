@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>当React State 为 Array 时如何 setState</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>当React State 为 Array 时如何 setState</h1>
+      <span class="blog-post-date">May 8, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        <p>某个数据类型为 Array 的 state，这里我们假设这个 state 名为 test，然后我们在组件的 constructor 里初始化这个 state:</p>
+
+<pre><code>constructor(props) {
+  super(props)
+  this.state = {
+    test: []
+  }
+}
+</code></pre>
+
+<p>数据使用 WebSocket 通信，当来了新数据时，比如我们接收到的数据为 data, data里有一个或者多个对象的数组，类似于这样 <code>[{},{}]</code>, 我们想把data里的数据存到 <code>this.state.test</code> 数组的头部，该怎么做呢，我们不能直接用 <code>unshift</code> 操作，因为 <code>setState</code> 才会触发 <code>render()</code> 函数重新渲染UI。</p>
+
+<p>也不能这样做：</p>
+
+<pre><code>this.setState({
+  test: this.state.test.unshift(...data)
+})
+</code></pre>
+
+<p>因为 <code>unshift</code> 返回的是新的长度，所以上面的做法是错误的。</p>
+
+<p>正确的做法是：</p>
+
+<pre><code>this.setState({
+  test: [...data, ...this.state.test]
+})
+</code></pre>
+
+<p><code>...</code> 是扩展运算符，可以把数组转为用逗号分隔的参数序列。</p>
+
+    </div>
+  </main>
+
+</body>
+</html>
