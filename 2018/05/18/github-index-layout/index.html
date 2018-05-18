@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>调整Github首页布局</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>调整Github首页布局</h1>
+      <span class="blog-post-date">May 18, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        <p>GitHub 首页的改版好蛋疼，原先的右栏换成了左栏，左栏换成了右栏。看着好别扭，原先的看习惯了，于是想把 Github 的首页布局改回去。</p>
+
+<p>首先我是用的 Chrome 浏览器，下载 <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> ,然后打开GitHub首页，点击插件图标，点添加新脚本。</p>
+
+<p>在新打开的页面中，添加下面一行代码：</p>
+
+<pre><code>document.getElementsByClassName('column')[0].style.float=&quot;right&quot;
+</code></pre>
+
+<p>按 <code>Ctrl + S</code> 保存，然后就可以看到 Github 首页布局恢复了。</p>
+
+<p>完整的代码如下:</p>
+
+<pre><code>// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://github.com/
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    document.getElementsByClassName('column')[0].style.float=&quot;right&quot;
+})();
+</code></pre>
+
+    </div>
+  </main>
+
+</body>
+</html>

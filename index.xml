@@ -6,10 +6,24 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 May 2018 13:26:11 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 May 2018 08:28:02 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>调整Github首页布局</title>
+      <link>http://ijs.me/2018/05/18/github-index-layout/</link>
+      <pubDate>Fri, 18 May 2018 08:28:02 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/05/18/github-index-layout/</guid>
+      <description>GitHub 首页的改版好蛋疼，原先的右栏换成了左栏，左栏换成了右栏。看着好别扭，原先的看习惯了，于是想把 Github 的首页布局改回去。
+首先我是用的 Chrome 浏览器，下载 Tampermonkey ,然后打开GitHub首页，点击插件图标，点添加新脚本。
+在新打开的页面中，添加下面一行代码：
+document.getElementsByClassName(&#39;column&#39;)[0].style.float=&amp;quot;right&amp;quot;  按 Ctrl + S 保存，然后就可以看到 Github 首页布局恢复了。
+完整的代码如下:
+// ==UserScript== // @name New Userscript // @namespace http://tampermonkey.net/ // @version 0.1 // @description try to take over the world! // @author You // @match https://github.com/ // @grant none // ==/UserScript== (function() { &#39;use strict&#39;; document.getElementsByClassName(&#39;column&#39;)[0].style.float=&amp;quot;right&amp;quot; })();  </description>
+    </item>
     
     <item>
       <title>Axios CancelToken 取消请求</title>
