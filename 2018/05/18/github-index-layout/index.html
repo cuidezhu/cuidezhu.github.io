@@ -23,7 +23,7 @@
 <pre><code>document.getElementsByClassName('column')[0].style.float=&quot;right&quot;
 </code></pre>
 
-<p>改下 <code>@match</code>, 在<code>https://github.com/</code> 添加 <code>*</code>, 由于 Chrome 插件应该是不支持正则表达式中的 <code>?</code>,  <a href="https://developer.chrome.com/extensions/match_patterns">https://developer.chrome.com/extensions/match_patterns</a>, 所以想匹配 <code>https://github.com/orgs/xxx</code> 其中<code>xxx</code>代表任意字符只能加个 <code>*</code> 了，不过这样做满足了匹配首页和 orgs 页面的要求，由于其它页面并没有 <code>column</code> 这个 class,所以对其它页面无影响。</p>
+<p>改下 <code>@match</code>, 在<code>https://github.com/</code> 添加 <code>*</code>, 由于 Chrome 插件应该是不支持正则表达式中的 <code>?</code>,  <a href="https://developer.chrome.com/extensions/match_patterns">https://developer.chrome.com/extensions/match_patterns</a> 可能所有的 Chrome 插件都支持个通配符 <code>*</code>, 所以想匹配 <code>https://github.com/orgs/xxx</code> 其中<code>xxx</code>代表任意字符只能加个 <code>*</code> 了，不过这样做满足了匹配首页和 orgs 页面的要求，由于其它页面并没有 <code>column</code> 这个 class,所以对其它页面无影响。</p>
 
 <p>按 <code>Ctrl + S</code> 保存，然后就可以看到 Github 首页布局恢复了。</p>
 
