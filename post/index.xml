@@ -18,7 +18,7 @@
       
       <guid>http://ijs.me/2018/05/18/github-index-layout/</guid>
       <description>GitHub 首页的改版好蛋疼，原先的右栏换成了左栏，左栏换成了右栏。看着好别扭，原先的看习惯了，于是想把 Github 的首页布局改回去。
-更新： 发现用 Stylish-为任意网站自定义主题，而且Stylish支持正则表达式匹配网址。
+更新： 发现用 Stylish-为任意网站自定义主题 更方便，Stylish 改变 UI 时不会闪一下，而且Stylish支持正则表达式匹配网址。
 下载好Stylish后，点插件图标，然后点右上角的菜单图标，新建样式，
 然后把下面这行 css 复制到代码部分，
 .column { float: right; }  底部应用对象选择：与该正则表达式匹配的网址，input框里填入 https://github.com/(orgs/.*|$) 然后点保存就好了。
