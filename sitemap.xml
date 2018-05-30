@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/05/30/react-redux-devtools/</loc>
+    <lastmod>2018-05-30T08:21:44+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/05/18/github-index-layout/</loc>
     <lastmod>2018-05-18T08:28:02+08:00</lastmod>
   </url>
@@ -59,7 +64,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-05-18T08:28:02+08:00</lastmod>
+    <lastmod>2018-05-30T08:21:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,7 +75,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-05-18T08:28:02+08:00</lastmod>
+    <lastmod>2018-05-30T08:21:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>React Redux Devtools 导致 Chrome 之外的浏览器报错处理</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>React Redux Devtools 导致 Chrome 之外的浏览器报错处理</h1>
+      <span class="blog-post-date">May 30, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        <p>用 Redux 配合 React 开发项目时遇到一个奇怪的问题，项目只能在 Chrome 浏览器下正确运行，其它的浏览器都会报如下错误：<code>TypeError: undefined is not an object (evaluating 'b.apply')</code></p>
+
+<p><img src="/img/2018/redux-devtools-error.png" alt="redux-devtools-error" /></p>
+
+<p>猜测可能是由 Redux 引起的，于是搜索一番，找到了这个 <a href="https://github.com/reduxjs/redux/issues/2033">Github Issues</a>, 原来是因为只有我的 Chrome 浏览器装了 Redux DevTools 这个插件，而其它浏览器都没装，所以下面的代码会报错，</p>
+
+<pre><code class="language-js">const store = createStore(reducers, compose(
+  applyMiddleware(thunk),
+  window.__REDUX_DEVTOOLS_EXTENSION__ &amp;&amp; window.__REDUX_DEVTOOLS_EXTENSION__()
+))
+</code></pre>
+
+<p>正确的做法是：</p>
+
+<pre><code class="language-js">const store = createStore(reducers, compose(
+  applyMiddleware(thunk),
+  window.devToolsExtension ? window.devToolsExtension() : f=&gt;f
+))
+</code></pre>
+
+<p>这样项目就不会在 Chrome 之外的浏览器报错了。</p>
+
+    </div>
+  </main>
+
+</body>
+</html>
