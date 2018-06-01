@@ -86,13 +86,15 @@ componentDidMount () { const script = document.createElement(&amp;quot;script&am
     </item>
     
     <item>
-      <title>VsCode 扩展推荐</title>
+      <title>VS Code 扩展推荐</title>
       <link>http://ijs.me/2018/04/30/vscode-extensions/</link>
       <pubDate>Mon, 30 Apr 2018 23:56:14 +0800</pubDate>
       
       <guid>http://ijs.me/2018/04/30/vscode-extensions/</guid>
-      <description>Auto Close Tag: Automatically add HTML/XML close tag, same as Visual Studio IDE or Sublime Text
-Auto Import - ES6, TS, JSX, TSX: Automatically finds, parses and provides code actions and code completion for all available imports. Works with JavaScript and TypeScript. [Forked]</description>
+      <description>Auto Close Tag: Automatically add HTML/XML close tag, same as Visual Studio IDE or Sublime Text. 写 JSX 时能自动闭合标签，很有用；
+Auto Import - ES6, TS, JSX, TSX: Automatically finds, parses and provides code actions and code completion for all available imports. Works with JavaScript and TypeScript. 自动引入代码中用到的组件；
+Auto Rename Tag: Automatically rename paired HTML/XML tag, same as Visual Studio IDE does. 修改标签时自动重命名匹配的标签；
+Import Cost: Display import/require package size in the editor. 计算 import 进来的模块大小；</description>
     </item>
     
     <item>
