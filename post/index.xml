@@ -6,10 +6,20 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jun 2018 19:58:48 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 Jun 2018 20:47:22 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>常见的数据结构和算法（Javascript实现）</title>
+      <link>http://ijs.me/2018/06/21/data-structure-algorithm-javascript/</link>
+      <pubDate>Thu, 21 Jun 2018 20:47:22 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/06/21/data-structure-algorithm-javascript/</guid>
+      <description>二分查找 二分查找是针对的是已经有序的序列，序列是列表和数组的统称， 在 JS 里通常用是数组。我们下面来实现下在 JS 数组里二分查找某个元素：
+function binarySearch(orderArr, element) { let start = 0; let end = orderArr.length - 1; while (start &amp;lt;= end) { let mid = Math.floor((start + end) / 2); if (element &amp;lt; orderArr[mid]) { end = mid; } else if (element &amp;gt; orderArr[mid]) { start = mid + 1; } else { console.log(&#39;element index is &#39; + mid) return mid; } } console.log(&#39;not found&#39;) return -1; } let a = [0,1,2,3,4,5,6,7,8] binarySearch(a, 2) //output &amp;quot;element index is 2&amp;quot;  这里我们要注意对边界值的判断，因为取中间值 mid 的时候是使用 floor() 向下取整，所以当查找的值大于中间值时我们要对 start 这个变量加 1，因为这时要查找的值肯定不等于中间值，没必要再判断这时的中间值，并且如果不加 1 还会导致遗漏判断尾边界值。</description>
+    </item>
     
     <item>
       <title>前端基础知识总结</title>
