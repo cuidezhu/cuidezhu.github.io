@@ -6,12 +6,17 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+<<<<<<< HEAD
     <lastBuildDate>Thu, 21 Jun 2018 19:58:48 +0800</lastBuildDate>
+=======
+    <lastBuildDate>Tue, 05 Jun 2018 16:09:35 +0800</lastBuildDate>
+>>>>>>> 1f4291afdbc4ea591f735aca08a3aeeb302c29e1
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>前端基础知识总结</title>
       <link>http://ijs.me/2018/06/21/frontend-basic-knowledge/</link>
       <pubDate>Thu, 21 Jun 2018 19:58:48 +0800</pubDate>
@@ -21,6 +26,18 @@
 以下知识不像常见的搬运网上的文章，而是经过了自己的总结和实践。
 JavaScript 继承 JS 里最常用的继承方式是原型链继承，通常通过 prototype 关键字来实现，prototype 属性使你有能力向对象添加属性和方法。
 function people(name,job,age) { this.name = name; this.job = job; this.age= age; } var bill = new people(&amp;quot;Bill Gates&amp;quot;,&amp;quot;Engineer&amp;quot;,50); people.prototype.salary = null; bill.salary = 20000; console.log(bill.salary); // output 20000  </description>
+=======
+      <title>React 使用 Promise 等待外部脚本加载完成再执行代码</title>
+      <link>http://ijs.me/2018/06/05/react-load-script/</link>
+      <pubDate>Tue, 05 Jun 2018 16:09:35 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/06/05/react-load-script/</guid>
+      <description>有时我们做项目时，需要引入外部的脚本，有些是需要等脚本加载完才可以执行相关的代码。我们在 React 项目中，可以用 Promise 来做这件事儿。
+首先需要如下加载脚本的函数：
+function loadScript(src) { return new Promise(resolve =&amp;gt; { let tag = document.createElement(&amp;quot;script&amp;quot;) tag.async = true tag.src = src document.body.appendChild(tag) tag.addEventListener(&amp;quot;load&amp;quot;, function() { resolve() }) }) }  当一个资源及其依赖资源已完成加载时，将触发 load 事件。
+然后我们在组件的 componentDidMount() 里调用这个函数：
+componentDidMount() { Promise.all([ loadScript(&amp;quot;/a.js&amp;quot;), loadScript(&amp;quot;/b.js&amp;quot;), loadScript(&amp;quot;/c.js&amp;quot;) ]).then(() =&amp;gt; { // your code goes here } }  这样我们就实现了先加载完 a.js, b.js, c.js 这三个脚本再执行相关代码，这里我们需要加载三个脚本，用到了 Promise.all(iterable), 这个方法返回一个新的 promise 对象，该 promise 对象在 iterable 参数对象里所有的 promise 对象都成功的时候才会触发成功，一旦有任何一个 iterable 里面的 promise 对象失败则立即触发该 promise 对象的失败。</description>
+>>>>>>> 1f4291afdbc4ea591f735aca08a3aeeb302c29e1
     </item>
     
     <item>
