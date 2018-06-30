@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>JavaScript 实现快速排序 -- 挖坑法和递归法</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>JavaScript 实现快速排序 -- 挖坑法和递归法</h1>
+      <span class="blog-post-date">June 30, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<h2 id="递归法">递归法</h2>
+
+<pre><code class="language-js">function quickSort(arr) {
+  let length = arr.length;
+  
+  let pivotIndex = parseInt((length - 1) / 2);
+  let pivot = arr.splice(pivotIndex, 1)[0];
+  
+  let leftArr = [];
+  let rightArr = [];
+  
+  if (length &lt;= 1) {
+    return arr;
+  }
+  
+  arr.forEach(v =&gt; {
+    if (v &lt; pivot) {
+      leftArr.push(v);
+    } else {
+      rightArr.push(v);
+    }
+  });
+
+  return quickSort(leftArr).concat([pivot], quickSort(rightArr));
+}
+
+let testArr = [3, 5, 1, 7, 9, 10, 30, 28, 19, 6];
+console.log(quickSort(testArr))
+</code></pre>
+
+    </div>
+  </main>
+
+</body>
+</html>

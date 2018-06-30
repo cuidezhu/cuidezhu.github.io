@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jun 2018 20:29:58 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Jun 2018 20:06:11 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript 实现快速排序 -- 挖坑法和递归法</title>
+      <link>http://ijs.me/2018/06/30/javascript-quicksort-recursion-divide/</link>
+      <pubDate>Sat, 30 Jun 2018 20:06:11 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/06/30/javascript-quicksort-recursion-divide/</guid>
+      <description>递归法 function quickSort(arr) { let length = arr.length; let pivotIndex = parseInt((length - 1) / 2); let pivot = arr.splice(pivotIndex, 1)[0]; let leftArr = []; let rightArr = []; if (length &amp;lt;= 1) { return arr; } arr.forEach(v =&amp;gt; { if (v &amp;lt; pivot) { leftArr.push(v); } else { rightArr.push(v); } }); return quickSort(leftArr).concat([pivot], quickSort(rightArr)); } let testArr = [3, 5, 1, 7, 9, 10, 30, 28, 19, 6]; console.</description>
+    </item>
     
     <item>
       <title>统计字符串中的字符重复出现的次数并按次数排序</title>
