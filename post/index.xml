@@ -17,7 +17,8 @@
       <pubDate>Fri, 29 Jun 2018 20:29:58 +0800</pubDate>
       
       <guid>http://ijs.me/2018/06/29/counting-duplicates-sort/</guid>
-      <description>我们有某个字符串 text 假设 test 是由字母和数字组成的，现在我们要字符串中的字符重复出现的字数，然后按字数进行排序，输出。</description>
+      <description>我们有某个字符串 text 假设 text 是由字母和数字组成的，现在我们要字符串中的字符重复出现的字数，然后按字数进行排序，输出。
+function countDuplicates(text) { let textArr = text.split(&#39;&#39;); let countObj = {}; let resultArr = []; textArr.forEach(v =&amp;gt; { if (countObj[v]) { countObj[v] += 1; } else { countObj[v] = 1; } }) for (let char in countObj) { resultArr.push([char, countObj[char]]); } resultArr.sort((a, b) =&amp;gt; a[1] - b[1]); console.log(resultArr); } let text = &#39;abba222ccxxxd&#39;; countDuplicates(text);  output: [[&amp;quot;d&amp;quot;, 1], [&amp;quot;a&amp;quot;, 2], [&amp;quot;b&amp;quot;, 2], [&amp;quot;c&amp;quot;, 2], [&amp;quot;2&amp;quot;, 3], [&amp;quot;x&amp;quot;, 3]]</description>
     </item>
     
     <item>

@@ -14,7 +14,35 @@
       <span class="blog-post-date">June 29, 2018</span>
     </div>
     <div class="blog-post-content">
-        <p>我们有某个字符串 <code>text</code>  假设 <code>test</code> 是由字母和数字组成的，现在我们要字符串中的字符重复出现的字数，然后按字数进行排序，输出。</p>
+        <p>我们有某个字符串 <code>text</code>  假设 <code>text</code> 是由字母和数字组成的，现在我们要字符串中的字符重复出现的字数，然后按字数进行排序，输出。</p>
+
+<pre><code class="language-js">function countDuplicates(text) {
+  let textArr = text.split('');
+  let countObj = {};
+  let resultArr = [];
+  
+  textArr.forEach(v =&gt; {
+    if (countObj[v]) {
+      countObj[v] += 1;
+    } else {
+      countObj[v] = 1;
+    }
+  })
+  
+  
+  for (let char in countObj) {
+    resultArr.push([char, countObj[char]]);
+  }
+  
+  resultArr.sort((a, b) =&gt; a[1] - b[1]);
+  console.log(resultArr);
+}
+
+let text = 'abba222ccxxxd';
+countDuplicates(text);
+</code></pre>
+
+<p><code>output: [[&quot;d&quot;, 1], [&quot;a&quot;, 2], [&quot;b&quot;, 2], [&quot;c&quot;, 2], [&quot;2&quot;, 3], [&quot;x&quot;, 3]]</code></p>
 
     </div>
   </main>
