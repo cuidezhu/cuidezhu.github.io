@@ -6,10 +6,24 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jul 2018 02:05:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jul 2018 23:20:48 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript 函数防抖 Debounce 实现原理</title>
+      <link>http://ijs.me/2018/07/02/javascript-function-debounce/</link>
+      <pubDate>Mon, 02 Jul 2018 23:20:48 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/07/02/javascript-function-debounce/</guid>
+      <description>考虑这样一个场景，我们有一个搜索框，需要在用户输入内容时列出搜索结果，我们可以用 oninput 事件来做这件事情。
+oninput 和 onchange 不同之处在于 oninput 事件在 input 值发生变化是立即触发， onchange 在元素失去焦点时触发。
+我们想要选用 oninput 来做这件事情，以便即时地获取到搜索的数据。
+&amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;myInput&amp;quot; oninput=&amp;quot;debounceSearch(this)&amp;quot;&amp;gt;  可是用 oninput 会带来一个问题，比如用户想搜索 JavaScript 这个关键字，当用户输入 J 时发送一次请求数据的请求，接着输入 a，又用 Ja这个关键字发送一次请求，在用户输入完 JavaScript 这个关键字的过程中，我们总共发了 10 次请求，而前 9 次请求都是无效的，如果用户输入够快的话，这样就会带给服务器更大的压力，我们可以用函数防抖来解决这个问题。
+函数防抖（debounce）就是当我们发送一个请求方法时，我们把请求数据的方法放到 setTimeout() 里，每次发请求之前都先 clearTimeout()，这样用户在 setTimeout() 里规定的 delay 时间里触发 oninput 就会 clearTimeout()，导致不发送请求，直至用户在 delay 时间里无操作，才发送请求。代码简化如下：
+let timer; function debounceSearch(e) { let searchKeywords = e.value; clearTimeout(timer); timer = setTimeout(() =&amp;gt; { console.log(searchKeywords); }, 250); }  上面那种方法只是简单的演示下防抖的原理，上面那种方法扩展性较差</description>
+    </item>
     
     <item>
       <title>iTerm2 使用 lrzsz 在本机和服务器之间传输文件</title>
