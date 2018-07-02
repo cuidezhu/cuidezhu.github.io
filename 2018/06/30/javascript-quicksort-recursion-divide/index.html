@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>JavaScript 实现快速排序 -- 挖坑法和递归法</title>
+  <title>JavaScript 实现快速排序</title>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
 
   <main class="container" role="main">
     <div class="article-head">
-      <h1>JavaScript 实现快速排序 -- 挖坑法和递归法</h1>
+      <h1>JavaScript 实现快速排序</h1>
       <span class="blog-post-date">June 30, 2018</span>
     </div>
     <div class="blog-post-content">
-        
-
-<h2 id="递归法">递归法</h2>
-
-<pre><code class="language-js">function quickSort(arr) {
+        <pre><code class="language-js">function quickSort(arr) {
   let length = arr.length;
   
   let pivotIndex = parseInt((length - 1) / 2);

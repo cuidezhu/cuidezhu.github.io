@@ -27,12 +27,12 @@ git clone https://github.com/mmastrac/iterm2-zmodem.git cd iterm2-zmodem cp iter
     </item>
     
     <item>
-      <title>JavaScript 实现快速排序 -- 挖坑法和递归法</title>
+      <title>JavaScript 实现快速排序</title>
       <link>http://ijs.me/2018/06/30/javascript-quicksort-recursion-divide/</link>
       <pubDate>Sat, 30 Jun 2018 20:06:11 +0800</pubDate>
       
       <guid>http://ijs.me/2018/06/30/javascript-quicksort-recursion-divide/</guid>
-      <description>递归法 function quickSort(arr) { let length = arr.length; let pivotIndex = parseInt((length - 1) / 2); let pivot = arr.splice(pivotIndex, 1)[0]; let leftArr = []; let rightArr = []; if (length &amp;lt;= 1) { return arr; } arr.forEach(v =&amp;gt; { if (v &amp;lt; pivot) { leftArr.push(v); } else { rightArr.push(v); } }); return quickSort(leftArr).concat([pivot], quickSort(rightArr)); } let testArr = [3, 5, 1, 7, 9, 10, 30, 28, 19, 6]; console.</description>
+      <description>function quickSort(arr) { let length = arr.length; let pivotIndex = parseInt((length - 1) / 2); let pivot = arr.splice(pivotIndex, 1)[0]; let leftArr = []; let rightArr = []; if (length &amp;lt;= 1) { return arr; } arr.forEach(v =&amp;gt; { if (v &amp;lt; pivot) { leftArr.push(v); } else { rightArr.push(v); } }); return quickSort(leftArr).concat([pivot], quickSort(rightArr)); } let testArr = [3, 5, 1, 7, 9, 10, 30, 28, 19, 6]; console.log(quickSort(testArr))  关于 let pivot = arr.</description>
     </item>
     
     <item>
