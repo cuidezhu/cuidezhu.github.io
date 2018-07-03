@@ -133,6 +133,63 @@ func.call(obj);       // &quot;jack&quot;
 function.call(thisArg, arg1, arg2, ...)
 </code></pre>
 
+<p>bind() 也可以改变 this 的指向，bind() 方法会创建一个新函数，当这个新函数被调用时，它的 this 值是传递给 bind() 的第一个参数, 它的参数是 bind() 的其他参数和其原本的参数。</p>
+
+<p>apply, call 和 bind 三者有相似之处，</p>
+
+<ol>
+<li>都是用来改变函数的this对象的指向的。</li>
+<li>第一个参数都是this要指向的对象。</li>
+<li>都可以利用后续参数传参。</li>
+</ol>
+
+<pre><code class="language-js">var xw={
+  name: &quot;小王&quot;,
+  gender: &quot;男&quot;,
+  age: 24,
+  say: function() {
+    alert(this.name+&quot; , &quot;+this.gender+&quot; ,今年&quot;+this.age);
+  }
+}
+var xh={
+  name: &quot;小红&quot;,
+  gender: &quot;女&quot;,
+  age: 18
+}
+xw.say();
+</code></pre>
+
+<p>输出的是： <code>小王 , 男 ,今年24</code>。</p>
+
+<p>那么我们如何输出小红的数据呢？</p>
+
+<p>用 <code>apply</code> 的话是这样：</p>
+
+<pre><code class="language-js">xw.say.apply(xh);
+</code></pre>
+
+<p>用 call 的话也类似：</p>
+
+<pre><code class="language-js">xw.say.call(xh)
+</code></pre>
+
+<p>用 bind 的话是这样：</p>
+
+<pre><code class="language-js">xw.say.bind(xh)();
+</code></pre>
+
+<p>call和apply都是对函数的直接调用，而bind方法返回的仍然是一个函数，因此后面还需要()来进行调用才可以。</p>
+
+<p>另一个区别就是 bind 的传参数可以在 <code>bind()</code> 里传参数：</p>
+
+<pre><code class="language-js">xw.say.bind(xh,&quot;实验小学&quot;,&quot;六年级&quot;)();
+</code></pre>
+
+<p>也可以在调用时传参数：</p>
+
+<pre><code class="language-js">xw.say.bind(xh)(&quot;实验小学&quot;,&quot;六年级&quot;);
+</code></pre>
+
     </div>
   </main>
 
