@@ -6,10 +6,24 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Jul 2018 23:20:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jul 2018 23:58:57 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Apply, Call 和 Bind</title>
+      <link>http://ijs.me/2018/07/04/apply-call-%E5%92%8C-bind/</link>
+      <pubDate>Wed, 04 Jul 2018 23:58:57 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/07/04/apply-call-%E5%92%8C-bind/</guid>
+      <description>在 JavaScript 中，call 和 apply 都是为了改变某个函数运行时的上下文（context）而存在的，换句话说，就是为了改变函数体内部 this 的指向。
+let obj = { name: &#39;jack&#39; } function func() { console.log(this.name); } func.call(obj); // &amp;quot;jack&amp;quot;  call 方法的第一个参数是作为函数上下文的对象，这里把 obj 作为参数传给了 func，此时函数里的 this 便指向了 obj 对象。此处 func 函数里其实相当于
+function func() { console.log(obj.name); }  call 和 apply 作用相同，只是接收的参数不一样
+function.apply(thisArg, [argsArray]) function.call(thisArg, arg1, arg2, ...)  bind() 也可以改变 this 的指向，bind() 方法会创建一个新函数，当这个新函数被调用时，它的 this 值是传递给 bind() 的第一个参数, 它的参数是 bind() 的其他参数和其原本的参数。
+apply, call 和 bind 三者有相似之处，
+ 都是用来改变函数的this对象的指向的。 第一个参数都是this要指向的对象。 都可以利用后续参数传参。  var xw={ name: &amp;quot;小王&amp;quot;, gender: &amp;quot;男&amp;quot;, age: 24, say: function() { alert(this.</description>
+    </item>
     
     <item>
       <title>JavaScript 函数防抖 Debounce 实现原理</title>
