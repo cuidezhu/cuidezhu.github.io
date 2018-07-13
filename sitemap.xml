@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/07/13/one-way-data-binding-vs-two-way-data-binding/</loc>
+    <lastmod>2018-07-13T19:19:13+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/07/04/apply-call-%E5%92%8C-bind/</loc>
     <lastmod>2018-07-04T23:58:57+08:00</lastmod>
   </url>
@@ -109,7 +114,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-07-04T23:58:57+08:00</lastmod>
+    <lastmod>2018-07-13T19:19:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -120,7 +125,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-07-04T23:58:57+08:00</lastmod>
+    <lastmod>2018-07-13T19:19:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
