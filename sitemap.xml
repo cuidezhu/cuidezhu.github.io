@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/07/16/webpack-code-splitting/</loc>
+    <lastmod>2018-07-16T23:53:36+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/07/15/react-source-code-analysis/</loc>
     <lastmod>2018-07-15T09:51:10+08:00</lastmod>
   </url>
@@ -134,7 +139,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-07-15T09:51:10+08:00</lastmod>
+    <lastmod>2018-07-16T23:53:36+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -145,7 +150,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-07-15T09:51:10+08:00</lastmod>
+    <lastmod>2018-07-16T23:53:36+08:00</lastmod>
     <priority>0</priority>
   </url>
   

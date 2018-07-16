@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>迷你 Redux 实现</title>
+  <title>Webpack Code Splitting</title>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css">
 </head>
@@ -11,38 +11,11 @@
 
   <main class="container" role="main">
     <div class="article-head">
-      <h1>迷你 Redux 实现</h1>
-      <span class="blog-post-date">July 14, 2018</span>
+      <h1>Webpack Code Splitting</h1>
+      <span class="blog-post-date">July 16, 2018</span>
     </div>
     <div class="blog-post-content">
-        <p>```js
-export function createStore(reducer) {
-  let currentState = {}
-  let currentListeners = []</p>
-
-<p>function getState() {
-    return currentState
-  }</p>
-
-<p>function subscribe(listener) {
-    currentListeners.push(listener)
-  }</p>
-
-<p>function dispatch(action) {
-    currentState = reducer(currentState, action)
-    currentListeners.forEach(v =&gt; v())</p>
-
-<pre><code>return action
-</code></pre>
-
-<p>}</p>
-
-<p>// type 定义为一个特殊的值，触发 reducer 的 default 分支来获取初始 state
-  dispatch({type: &lsquo;@@mini-redux/INIT&rsquo;})</p>
-
-<p>return { getState, subscribe, dispatch}
-}</p>
-
+        
     </div>
   </main>
 
