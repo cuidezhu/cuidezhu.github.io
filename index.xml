@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>React 原理解析</title>
-      <link>http://ijs.me/2018/07/15/react-principle-analysis/</link>
+      <title>React 源码解析</title>
+      <link>http://ijs.me/2018/07/15/react-source-code-analysis/</link>
       <pubDate>Sun, 15 Jul 2018 09:51:10 +0800</pubDate>
       
-      <guid>http://ijs.me/2018/07/15/react-principle-analysis/</guid>
+      <guid>http://ijs.me/2018/07/15/react-source-code-analysis/</guid>
       <description> JSX 我们现在一般使用 JSX 来写 React 代码，实际上我们的 JSX 最终会把转化成普通的 JavaScript 代码，我们可以在 Babel 里看下转化后的代码：
 React.createElement </description>
     </item>
