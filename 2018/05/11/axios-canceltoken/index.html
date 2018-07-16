@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Axios CancelToken 取消请求</title>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css">
 </head>
 <body>
 
@@ -22,7 +23,7 @@
 
 <p>假如说页面中有两项菜单可供选择，这两项菜单下的内容是同一个页面，同一个组件，两项菜单下的页面结构是一样的，只是数据不同，数据比如都是使用 axios 请求 REST API 获取到的，然后用 <code>setState</code> 把 API 传过来的值展示到页面中。</p>
 
-<pre><code>axios.get('/test', {
+<pre><code class="language-js">axios.get('/test', {
     params: {
       type: 'fruit'
     }
@@ -48,13 +49,13 @@
 
 <p>我们在点击菜单项绑定的函数中每次定义下面两个变量</p>
 
-<pre><code>const CancelToken = axios.CancelToken
+<pre><code class="language-js">const CancelToken = axios.CancelToken
 const source = CancelToken.source()
 </code></pre>
 
 <p>注意上面两个变量初始化时每次切换菜单项时都要重新定义，不然只定义一次的话，上面两个变量的值只是初始化时的值。我们可以把上面两个变量写到我们发送请求的前面，然后把发送请求包装成一个函数，在 <code>componentDidMount()</code> 和 切换菜单项时调用这个函数。然后完整的代码如下。</p>
 
-<pre><code>handleRequest() {
+<pre><code class="language-js">handleRequest() {
   const CancelToken = axios.CancelToken
   const source = CancelToken.source()
 
@@ -93,5 +94,7 @@ source.cancel('Operation canceled by the user.');
     </div>
   </main>
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>React 源码解析</title>
+      <title>React 原理深入解析（附源码）</title>
       <link>http://ijs.me/2018/07/15/react-source-code-analysis/</link>
       <pubDate>Sun, 15 Jul 2018 09:51:10 +0800</pubDate>
       
@@ -41,10 +41,10 @@ React.createElement() 我们可以看下 React 源码中的 react/packages/react
     
     <item>
       <title>Apply, Call 和 Bind</title>
-      <link>http://ijs.me/2018/07/04/apply-call-%E5%92%8C-bind/</link>
+      <link>http://ijs.me/2018/07/04/apply-call-bind/</link>
       <pubDate>Wed, 04 Jul 2018 23:58:57 +0800</pubDate>
       
-      <guid>http://ijs.me/2018/07/04/apply-call-%E5%92%8C-bind/</guid>
+      <guid>http://ijs.me/2018/07/04/apply-call-bind/</guid>
       <description>在 JavaScript 中，call 和 apply 都是为了改变某个函数运行时的上下文（context）而存在的，换句话说，就是为了改变函数体内部 this 的指向。
 let obj = { name: &#39;jack&#39; } function func() { console.log(this.name); } func.call(obj); // &amp;quot;jack&amp;quot;  call 方法的第一个参数是作为函数上下文的对象，这里把 obj 作为参数传给了 func，此时函数里的 this 便指向了 obj 对象。此处 func 函数里其实相当于
 function func() { console.log(obj.name); }  call 和 apply 作用相同，只是接收的参数不一样

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>调整 Github 首页布局</title>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css">
 </head>
 <body>
 
@@ -28,7 +29,7 @@
 
 <p>然后把下面这行 css 复制到代码部分，</p>
 
-<pre><code>.column {
+<pre><code class="language-css">.column {
   float: right;
 }
 </code></pre>
@@ -54,7 +55,7 @@
 
 <p>完整的代码如下:</p>
 
-<pre><code>// ==UserScript==
+<pre><code class="language-js">// ==UserScript==
 // @name         New Userscript
 // @namespace    http://tampermonkey.net/
 // @version      0.1
@@ -74,5 +75,7 @@
     </div>
   </main>
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
