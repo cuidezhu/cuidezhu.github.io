@@ -15,33 +15,31 @@
       <span class="blog-post-date">July 14, 2018</span>
     </div>
     <div class="blog-post-content">
-        <p>```js
-export function createStore(reducer) {
+        <pre><code class="language-js">export function createStore(reducer) {
   let currentState = {}
-  let currentListeners = []</p>
+  let currentListeners = []
 
-<p>function getState() {
+  function getState() {
     return currentState
-  }</p>
+  }
 
-<p>function subscribe(listener) {
+  function subscribe(listener) {
     currentListeners.push(listener)
-  }</p>
+  }
 
-<p>function dispatch(action) {
+  function dispatch(action) {
     currentState = reducer(currentState, action)
-    currentListeners.forEach(v =&gt; v())</p>
+    currentListeners.forEach(v =&gt; v())
 
-<pre><code>return action
+    return action
+  }
+
+  // type 定义为一个特殊的值，触发 reducer 的 default 分支来获取初始 state
+  dispatch({type: '@@mini-redux/INIT'})
+
+  return { getState, subscribe, dispatch}
+}
 </code></pre>
-
-<p>}</p>
-
-<p>// type 定义为一个特殊的值，触发 reducer 的 default 分支来获取初始 state
-  dispatch({type: &lsquo;@@mini-redux/INIT&rsquo;})</p>
-
-<p>return { getState, subscribe, dispatch}
-}</p>
 
     </div>
   </main>
