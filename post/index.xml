@@ -38,7 +38,12 @@ React.createElement() 我们可以看下 React 源码中的 react/packages/react
       <pubDate>Sat, 14 Jul 2018 20:04:01 +0800</pubDate>
       
       <guid>http://ijs.me/2018/07/14/mini-redux-implemention/</guid>
-      <description>export function createStore(reducer) { let currentState = {} let currentListeners = [] function getState() { return currentState } function subscribe(listener) { if (typeof listener !== &#39;function&#39;) { throw new Error(&#39;Expected the listener to be a function.&#39;) } currentListeners.push(listener) } function dispatch(action) { currentState = reducer(currentState, action) currentListeners.forEach(v =&amp;gt; v()) return action } // type 定义为一个特殊的值，触发 reducer 的 default 分支来获取初始 state dispatch({type: &#39;@@mini-redux/INIT&#39;}) return { getState, subscribe, dispatch} }  </description>
+      <description>redux 主要由三部分组成：action, reduer, store，
+action action 是用户自己定义的，用来描述发生了什么, action 的 type 字段是必须的，其它字段可以自己定义：
+const action = { type: &#39;ADD_TODO&#39;, };  Reducer Reducer 也是由用户负责编写的，Reducers 指定了应用状态的变化如何响应 actions 并发送到 store 的，记住 actions 只是描述了有事情发生了这一事实，并没有描述应用如何更新 state。
+function todoApp(state = initialState, action) { switch (action.type) { case ADD_TODO: return state + 1 default: return state } }  Store redux 只有一个单一的 Store 通过 createStore() 来创建创建 store，
+Store 有以下职责：
+ 维持应用的 state； 提供 getState() 方法获取 state； 提供 dispatch(action) 方法更新 state； 通过 subscribe(listener) 注册监听器; 通过 subscribe(listener) 返回的函数注销监听器。  实现 mini-redux 下面我们来实现 redux 核心的 createStore() 函数</description>
     </item>
     
     <item>
