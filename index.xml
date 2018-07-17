@@ -38,7 +38,7 @@ React.createElement() 我们可以看下 React 源码中的 react/packages/react
       <pubDate>Sat, 14 Jul 2018 20:04:01 +0800</pubDate>
       
       <guid>http://ijs.me/2018/07/14/mini-redux-implemention/</guid>
-      <description>export function createStore(reducer) { let currentState = {} let currentListeners = [] function getState() { return currentState } function subscribe(listener) { currentListeners.push(listener) } function dispatch(action) { currentState = reducer(currentState, action) currentListeners.forEach(v =&amp;gt; v()) return action } // type 定义为一个特殊的值，触发 reducer 的 default 分支来获取初始 state dispatch({type: &#39;@@mini-redux/INIT&#39;}) return { getState, subscribe, dispatch} }  </description>
+      <description>export function createStore(reducer) { let currentState = {} let currentListeners = [] function getState() { return currentState } function subscribe(listener) { if (typeof listener !== &#39;function&#39;) { throw new Error(&#39;Expected the listener to be a function.&#39;) } currentListeners.push(listener) } function dispatch(action) { currentState = reducer(currentState, action) currentListeners.forEach(v =&amp;gt; v()) return action } // type 定义为一个特殊的值，触发 reducer 的 default 分支来获取初始 state dispatch({type: &#39;@@mini-redux/INIT&#39;}) return { getState, subscribe, dispatch} }  </description>
     </item>
     
     <item>
