@@ -19,9 +19,9 @@
 
 <p>redux 主要由三部分组成：action, reduer, store，</p>
 
-<h2 id="action">action</h2>
+<h2 id="action">Action</h2>
 
-<p>action 是用户自己定义的，用来描述发生了什么, action 的 type 字段是必须的，其它字段可以自己定义：</p>
+<p>Action 是用户自己定义的，用来描述发生了什么, action 的 type 字段是必须的，其它字段可以自己定义：</p>
 
 <pre><code class="language-js">const action = {
   type: 'ADD_TODO',
@@ -44,7 +44,12 @@
 
 <h2 id="store">Store</h2>
 
-<p>redux 只有一个单一的 Store 通过 <code>createStore()</code> 来创建创建 store，</p>
+<p>redux 只有一个单一的 Store, 用户通过 <code>createStore()</code> 来创建 store，<code>createStore()</code> 接受一个 reducer 函数作为参数, 我们使用 <code>combineReducers()</code> 将多个 reducer 合并成为一个。。</p>
+
+<p><code>createStore()</code> 的第二个参数是可选的, 用于设置 state 初始状态。这对开发同构应用时非常有用，服务器端 redux 应用的 state 结构可以与客户端保持一致, 那么客户端可以将从网络接收到的服务端 state 直接用于本地数据初始化。</p>
+
+<pre><code class="language-js">let store = createStore(todoApp, window.STATE_FROM_SERVER)
+</code></pre>
 
 <p>Store 有以下职责：</p>
 
