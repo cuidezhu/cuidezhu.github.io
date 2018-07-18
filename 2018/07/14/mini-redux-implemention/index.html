@@ -44,7 +44,7 @@
 
 <h2 id="store">Store</h2>
 
-<p>redux 只有一个单一的 Store, 用户通过 <code>createStore()</code> 来创建 store，<code>createStore()</code> 接受一个 reducer 函数作为参数, 我们使用 <code>combineReducers()</code> 将多个 reducer 合并成为一个。。</p>
+<p>redux 只有一个单一的 Store, 用户通过 <code>createStore()</code> 来创建 store，<code>createStore()</code> 接受一个 reducer 函数作为参数, 我们使用 <code>combineReducers()</code> 将多个 reducer 合并成为一个。</p>
 
 <p><code>createStore()</code> 的第二个参数是可选的, 用于设置 state 初始状态。这对开发同构应用时非常有用，服务器端 redux 应用的 state 结构可以与客户端保持一致, 那么客户端可以将从网络接收到的服务端 state 直接用于本地数据初始化。</p>
 
@@ -55,15 +55,15 @@
 
 <ul>
 <li>维持应用的 state；</li>
-<li>提供 getState() 方法获取 state；</li>
-<li>提供 dispatch(action) 方法更新 state；</li>
-<li>通过 subscribe(listener) 注册监听器;</li>
-<li>通过 subscribe(listener) 返回的函数注销监听器。</li>
+<li>提供 <code>getState()</code> 方法获取 state；</li>
+<li>提供 <code>dispatch(action)</code> 方法更新 state；</li>
+<li>通过 <code>subscribe(listener)</code> 注册监听器;</li>
+<li>通过 <code>subscribe(listener)</code> 返回的函数注销监听器。</li>
 </ul>
 
 <h2 id="实现-mini-redux">实现 mini-redux</h2>
 
-<p>下面我们来实现 redux 核心的 createStore() 函数</p>
+<p>下面我们来实现 redux 核心的 <code>createStore()</code> 函数</p>
 
 <pre><code class="language-js">export function createStore(reducer) {
   let currentState = {}
