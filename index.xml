@@ -6,10 +6,20 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Jul 2018 06:55:28 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Jul 2018 19:56:36 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React 高阶组件和装饰器</title>
+      <link>http://ijs.me/2018/07/20/react-higher-order-components-and-decorator/</link>
+      <pubDate>Fri, 20 Jul 2018 19:56:36 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/07/20/react-higher-order-components-and-decorator/</guid>
+      <description>高阶组件 高阶组件就是一个函数，且该函数接受一个组件作为参数，并返回一个新的组件。但高阶组件本身并不是React API，它只是一种模式。
+下面我们来实现一个高阶组件。</description>
+    </item>
     
     <item>
       <title>实现 MVVM 框架的双向数据绑定</title>
