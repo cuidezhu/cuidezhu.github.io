@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Jul 2018 20:45:52 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jul 2018 06:55:28 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实现 MVVM 框架的双向数据绑定</title>
+      <link>http://ijs.me/2018/07/19/mvvm-two-way-data-binding/</link>
+      <pubDate>Thu, 19 Jul 2018 06:55:28 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/07/19/mvvm-two-way-data-binding/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>实现 react-redux</title>
@@ -17,7 +26,9 @@
       <pubDate>Wed, 18 Jul 2018 20:45:52 +0800</pubDate>
       
       <guid>http://ijs.me/2018/07/18/react-redux-implementation/</guid>
-      <description></description>
+      <description>前面的文章 迷你 Redux 实现 我们实现了一个简单的 Redux, 那么我们怎么在 React 项目里使用我们自制的 Redux 呢？我们可以显式传递 Store，但更优雅的方式是使用 react-redux，这篇文章会实现我们自己的react-redux。
+显式传递 Store 我们可以手动用 subscribe 订阅 ReactDOM.render 来将把 redux 和 react 结合起来，将 Store 集成到 UI 中最合乎直觉逻辑的做法是显式地将它作为属性在组件树中向下传递。例如下面的 index.js 文件中渲染一个 App 组件并传递 Store:
+import React from &#39;react&#39; import ReactDOM from &#39;react-dom&#39; import App from &#39;./components/App&#39; import { counter } from &#39;./index.redux&#39; const store = createStore(counter) const render = () =&amp;gt; ReactDOM.render( &amp;lt;App store={store} /&amp;gt;, document.getElementById(&#39;root&#39;) ) store.subscribe(render) render()  在这个文件中，我们使用 counter 这个 reducer 处理函数来创建了一个 store，当 App 组件渲染完毕后，Store 会作为属性传递给它。每次 Store 发生变化后，render 函数就会被触发执行，这样就可以使用新的 State 数据高效地更新 UI 了。</description>
     </item>
     
     <item>

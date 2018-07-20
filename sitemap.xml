@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/07/19/mvvm-two-way-data-binding/</loc>
+    <lastmod>2018-07-19T06:55:28+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/07/18/react-redux-implementation/</loc>
     <lastmod>2018-07-18T20:45:52+08:00</lastmod>
   </url>
@@ -144,7 +149,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-07-18T20:45:52+08:00</lastmod>
+    <lastmod>2018-07-19T06:55:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -155,7 +160,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-07-18T20:45:52+08:00</lastmod>
+    <lastmod>2018-07-19T06:55:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   
