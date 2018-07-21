@@ -6,10 +6,20 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Jul 2018 19:56:36 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 21 Jul 2018 12:09:18 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>函数式编程</title>
+      <link>http://ijs.me/2018/07/21/functional-programming/</link>
+      <pubDate>Sat, 21 Jul 2018 12:09:18 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/07/21/functional-programming/</guid>
+      <description>函数式编程是一种编程典范，最重要的是函数可以当参数，函数也可以当返回值。比如下面这个例子：
+function hello() { console.log(&#39;hello, I love react&#39;) } function WrapperHello(fn) { return function() { console.log(&#39;before say hello&#39;) fn() console.log(&#39;after say hello&#39;) } } hello = WrapperHello(hello) hello()  上面这句 hello = WrapperHello(hello) 把 hello() 这个函数装饰了一次，这种设计模式称为装饰器模式，这也是 React 中的高阶组件（HOC）实现的基础。</description>
+    </item>
     
     <item>
       <title>React 高阶组件和装饰器</title>
