@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Jul 2018 12:09:18 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Jul 2018 22:05:08 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Redux ApplyMiddleware Implementation</title>
+      <link>http://ijs.me/2018/07/22/redux-applymiddleware-implementation/</link>
+      <pubDate>Sun, 22 Jul 2018 22:05:08 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/07/22/redux-applymiddleware-implementation/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>函数式编程</title>
