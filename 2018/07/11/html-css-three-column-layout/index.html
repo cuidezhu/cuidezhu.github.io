@@ -27,6 +27,177 @@
     <div class="blog-post-content">
         <p>三栏布局是网页中常见的布局，即两边固定宽度，中间自适应，下面我们用五种不同的方式来实现这种布局。</p>
 
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    html * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .layout {
+      margin-top: 20px;
+    }
+
+    .layout:first-child {
+      margin-top: 0;
+    }
+
+    .layout div {
+      min-height: 150px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- float 浮动解决方案 --&gt;
+  &lt;section class=&quot;layout float&quot;&gt;
+    &lt;style&gt;
+      .layout.float .left {
+        float: left;
+        width: 300px;
+        background: red;
+      }
+      .layout.float .right {
+        float: right;
+        width: 300px;
+        background: blue;
+      }
+      .layout.float .center {
+        background: yellow;
+      }
+    &lt;/style&gt;
+    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;center&quot;&gt;
+      &lt;h1&gt;浮动解决方案&lt;/h1&gt;
+      &lt;p&gt;这是三栏布局的中间部分&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- 绝对定位 --&gt;
+  &lt;section class=&quot;layout absolute&quot;&gt;
+    &lt;style&gt;
+      .layout.absolute &gt; div {
+        position: absolute;
+      }
+      .layout.absolute .left {
+        left: 0;
+        width: 300px;
+        background: red;
+      }
+      .layout.absolute .center {
+        left: 300px;
+        right: 300px;
+        background: yellow;
+      }
+      .layout.absolute .right {
+        right: 0;
+        width: 300px;
+        background: blue;
+      }
+    &lt;/style&gt;
+    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;center&quot;&gt;
+      &lt;h1&gt;绝对定位解决方案&lt;/h1&gt;
+      &lt;p&gt;这是三栏布局绝对定位的中间部分&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- Flexbox 布局 --&gt;
+  &lt;section class=&quot;layout flexbox&quot;&gt;
+    &lt;style&gt;
+      .layout.flexbox {
+        display: flex;
+        margin-top: 190px;
+      }
+      .layout.flexbox .left {
+        width: 300px;
+        background: red;
+      }
+      .layout.flexbox .center {
+        flex: 1;
+        background: yellow;
+      }
+      .layout.flexbox .right {
+        width: 300px;
+        background: blue;
+      }
+    &lt;/style&gt;
+    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;center&quot;&gt;
+      &lt;h2&gt;Flexbox 解决方案&lt;/h2&gt;
+      &lt;p&gt;这是三栏布局Flexbox 的中间部分&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- table 布局 --&gt;
+  &lt;section class=&quot;layout table&quot;&gt;
+    &lt;style&gt;
+      .layout.table {
+        width: 100%;
+        display: table;
+        height: 150px;
+      }
+      .layout.table &gt; div {
+        display: table-cell;
+      }
+      .layout.table .left {
+        width: 300px;
+        background: red;
+      }
+      .layout.table .center {
+        background: yellow;
+      }
+      .layout.table .right {
+        width: 300px;
+        background: blue;
+      }
+    &lt;/style&gt;
+    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;center&quot;&gt;
+      &lt;h2&gt;表格布局&lt;/h2&gt;
+      &lt;p&gt;这是三栏布局表格布局的中间部分&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- 网格布局 --&gt;
+  &lt;section class=&quot;layout grid&quot;&gt;
+    &lt;style&gt;
+      .layout.grid {
+        display: grid;
+        width: 100%;
+        grid-template-row: 150px;
+        grid-template-columns: 300px auto 300px;
+      }
+      .layout.grid .left {
+        background: red;
+      }
+      .layout.grid .center {
+        background: yellow;
+      }
+      .layout.grid .right {
+        background: blue;
+      }
+    &lt;/style&gt;
+    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;center&quot;&gt;
+      &lt;h1&gt;网格布局解决方案&lt;/h1&gt;
+      &lt;p&gt;这是三栏布局网格布局的中间部分&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+  &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
     </div>
   </main>
 
