@@ -55,11 +55,105 @@ render()
 
 <p>我们可以在 App 组件中将 Store 作为属性传递给它的子组件，现在可以在子组件中使用它了。</p>
 
-<p>但这种方法需要属性在每层组件树中传递，就像上面的实例，我们需要把 Store 首先作为属性传递给 App 组件，App 组件再把 Store 作为属性传递给它的子组件，最后才在 App 的自组件内使用传递来的属性。如何克服这种在每一层级都传递属性的缺点呢？</p>
+<p>但这种方法需要属性在每层组件树中传递，就像上面的实例，我们需要把 Store 首先作为属性传递给 App 组件，App 组件再把 Store 作为属性传递给它的子组件，最后才在 App 的自组件内使用传递来的属性。如何克服这种在每一层级都传递属性的缺点呢？再看下面这个例子：</p>
+
+<pre><code class="language-js">import React from 'react'
+
+class Sidebar extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;p&gt;侧边栏&lt;/p&gt;
+        &lt;Navbar user={this.props.user}&gt;&lt;/Navbar&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+
+class Navbar extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;{this.props.user}的导航栏&lt;/div&gt;
+    )
+  }
+}
+
+class Page extends React.Component {
+  render() {
+    const user = 'Jack'
+    return (
+      &lt;div&gt;
+        &lt;p&gt;我是{user}&lt;/p&gt;
+        &lt;Sidebar user={user}&gt;&lt;/Sidebar&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+
+export default Page
+</code></pre>
+
+<p>上面这种层层通过属性传递比较繁琐，而且 <code>Sidebar</code> 这个组件本身不需要 <code>user</code> 这个数据，却依然需要接收和传递数据，这对性能也是一种浪费。</p>
 
 <p>React 中的 Context 就是为了解决这个问题，Context 通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递 props 属性。</p>
 
 <h2 id="context">Context</h2>
+
+<p>Context 是全局的，组件里声明，所有的子元素可以直接获取。</p>
+
+<p>把上面的例子用 Context 改造如下：</p>
+
+<pre><code class="language-js">import React from 'react'
+import PropTypes from 'prop-types'
+
+class Sidebar extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;p&gt;侧边栏&lt;/p&gt;
+        &lt;Navbar&gt;&lt;/Navbar&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+
+class Navbar extends React.Component {
+  static contextTypes = {
+    user: PropTypes.string
+  }
+  render() {
+    console.log(this.context)
+    return (
+      &lt;div&gt;{this.context.user}的导航栏&lt;/div&gt;
+    )
+  }
+}
+
+class Page extends React.Component {
+  static childContextTypes = {
+    user: PropTypes.string
+  }
+  constructor(props) {
+    super(props)
+    this.state = {user: 'Jack'}
+  }
+  getChildContext() {
+    return this.state
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;p&gt;我是{this.state.user}&lt;/p&gt;
+        &lt;Sidebar&gt;&lt;/Sidebar&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+
+export default Page
+</code></pre>
+
+<h2 id="实现-react-redux">实现 react-redux</h2>
 
     </div>
   </main>
