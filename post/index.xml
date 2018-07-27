@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Jul 2018 21:38:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Jul 2018 23:37:59 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript Design Pattern</title>
+      <link>http://ijs.me/2018/07/25/javascript-design-pattern/</link>
+      <pubDate>Wed, 25 Jul 2018 23:37:59 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/07/25/javascript-design-pattern/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>React 服务端渲染（SSR）</title>
