@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Jul 2018 23:37:59 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Jul 2018 18:41:39 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript 函数柯里化（Curry）</title>
+      <link>http://ijs.me/2018/07/27/javascript-function-curry/</link>
+      <pubDate>Fri, 27 Jul 2018 18:41:39 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/07/27/javascript-function-curry/</guid>
+      <description>const add = function(x) { return function(y) { return x + y + 3 } } const add = x =&amp;gt; y =&amp;gt; x+y+3 const res = add(2)(4) console.log(&#39;res is&#39;, res)  </description>
+    </item>
     
     <item>
       <title>JavaScript Design Pattern</title>
