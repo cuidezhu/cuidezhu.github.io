@@ -39,12 +39,15 @@
     </item>
     
     <item>
-      <title>Redux applyMiddleware 中间机制的实现</title>
-      <link>http://ijs.me/2018/07/22/redux-applymiddleware-implementation/</link>
+      <title>redux-thunk 中间件的实现</title>
+      <link>http://ijs.me/2018/07/22/redux-thunk-middleware-implementation/</link>
       <pubDate>Sun, 22 Jul 2018 22:05:08 +0800</pubDate>
       
-      <guid>http://ijs.me/2018/07/22/redux-applymiddleware-implementation/</guid>
-      <description></description>
+      <guid>http://ijs.me/2018/07/22/redux-thunk-middleware-implementation/</guid>
+      <description> 同步中间件 通过 redux 暴露出的 applyMiddleware，我们可以得到一个新的 dispatch. 所以 applyMiddleware 的实际效果可以看做是：dispatch =&amp;gt; newdispatch
+异步中间件 对于异步的情况，我们拿 redux-thunk 为例，它会对传入的 action 进行判断，如果是 function 的话。则去把我们的 action 执行，这个执行的就是我们的 delay 代码。然后在最里面执行 dispatch()。所以我们的箭头又重新回到最上面，这一次就相当于同步的使用了。
+redux-thunk 允许我们的 action 创建函数 return 一个函数而不是一个 action, 经常用来延迟 dispatch 某个 action。redux-thunk 本身代码非常简单，下面我们来实现一下：
+const thunk = ({dispatch, getState}) =&amp;gt; next =&amp;gt; action =&amp;gt; { // 如果是函数，执行一下，参数是dispatch和getState if (typeof action === &#39;function&#39;) { return action(dispatch, getState) } // 默认什么都没干 return next(action) } export default thunk  </description>
     </item>
     
     <item>
