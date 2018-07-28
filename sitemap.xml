@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/07/28/compare-two-js-object/</loc>
+    <lastmod>2018-07-28T23:42:47+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/07/27/javascript-function-curry/</loc>
     <lastmod>2018-07-27T18:41:39+08:00</lastmod>
   </url>
@@ -184,7 +189,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-07-27T18:41:39+08:00</lastmod>
+    <lastmod>2018-07-28T23:42:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -195,7 +200,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-07-27T18:41:39+08:00</lastmod>
+    <lastmod>2018-07-28T23:42:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
