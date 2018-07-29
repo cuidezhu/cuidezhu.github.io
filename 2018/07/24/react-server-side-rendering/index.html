@@ -25,7 +25,39 @@
       <span class="blog-post-date">July 24, 2018</span>
     </div>
     <div class="blog-post-content">
-        
+        <p>服务端渲染有利于首屏加载速度和搜索引擎优化（SEO）。</p>
+
+<p>因为 Node 环境原生不支持 JSX，首先我们使用 <code>babel-node</code> 让 Node 环境支持 JSX：</p>
+
+<pre><code class="language-js">yarn add babel-cli
+</code></pre>
+
+<p>然后我们在 <code>package.json</code> 里用 <code>babel-node</code> 来替代 <code>Node</code>，&rdquo;scripts&rdquo; 字段里加入下面一行：</p>
+
+<pre><code class="language-js">&quot;scripts&quot;: {
+  &quot;server&quot;: &quot;NODE_ENV=test nodemon --exec babel-node server/server.js&quot;,
+}
+</code></pre>
+
+<p>现在我们的 Node 环境已经支持 es6 了，那么怎么支持 JSX 呢？我们在项目根目录下新建个 babel 的配置文件 <code>.babelrc</code>，然后把我们的 <code>package.json</code> 文件下的 babel 的配置复制到 <code>.babelrc</code> 文件中：</p>
+
+<pre><code class="language-js">{
+  &quot;presets&quot;: [
+    &quot;react-app&quot;
+  ],
+  &quot;plugins&quot;: [
+    &quot;transform-decorators-legacy&quot;,
+    [
+      &quot;import&quot;,
+      {
+        &quot;libraryName&quot;: &quot;antd-mobile&quot;,
+        &quot;style&quot;: &quot;css&quot;
+      }
+    ]
+  ]
+}
+</code></pre>
+
     </div>
   </main>
 
