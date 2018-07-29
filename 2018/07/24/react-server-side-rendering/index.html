@@ -155,6 +155,60 @@ res.send(pageHtml)
 
 <p>重启项目我们发现我们服务端渲染的首页已经正常显示了。</p>
 
+<h2 id="react-16-rendertonodestream-新-api-实现服务端渲染">React 16 renderToNodeStream() 新 API 实现服务端渲染</h2>
+
+<p>直接渲染成 Node 节点流，通过这个节点流给浏览器流式地返回，我们把我们上面的 renderToString() 改为 React 16 的renderToNodeStream()</p>
+
+<pre><code class="language-js">const objDes = {
+  '/msg': 'React Chat',
+  '/boss': 'boss genius'
+}
+
+res.write(`&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+    &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot;&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;React, Redux, SSR, ${objDes[req.url]}&quot;&gt;
+
+    &lt;link rel=&quot;manifest&quot; href=&quot;%PUBLIC_URL%/manifest.json&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;%PUBLIC_URL%/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/${staticPath['main.css']}&quot;&gt;
+
+    &lt;title&gt;React App&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;noscript&gt;
+      You need to enable JavaScript to run this app.
+    &lt;/noscript&gt;
+    &lt;div id=&quot;root&quot;&gt;`)
+const markupStream = renderToNodeStream(
+  (&lt;Provider store={store}&gt;
+    &lt;StaticRouter
+      location={req.url}
+      context={context}
+    &gt;
+      &lt;App&gt;&lt;/App&gt;
+    &lt;/StaticRouter&gt;
+  &lt;/Provider&gt;)
+)
+
+markupStream.pipe(res, {end: false})
+markupStream.on('end', ()=&gt; {
+  res.write(`&lt;/div&gt;
+  &lt;script src=&quot;/${staticPath['main.js']}&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;`)
+  res.end()
+})
+
+</code></pre>
+
+<p>然后把 <code>src/index.js</code> 里的 <code>ReactDOM.render()</code> 改为 <code>ReactDOM.hydrate()</code></p>
+
+<p>然后我们就完成流式渲染了。</p>
+
     </div>
   </main>
 
