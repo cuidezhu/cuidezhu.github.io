@@ -79,7 +79,7 @@ const markup = renderToString(
 )
 </code></pre>
 
-<h2 id="css-modules-require-hook">css-modules-require-hook</h2>
+<h2 id="css-modules-require-hook-解决-css-报错">css-modules-require-hook 解决 CSS 报错</h2>
 
 <p>Node 里是没有 CSS 的，所以我们用 css-modules-require-hook 这个包来解决 CSS 报错相关问题：</p>
 
@@ -99,6 +99,61 @@ module.exports = {
   generateScopedName: '[name]__[local]___[hash:base64:5]',
 }
 </code></pre>
+
+<h2 id="asset-require-hook-解决图片报错">asset-require-hook 解决图片报错</h2>
+
+<p>在 servder.js 代码中加入下列代码：</p>
+
+<pre><code class="language-js">import assethook from 'asset-require-hook'
+assethook({
+  extensions: ['png']
+})
+</code></pre>
+
+<h2 id="拼接-public-index-html-骨架">拼接 public/index.html 骨架</h2>
+
+<p>把服务端生成的 html 放到 html 骨架里：</p>
+
+<pre><code class="language-js">const pageHtml = `&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+    &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot;&gt;
+
+    &lt;link rel=&quot;manifest&quot; href=&quot;%PUBLIC_URL%/manifest.json&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;%PUBLIC_URL%/favicon.ico&quot;&gt;
+
+    &lt;title&gt;React App&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;noscript&gt;
+      You need to enable JavaScript to run this app.
+    &lt;/noscript&gt;
+    &lt;div id=&quot;root&quot;&gt;${markup}&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;`
+
+res.send(pageHtml)
+</code></pre>
+
+<p>现在我们的 html 页面就是带有骨架的完整页面了。</p>
+
+<h2 id="引入-css-和-js-文件">引入 CSS 和 JS 文件</h2>
+
+<p>我们 build 项目生成的 build 文件夹下的 <code>build/asset-manifest.json</code> 文件中有 CSS 和 JS 的路径，因为文件名每次 build 每次都在变，这样做是为了在文件名中加入 hash 值使之不命中缓存。</p>
+
+<pre><code class="language-js">import staticPath from '../build/asset-manifest.json'
+</code></pre>
+
+<p>然后我们在 html 骨架中加入下面两行代码来分别引入 CSS 和 JS</p>
+
+<pre><code class="language-js">&lt;link rel=&quot;stylesheet&quot; href=&quot;/${staticPath['main.css']}&quot;&gt;
+
+&lt;script src=&quot;/${staticPath['main.js']}&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>重启项目我们发现我们服务端渲染的首页已经正常显示了。</p>
 
     </div>
   </main>
