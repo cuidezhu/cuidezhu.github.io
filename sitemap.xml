@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/07/30/minimum-coin-change-problem/</loc>
+    <lastmod>2018-07-30T23:47:06+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/07/29/javascript-object-oriented-programming/</loc>
     <lastmod>2018-07-29T23:15:29+08:00</lastmod>
   </url>
@@ -194,7 +199,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-07-29T23:15:29+08:00</lastmod>
+    <lastmod>2018-07-30T23:47:06+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -205,7 +210,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-07-29T23:15:29+08:00</lastmod>
+    <lastmod>2018-07-30T23:47:06+08:00</lastmod>
     <priority>0</priority>
   </url>
   
