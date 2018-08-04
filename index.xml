@@ -27,8 +27,8 @@
       
       <guid>http://ijs.me/2018/08/02/webpack-react-environment/</guid>
       <description>新建一个项目的文件夹，打开终端，进入我们新建的文件夹目录，我们使用 npm init 来初始化一个 npm 项目，按照提示填写项目相关信息，然后它会根据你填的信息生成一个 package.json 文件。
-我们的项目需要用到 Webpack 和 React，我们首先安装下这两个包：
-npm i webpack react  npm i 是 npm install 的别名，其它 npm install 的别名有 isntall, add，npm install 的后缀的意思可以看 官方文档：
+我们的项目需要用到 Webpack 和 React，这里我们用 webpack 的版本 3.9.1，我们首先安装下这两个包：
+npm i webpack@3.9.1 react  npm i 是 npm install 的别名，其它 npm install 的别名有 isntall, add，npm install 的后缀的意思可以看 官方文档：
  npm install saves any specified packages into dependencies by default. Additionally, you can control where and how they get saved with some additional flags:
 -P, &amp;ndash;save-prod: Package will appear in your dependencies. This is the default unless -D or -O are present.</description>
     </item>
