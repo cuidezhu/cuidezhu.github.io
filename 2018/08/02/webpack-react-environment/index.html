@@ -72,6 +72,33 @@ module.exports = {
 }
 </code></pre>
 
+<p>我们用 <code>babel-loader</code> 这个 loader 来让 webpack 能处理 JSX：</p>
+
+<pre><code class="language-zsh">npm i babel-core babel-loader -D
+</code></pre>
+
+<p>为了能支持 ES2015 和 React，我们在根目录下新建 <code>.babelrc</code> babel 的配置文件，内容如下：</p>
+
+<pre><code class="language-js">{
+  &quot;presets&quot;: [
+    [&quot;es2015&quot;, { &quot;loose&quot;: true }],
+    &quot;react&quot;
+  ]
+}
+</code></pre>
+
+<p>上面的配置还需要安装如下包：</p>
+
+<pre><code class="language-zsh">npm i babel-preset-es2015 babel-preset-es2015-loose babel-preset-react -D
+</code></pre>
+
+<p>然后我们在 <code>package.json</code> 文件 <code>scripts</code> 字段里新增如下命令：</p>
+
+<pre><code class="language-js">&quot;build&quot;: &quot;webpack --config build/webpack.config.js&quot;
+</code></pre>
+
+<p>在终端里运行 <code>npm run build</code> 就可以编译成功编译我们的代码了。</p>
+
     </div>
   </main>
 
