@@ -118,6 +118,28 @@ module.exports = {
 
 <p>这时我们再 <code>npm run build</code> 就会看到 <code>dist</code> 目录下生成了 index.html 文件，并且文件内引入了打包后的 JS 文件。</p>
 
+<p>然后加入对 <code>.js</code> 结尾的文件的编译 babel-loader 配置，因为 <code>node_modules</code> 目录下的文件已经经过编译了，所以我们将这个目录排除：</p>
+
+<pre><code class="language-js">// ...
+
+module.exports = {
+  // ...
+  module: {
+      // ...
+      {
+        test: /.js$/,
+        loader: 'babel-loader',
+        exclude: [
+          path.join(__dirname, '../node_modules')
+        ]
+      }
+    ]
+  },
+}
+</code></pre>
+
+<p>这时我们再次  <code>npm run build</code>，打开生成的 <code>index.html</code> 文件，就会看到正确的显示结果了。</p>
+
     </div>
   </main>
 
