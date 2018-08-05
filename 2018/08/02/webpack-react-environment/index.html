@@ -99,6 +99,25 @@ module.exports = {
 
 <p>在终端里运行 <code>npm run build</code> 就可以编译成功编译我们的代码了，打包完成的代码会放在根目录下的 <code>dist</code> 目录。</p>
 
+<p>然后我们安装 <code>html-webpack-plugin</code> 插件来把我们 Webpack 打包后的 entry 下的所有文件都注入到一个生成的 HTML 页面里面，文件名字路径都是根据 output 的配置拼接而成。</p>
+
+<pre><code class="language-zsh">npm i --save-dev html-webpack-plugin
+</code></pre>
+
+<p>然后在我们的 <code>webpack.config.js</code> 文件中加入以下内容：</p>
+
+<pre><code class="language-js">const HTMLPlugin = require('html-webpack-plugin')
+
+module.exports = {
+  // ...
+  plugins: [
+    new HTMLPlugin()
+  ]
+}
+</code></pre>
+
+<p>这时我们再 <code>npm run build</code> 就会看到 <code>dist</code> 目录下生成了 index.html 文件，并且文件内引入了打包后的 JS 文件。</p>
+
     </div>
   </main>
 
