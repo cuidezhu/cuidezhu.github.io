@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Aug 2018 21:19:21 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Aug 2018 23:29:57 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS 中的 BFC（Block Formatting Context）的前因后果</title>
+      <link>http://ijs.me/2018/08/06/css-block-formatting-context/</link>
+      <pubDate>Mon, 06 Aug 2018 23:29:57 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/08/06/css-block-formatting-context/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>JavaScript 跨域问题解决方法</title>
