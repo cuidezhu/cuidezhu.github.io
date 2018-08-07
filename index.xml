@@ -26,7 +26,8 @@
       <pubDate>Sun, 05 Aug 2018 21:19:21 +0800</pubDate>
       
       <guid>http://ijs.me/2018/08/05/javascript-cross-domain-solution/</guid>
-      <description>以下情况会出现跨域：
+      <description>只要协议，域名，端口有任何一个不同，都被当作跨域。
+以下情况会出现跨域：
  协议不同，http://a.com 和 https://a.com  </description>
     </item>
     
