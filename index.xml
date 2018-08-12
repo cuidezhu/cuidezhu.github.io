@@ -6,10 +6,20 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Aug 2018 23:24:06 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Aug 2018 00:09:13 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>更改 Git 远程仓库地址</title>
+      <link>http://ijs.me/2018/08/13/change-git-remote-url/</link>
+      <pubDate>Mon, 13 Aug 2018 00:09:13 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/08/13/change-git-remote-url/</guid>
+      <description> 我们有时候需要更改 Git 仓库的远程地址，该如何操作呢？通常有下面几种方式：
+先删后加 git remote rm origin git remote add origin git@xxx  </description>
+    </item>
     
     <item>
       <title>JavaScript 异步操作的几种方式</title>
