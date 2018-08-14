@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Aug 2018 00:09:13 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Aug 2018 23:55:31 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>数字没三个数添加一个逗号</title>
+      <link>http://ijs.me/2018/08/14/number-add-comma/</link>
+      <pubDate>Tue, 14 Aug 2018 23:55:31 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/08/14/number-add-comma/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>更改 Git 远程仓库地址</title>
