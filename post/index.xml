@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Aug 2018 23:55:31 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 Aug 2018 23:56:48 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript DOM 事件</title>
+      <link>http://ijs.me/2018/08/15/javascript-dom-event/</link>
+      <pubDate>Wed, 15 Aug 2018 23:56:48 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/08/15/javascript-dom-event/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>数字没三个数添加一个逗号</title>
