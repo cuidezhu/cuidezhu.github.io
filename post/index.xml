@@ -44,7 +44,7 @@ git submodule add -b master git@github.com:cuidezhu/cuidezhu.github.io.git publi
     </item>
     
     <item>
-      <title>数字没三个数添加一个逗号</title>
+      <title>数字每三个数添加一个逗号</title>
       <link>http://ijs.me/2018/08/14/number-add-comma/</link>
       <pubDate>Tue, 14 Aug 2018 23:55:31 +0800</pubDate>
       
