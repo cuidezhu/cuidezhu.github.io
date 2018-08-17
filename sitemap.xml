@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/08/17/git-submodule/</loc>
+    <lastmod>2018-08-17T09:12:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ijs.me/2018/08/16/javascript-simulate-function-overloading/</loc>
+    <lastmod>2018-08-16T23:42:14+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/08/15/javascript-dom-event/</loc>
     <lastmod>2018-08-15T23:56:48+08:00</lastmod>
   </url>
@@ -279,7 +289,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-08-15T23:56:48+08:00</lastmod>
+    <lastmod>2018-08-17T09:12:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -290,7 +300,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-08-15T23:56:48+08:00</lastmod>
+    <lastmod>2018-08-17T09:12:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

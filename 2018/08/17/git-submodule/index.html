@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <title>Git 子模块踩过的坑</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122652961-1');
+  </script>
+
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>Git 子模块踩过的坑</h1>
+      <span class="blog-post-date">August 17, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        <p>Git 子模块允许你将一个 Git 仓库当作另外一个Git仓库的子目录。这允许你克隆另外一个仓库到你的项目中并且保持你的提交相对独立。</p>
+
+<p>我在一台电脑上配置好了 Git 子目录，也把 Git 子目录生成的配置文件 <code>.gitmodules</code> 提交到了 Github 上，当我在另一台电脑上 <code>clone</code> 下来上层目录时，确发现子模块不起作用。</p>
+
+<p>解决方法如下就是我们需要把根目录下（我这里是 <code>blog</code>）以前生成的 <code>.gitmodules</code> 删掉，然后把子目录（我这里是 <code>public</code>） 从 <code>.gitignore</code> 文件里删除，然后重新添加 Git 子模块，最后把子模块的目录（<code>public</code>）添加到上层目录下的 <code>.gitmodules</code> 文件里：</p>
+
+<p>比如我的博客系统的目录是 <code>blog</code> 目录，而生成的博客网站是 <code>blog</code> 目录下的 <code>public</code> 目录，我们已经在 Github 上建立了这两个远程仓库时，我们首先把上层目录 <code>blog</code> 对应的仓库 <code>clone</code> 到本地，我的博客系统是 hugo，当我运行 <code>hugo</code> 命令时，会在 <code>blog</code> 目录下生成一个 <code>public</code> 目录，这个下的文件需要提交到另外一个仓库来当作博客的根目录。这个 <code>public</code> 目录我们是不提交到 Github 上的</p>
+
+<p>我们删除以前生成的 <code>.gitmodules</code> 文件，把 <code>public</code> 从 <code>blog</code> 目录下的 <code>.gitmodules</code> 文件里删掉，然后使用以下命令重新添加子模块：</p>
+
+<pre><code class="language-zsh">git submodule add -b master git@github.com:cuidezhu/cuidezhu.github.io.git public
+</code></pre>
+
+<p>然后把子模块的目录（<code>public</code>）添加到上层目录下的 <code>.gitmodules</code> 文件里，这样我们就配置好子模块了，下次我们添加文章后重新运行 <code>hugo</code> 命令，就可以在 <code>blog</code> 和 <code>public</code> 下独立提交相关内容了。</p>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
