@@ -6,10 +6,21 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Aug 2018 23:54:12 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Aug 2018 19:14:56 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mac Linux 查看端口占用情况及关闭端口</title>
+      <link>http://ijs.me/2018/08/20/mac-linux-query-kill-port/</link>
+      <pubDate>Mon, 20 Aug 2018 19:14:56 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/08/20/mac-linux-query-kill-port/</guid>
+      <description>查看端口占用情况 lsof -i:端口号  比如：
+lsof -i:8081  输出如下：
+COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME node 44195 mac 20u IPv6 0xc2056b16e4568339 0t0 TCP *:sunproxyadmin (LISTEN) node 44195 mac 28u IPv6 0xc2056b16e456ab79 0t0 TCP localhost:sunproxyadmin-&amp;gt;localhost:56335 (ESTABLISHED) ReactNati 45104 mac 8u IPv6 0xc2056b16e456a5b9 0t0 TCP localhost:56335-&amp;gt;localhost:sunproxyadmin (ESTABLISHED) ReactNati 45104 mac 12u IPv6 0xc2056b16e456a5b9 0t0 TCP localhost:56335-&amp;gt;localhost:sunproxyadmin (ESTABLISHED)  关闭端口 kill -9 44195 kill -9 45104  执行上门两条命令，</description>
+    </item>
     
     <item>
       <title>React 组件间通信</title>
