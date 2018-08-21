@@ -6,10 +6,23 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Aug 2018 19:14:56 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Aug 2018 15:32:42 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>调试 React Native</title>
+      <link>http://ijs.me/2018/08/21/debug-react-native/</link>
+      <pubDate>Tue, 21 Aug 2018 15:32:42 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/08/21/debug-react-native/</guid>
+      <description>我们写 JavaScript 通常通过 console.log 来打印一些信息调试我们的程序，那么使用 React Native 开发移动 App 应该如何调试呢？
+如果我们是在 Xcode 中启动的模拟器，那么我们写的 console.log(&#39;test&#39;) 实际上是被打印到 Xcode 的 Debug 日志里，直接在 Xcode 里就能看到。
+如果我们是通过 react-native run-ios 来启动模拟器，在程序中写 console.log(&#39;test&#39;)，我们要怎么看到打印的信息呢？
+我们可以在模拟器界面，按 Command + D，点击 Debug JS Remotely，就会在浏览器里打开一个新的调试页面，在这个调试页面的 Console 里可以看到我们打印的信息。
+或者可以使用 console.warn() 直接在 App 内打印调试信息。</description>
+    </item>
     
     <item>
       <title>Mac Linux 查看端口占用情况及关闭端口</title>
