@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Aug 2018 22:56:22 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Aug 2018 23:40:58 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git 修改提交的用户名、邮箱和远程仓库地址</title>
+      <link>http://ijs.me/2018/08/23/git-modify-username-email-remote-url/</link>
+      <pubDate>Thu, 23 Aug 2018 23:40:58 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/08/23/git-modify-username-email-remote-url/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>终端实用的几个快捷键</title>
