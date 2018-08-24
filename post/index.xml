@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Aug 2018 23:40:58 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Aug 2018 23:58:06 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WebSocket 心跳重连</title>
+      <link>http://ijs.me/2018/08/24/websocket-reconnect/</link>
+      <pubDate>Fri, 24 Aug 2018 23:58:06 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/08/24/websocket-reconnect/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Git 修改提交的用户名、邮箱和远程仓库地址</title>
