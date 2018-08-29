@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Aug 2018 23:57:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Aug 2018 23:56:18 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>关于所见即所得（富文本）编辑器、HTML语义化和 Markdown 的思索</title>
+      <link>http://ijs.me/2018/08/29/wysiwyg-editor-semantic-html-markdown/</link>
+      <pubDate>Wed, 29 Aug 2018 23:56:18 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/08/29/wysiwyg-editor-semantic-html-markdown/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>HTML5 Contenteditable 属性</title>
