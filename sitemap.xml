@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/09/01/vim-macos-backspace/</loc>
+    <lastmod>2018-09-01T22:12:13+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/08/31/react-nginx-server-cors/</loc>
     <lastmod>2018-08-31T23:54:43+08:00</lastmod>
   </url>
@@ -354,7 +359,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-08-31T23:54:43+08:00</lastmod>
+    <lastmod>2018-09-01T22:12:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -365,7 +370,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-08-31T23:54:43+08:00</lastmod>
+    <lastmod>2018-09-01T22:12:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
