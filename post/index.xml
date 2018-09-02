@@ -6,10 +6,23 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Sep 2018 22:12:13 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 02 Sep 2018 23:34:25 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>为 create-react-app 项目添加 Sass 支持</title>
+      <link>http://ijs.me/2018/09/02/create-react-app-sass/</link>
+      <pubDate>Sun, 02 Sep 2018 23:34:25 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/09/02/create-react-app-sass/</guid>
+      <description>首先安装 node-sass-chokidar：
+yarn add node-sass-chokidar  然后在 package.json 中加入下面两条执行脚本：
+&amp;quot;build-css&amp;quot;: &amp;quot;node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/&amp;quot;, &amp;quot;watch-css&amp;quot;: &amp;quot;npm run build-css &amp;amp;&amp;amp; node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive&amp;quot;,  watch-css 会监控 src 目录下的所有的 .scss 文件，然后会把每一个 .scss 文件生成一个对应的 .css 文件，我们可以在组件中 import 对应的 .css 文件。另外我们需要在 .gitignore 文件中忽略 src 目录及其子目录下的 .css 文件 src/**/*.css。
+安装 npm-run-all 来同时执行 npm start 和 watch-css：
+yarn add npm-run-all  最后在 package.json 中删掉 start 和 build 这两条脚本，加入下面四条脚本（我的项目已 yarn eject）：</description>
+    </item>
     
     <item>
       <title>解决 macOS 下 Vim 的 退格键（backspace）不能用的问题</title>

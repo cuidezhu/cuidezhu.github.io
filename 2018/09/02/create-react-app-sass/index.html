@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <title>为 create-react-app 项目添加 Sass 支持</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122652961-1');
+  </script>
+
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>为 create-react-app 项目添加 Sass 支持</h1>
+      <span class="blog-post-date">September 2, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        <p>首先安装 <code>node-sass-chokidar</code>：</p>
+
+<pre><code class="language-zsh">yarn add node-sass-chokidar
+</code></pre>
+
+<p>然后在 <code>package.json</code> 中加入下面两条执行脚本：</p>
+
+<pre><code class="language-zsh">&quot;build-css&quot;: &quot;node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/&quot;,
+&quot;watch-css&quot;: &quot;npm run build-css &amp;&amp; node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive&quot;,
+</code></pre>
+
+<p><code>watch-css</code> 会监控 <code>src</code> 目录下的所有的 <code>.scss</code> 文件，然后会把每一个 <code>.scss</code> 文件生成一个对应的 <code>.css</code> 文件，我们可以在组件中 <code>import</code> 对应的 <code>.css</code> 文件。另外我们需要在 <code>.gitignore</code> 文件中忽略 <code>src</code> 目录及其子目录下的 <code>.css</code> 文件 <code>src/**/*.css</code>。</p>
+
+<p>安装 <code>npm-run-all</code> 来同时执行 <code>npm start</code> 和 <code>watch-css</code>：</p>
+
+<pre><code class="language-zsh">yarn add npm-run-all
+</code></pre>
+
+<p>最后在 <code>package.json</code> 中删掉 <code>start</code> 和 <code>build</code> 这两条脚本，加入下面四条脚本（我的项目已 <code>yarn eject</code>）：</p>
+
+<pre><code class="language-zsh">&quot;start&quot;: &quot;npm-run-all -p watch-css start-js&quot;,
+&quot;start-js&quot;: &quot;node scripts/start.js&quot;,
+&quot;build&quot;: &quot;npm-run-all build-css build-js&quot;,
+&quot;build-js&quot;: &quot;node scripts/build.js&quot;,
+</code></pre>
+
+<p>如果未执行过 <code>yarn eject</code>，则加入下面四条脚本：</p>
+
+<pre><code class="language-zsh">&quot;start-js&quot;: &quot;react-scripts start&quot;,
+&quot;start&quot;: &quot;npm-run-all -p watch-css start-js&quot;,
+&quot;build-js&quot;: &quot;react-scripts build&quot;,
+&quot;build&quot;: &quot;npm-run-all build-css build-js&quot;,
+</code></pre>
+
+<p>至此，就完成了 create-react-app 项目对 Sass 的支持。</p>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
