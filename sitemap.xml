@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/09/05/rxjs-tutorial/</loc>
+    <lastmod>2018-09-05T23:52:50+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/09/02/create-react-app-sass/</loc>
     <lastmod>2018-09-02T23:34:25+08:00</lastmod>
   </url>
@@ -364,7 +369,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-09-02T23:34:25+08:00</lastmod>
+    <lastmod>2018-09-05T23:52:50+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -375,7 +380,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-09-02T23:34:25+08:00</lastmod>
+    <lastmod>2018-09-05T23:52:50+08:00</lastmod>
     <priority>0</priority>
   </url>
   
