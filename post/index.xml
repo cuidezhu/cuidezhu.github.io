@@ -6,18 +6,12 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-<<<<<<< HEAD
-    <lastBuildDate>Fri, 31 Aug 2018 23:54:43 +0800</lastBuildDate>
-=======
     <lastBuildDate>Wed, 05 Sep 2018 23:52:50 +0800</lastBuildDate>
->>>>>>> 16b8383ca27dbf05867de659f6557ebc56c21d01
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-<<<<<<< HEAD
-=======
       <title>RxJS 介绍</title>
       <link>http://ijs.me/2018/09/05/rxjs-tutorial/</link>
       <pubDate>Wed, 05 Sep 2018 23:52:50 +0800</pubDate>
@@ -51,7 +45,6 @@ Vim 是 vi 编辑器的加强版，增加了很多功能，默认 set compatible
     </item>
     
     <item>
->>>>>>> 16b8383ca27dbf05867de659f6557ebc56c21d01
       <title>Nginx 解决本地开发启动 Server 跨域问题</title>
       <link>http://ijs.me/2018/08/31/react-nginx-server-cors/</link>
       <pubDate>Fri, 31 Aug 2018 23:54:43 +0800</pubDate>
@@ -61,11 +54,7 @@ Vim 是 vi 编辑器的加强版，增加了很多功能，默认 set compatible
     </item>
     
     <item>
-<<<<<<< HEAD
-      <title>TypeScript QuickStart</title>
-=======
       <title>TypeScript 上手</title>
->>>>>>> 16b8383ca27dbf05867de659f6557ebc56c21d01
       <link>http://ijs.me/2018/08/30/typescript-quickstart/</link>
       <pubDate>Thu, 30 Aug 2018 23:36:45 +0800</pubDate>
       

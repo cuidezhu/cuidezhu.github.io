@@ -3,8 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-<<<<<<< HEAD
-=======
     <loc>http://ijs.me/2018/09/05/rxjs-tutorial/</loc>
     <lastmod>2018-09-05T23:52:50+08:00</lastmod>
   </url>
@@ -20,7 +18,6 @@
   </url>
   
   <url>
->>>>>>> 16b8383ca27dbf05867de659f6557ebc56c21d01
     <loc>http://ijs.me/2018/08/31/react-nginx-server-cors/</loc>
     <lastmod>2018-08-31T23:54:43+08:00</lastmod>
   </url>
@@ -372,11 +369,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-<<<<<<< HEAD
-    <lastmod>2018-08-31T23:54:43+08:00</lastmod>
-=======
     <lastmod>2018-09-05T23:52:50+08:00</lastmod>
->>>>>>> 16b8383ca27dbf05867de659f6557ebc56c21d01
     <priority>0</priority>
   </url>
   
@@ -387,11 +380,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-<<<<<<< HEAD
-    <lastmod>2018-08-31T23:54:43+08:00</lastmod>
-=======
     <lastmod>2018-09-05T23:52:50+08:00</lastmod>
->>>>>>> 16b8383ca27dbf05867de659f6557ebc56c21d01
     <priority>0</priority>
   </url>
   
