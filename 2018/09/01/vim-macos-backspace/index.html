@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
-  <title>TypeScript 上手</title>
+  <title>解决 macOS 下 Vim 的 退格键（backspace）不能用的问题</title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
   
@@ -21,11 +21,20 @@
 
   <main class="container" role="main">
     <div class="article-head">
-      <h1>TypeScript 上手</h1>
-      <span class="blog-post-date">August 30, 2018</span>
+      <h1>解决 macOS 下 Vim 的 退格键（backspace）不能用的问题</h1>
+      <span class="blog-post-date">September 1, 2018</span>
     </div>
     <div class="blog-post-content">
-        
+        <p>发现升级到 Vim 8 之后，我是在 iTerm2 里打开的终端里的 Vim，发现退格键不能正常使用了，解决方法如下，我们要在 Vim 的配置文件 <code>.vimrc</code> 中加入下面两项配置：</p>
+
+<pre><code class="language-zsh">set nocompatible
+set backspace=indent,eol,start
+</code></pre>
+
+<p>然后在终端执行 <code>source ~/.vimrc</code> 使修改的配置立即生效。这样就解决了退格键不起作用的问题。</p>
+
+<p>Vim 是 vi 编辑器的加强版，增加了很多功能，默认 <code>set compatible</code> 是与 vi 兼容，为了兼容失去了很多 Vim 扩展的功能。<code>set nocompatible</code> 是关闭兼容模式，由于这个选项是最基础的配置，会连带很多其它选项的变动。</p>
+
     </div>
   </main>
 

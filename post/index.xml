@@ -6,12 +6,52 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+<<<<<<< HEAD
     <lastBuildDate>Fri, 31 Aug 2018 23:54:43 +0800</lastBuildDate>
+=======
+    <lastBuildDate>Wed, 05 Sep 2018 23:52:50 +0800</lastBuildDate>
+>>>>>>> 16b8383ca27dbf05867de659f6557ebc56c21d01
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
+=======
+      <title>RxJS 介绍</title>
+      <link>http://ijs.me/2018/09/05/rxjs-tutorial/</link>
+      <pubDate>Wed, 05 Sep 2018 23:52:50 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/09/05/rxjs-tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>为 create-react-app 项目添加 Sass 支持</title>
+      <link>http://ijs.me/2018/09/02/create-react-app-sass/</link>
+      <pubDate>Sun, 02 Sep 2018 23:34:25 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/09/02/create-react-app-sass/</guid>
+      <description>首先安装 node-sass-chokidar：
+yarn add node-sass-chokidar  然后在 package.json 中加入下面两条执行脚本：
+&amp;quot;build-css&amp;quot;: &amp;quot;node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/&amp;quot;, &amp;quot;watch-css&amp;quot;: &amp;quot;npm run build-css &amp;amp;&amp;amp; node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive&amp;quot;,  watch-css 会监控 src 目录下的所有的 .scss 文件，然后会把每一个 .scss 文件生成一个对应的 .css 文件，我们可以在组件中 import 对应的 .css 文件。另外我们需要在 .gitignore 文件中忽略 src 目录及其子目录下的 .css 文件 src/**/*.css。
+安装 npm-run-all 来同时执行 npm start 和 watch-css：
+yarn add npm-run-all  最后在 package.json 中删掉 start 和 build 这两条脚本，加入下面四条脚本（我的项目已 yarn eject）：</description>
+    </item>
+    
+    <item>
+      <title>解决 macOS 下 Vim 的 退格键（backspace）不能用的问题</title>
+      <link>http://ijs.me/2018/09/01/vim-macos-backspace/</link>
+      <pubDate>Sat, 01 Sep 2018 22:12:13 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/09/01/vim-macos-backspace/</guid>
+      <description>发现升级到 Vim 8 之后，我是在 iTerm2 里打开的终端里的 Vim，发现退格键不能正常使用了，解决方法如下，我们要在 Vim 的配置文件 .vimrc 中加入下面两项配置：
+set nocompatible set backspace=indent,eol,start  然后在终端执行 source ~/.vimrc 使修改的配置立即生效。这样就解决了退格键不起作用的问题。
+Vim 是 vi 编辑器的加强版，增加了很多功能，默认 set compatible 是与 vi 兼容，为了兼容失去了很多 Vim 扩展的功能。set nocompatible 是关闭兼容模式，由于这个选项是最基础的配置，会连带很多其它选项的变动。</description>
+    </item>
+    
+    <item>
+>>>>>>> 16b8383ca27dbf05867de659f6557ebc56c21d01
       <title>Nginx 解决本地开发启动 Server 跨域问题</title>
       <link>http://ijs.me/2018/08/31/react-nginx-server-cors/</link>
       <pubDate>Fri, 31 Aug 2018 23:54:43 +0800</pubDate>
@@ -21,7 +61,11 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>TypeScript QuickStart</title>
+=======
+      <title>TypeScript 上手</title>
+>>>>>>> 16b8383ca27dbf05867de659f6557ebc56c21d01
       <link>http://ijs.me/2018/08/30/typescript-quickstart/</link>
       <pubDate>Thu, 30 Aug 2018 23:36:45 +0800</pubDate>
       
