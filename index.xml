@@ -6,10 +6,28 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Sep 2018 23:52:50 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 Sep 2018 23:36:15 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React 单页面应用登陆管理</title>
+      <link>http://ijs.me/2018/09/07/react-spa-login/</link>
+      <pubDate>Fri, 07 Sep 2018 23:36:15 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/09/07/react-spa-login/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>判断 Api 返回数据（对象，数组）为空的方法</title>
+      <link>http://ijs.me/2018/09/06/api-data-undefined/</link>
+      <pubDate>Thu, 06 Sep 2018 22:28:24 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/09/06/api-data-undefined/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>RxJS 介绍</title>
