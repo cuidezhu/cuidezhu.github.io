@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Sep 2018 17:02:23 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Sep 2018 23:55:39 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android 布局方式</title>
+      <link>http://ijs.me/2018/09/11/android-layout/</link>
+      <pubDate>Tue, 11 Sep 2018 23:55:39 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/09/11/android-layout/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>React Router V4 在 URL 中 传递和获取 &#39;?sort=name&#39; 形式的值</title>
