@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <title>修改并发布 node_modules 包</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122652961-1');
+  </script>
+
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>修改并发布 node_modules 包</h1>
+      <span class="blog-post-date">September 13, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        <p>如果我们要修改引用的某个 npm 包该怎么做呢，如果直接去修改 node_modules 下的代码，因为我们不应该把 node_modules 目录传到 Git 上，所以我们改了别人安装依赖时还是没修改过的代码。合理的做法是什么呢？</p>
+
+<p>我们首先应该在 GitHub 上 fork 一份要修改的源代码，然后 clone 到我们本地，进行我们所需的修改，把修改提交到 GitHub 上，由于 npm 可以直接从 GitHub 上安装包，所以我们可以执行 <code>npm install https://github.com/&lt;username&gt;/&lt;repository&gt;/tarball/master</code> 来安装。另外我们还可以把我们修改后的包发布到 npm 上，这样别人也可以直接从 npm 源安装。</p>
+
+<p>由于我们通常会把源换成淘宝源来获取更快的安装速度，所以我们要发布包的话需要先把源改回到官方源：</p>
+
+<pre><code class="language-zsh">npm config set registry https://registry.npmjs.org/
+</code></pre>
+
+<p>然后如果你已经有 npm 账户了，执行 <code>npm login</code> 来登录；如果没有账户，就执行 <code>npm adduser</code> 来创建账户。</p>
+
+<p>可以执行 <code>npm whoami</code> 来查看你是用哪个账户登录的。</p>
+
+<p>我们的 <code>package.json</code> 里的 <code>name</code> 字段表示包名，需要我们取一个别人没有用过的包名，并且不能和别人的太像，修改好代码后执行 <code>npm publish</code> 来发布你的包，这时你就可以在 <a href="https://www.npmjs.com">https://www.npmjs.com</a> 搜索到你刚发布的包了，并且过一会儿也可以在 <a href="https://npm.taobao.org">淘宝 NPM 镜像源</a> 上搜索到你发布的包了，可以像其他人发布的包那样正常使用。</p>
+
+<p>我们发布完我们的包后，可以把 npm 源改回淘宝源：</p>
+
+<pre><code class="language-zsh">npm config set registry https://registry.npm.taobao.org
+</code></pre>
+
+<p>这样我们和别人都可以用我们修改过后的 npm 包了。</p>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
