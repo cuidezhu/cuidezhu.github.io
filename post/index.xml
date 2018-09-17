@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Sep 2018 14:54:58 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Sep 2018 22:44:28 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MobX 用法</title>
+      <link>http://ijs.me/2018/09/16/mobx-usage/</link>
+      <pubDate>Sun, 16 Sep 2018 22:44:28 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/09/16/mobx-usage/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>修改并发布 npm 包</title>
