@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Sep 2018 22:44:28 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Sep 2018 23:37:46 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git 解决冲突</title>
+      <link>http://ijs.me/2018/09/17/git-conflict-fixed/</link>
+      <pubDate>Mon, 17 Sep 2018 23:37:46 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/09/17/git-conflict-fixed/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>MobX 用法</title>
