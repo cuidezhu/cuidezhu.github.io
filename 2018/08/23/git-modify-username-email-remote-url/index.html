@@ -25,7 +25,20 @@
       <span class="blog-post-date">August 23, 2018</span>
     </div>
     <div class="blog-post-content">
-        
+        <p>Git 修改当前项目的用户名的命令：<code>git config user.name 你的目标用户名;</code></p>
+
+<p>Git 修改当前项目提交邮箱的命令：<code>git config user.email 你的目标邮箱名;</code></p>
+
+<p>改完后进入项目的 <code>.git</code> 文件夹，我们可以发现 <code>config</code> 文件已经加上了我们设置的 <code>user</code> 信息，我们也可以编辑这个文件来修改用户名和密码。</p>
+
+<p>Git 修改全局的用户名和邮箱的命令为：</p>
+
+<pre><code class="language-zsh">git config  --global user.name 你的目标用户名；
+git config  --global user.email 你的目标邮箱名;
+</code></pre>
+
+<p>也可以编辑全局的 .gitconfig 文件 <code>vi ~/.gitconfig</code> 来修改。</p>
+
     </div>
   </main>
 

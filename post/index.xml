@@ -228,7 +228,11 @@ Vim 是 vi 编辑器的加强版，增加了很多功能，默认 set compatible
       <pubDate>Thu, 23 Aug 2018 23:40:58 +0800</pubDate>
       
       <guid>http://ijs.me/2018/08/23/git-modify-username-email-remote-url/</guid>
-      <description></description>
+      <description>Git 修改当前项目的用户名的命令：git config user.name 你的目标用户名;
+Git 修改当前项目提交邮箱的命令：git config user.email 你的目标邮箱名;
+改完后进入项目的 .git 文件夹，我们可以发现 config 文件已经加上了我们设置的 user 信息，我们也可以编辑这个文件来修改用户名和密码。
+Git 修改全局的用户名和邮箱的命令为：
+git config --global user.name 你的目标用户名； git config --global user.email 你的目标邮箱名;  也可以编辑全局的 .gitconfig 文件 vi ~/.gitconfig 来修改。</description>
     </item>
     
     <item>
