@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/09/19/go-environment/</loc>
+    <lastmod>2018-09-19T13:34:41+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/09/18/js-exclamation-point/</loc>
     <lastmod>2018-09-18T16:21:23+08:00</lastmod>
   </url>
@@ -424,7 +429,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-09-18T16:21:23+08:00</lastmod>
+    <lastmod>2018-09-19T13:34:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -435,7 +440,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-09-18T16:21:23+08:00</lastmod>
+    <lastmod>2018-09-19T13:34:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   

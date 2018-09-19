@@ -6,10 +6,26 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Sep 2018 16:21:23 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Sep 2018 13:34:41 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go 环境配置</title>
+      <link>http://ijs.me/2018/09/19/go-environment/</link>
+      <pubDate>Wed, 19 Sep 2018 13:34:41 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/09/19/go-environment/</guid>
+      <description>Go 安装 首先我们来安装 Go，Go 有多种方法安装:
+源码安装 Go 1.5 彻底移除 C 代码，Runtime、Compiler、Linker 均由 Go 编写，实现自举，所以我们不再需要先安装 C 编译器，直接去官网找到相应的 goVERSION.src.tar.gz 下载源码，解压到 $HOME 目录，然后执行:
+cd go/src ./all.bash  然后我们需要设置环境变量，可以把下面的命令写进 .bashrc 或者 .zshrc 里面：
+export GOPATH=$HOME/gopath export PATH=$PATH:$HOME/go/bin:$GOPATH/bin  Go标准包安装 但是我们最好通过 Go 标准包安装，直接下载响应系统的安装包，直接点下一步就行了。
+第三方工具安装 我们也可以通过 Homebrew 之类的第三方工具安装：
+brew update &amp;amp;&amp;amp; brew upgrade brew install go  GOPATH 和工作空间 GOPATH 从 go 1.8 开始，GOPATH 环境变量现在有一个默认值，在 Unix 上默认为 $HOME/go，如果 $HOME 目录下没有 go 这个目录则新建。
+$GOPATH 目录约定有三个子目录：
+ src 存放源代码（比如：.</description>
+    </item>
     
     <item>
       <title>JS 双感叹号 (!!) 作用</title>

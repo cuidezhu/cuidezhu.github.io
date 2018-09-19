@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <title>Go 环境配置</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122652961-1');
+  </script>
+
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>Go 环境配置</h1>
+      <span class="blog-post-date">September 19, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<h1 id="go-安装">Go 安装</h1>
+
+<p>首先我们来安装 Go，Go 有多种方法安装:</p>
+
+<h2 id="源码安装">源码安装</h2>
+
+<p>Go 1.5 彻底移除 C 代码，Runtime、Compiler、Linker 均由 Go 编写，实现自举，所以我们不再需要先安装 C 编译器，直接去官网找到相应的 <code>goVERSION.src.tar.gz</code> 下载源码，解压到 <code>$HOME</code> 目录，然后执行:</p>
+
+<pre><code class="language-zsh">cd go/src
+./all.bash
+</code></pre>
+
+<p>然后我们需要设置环境变量，可以把下面的命令写进 <code>.bashrc</code> 或者 <code>.zshrc</code> 里面：</p>
+
+<pre><code class="language-zsh">export GOPATH=$HOME/gopath
+export PATH=$PATH:$HOME/go/bin:$GOPATH/bin
+</code></pre>
+
+<h2 id="go标准包安装">Go标准包安装</h2>
+
+<p>但是我们最好通过 Go 标准包安装，直接下载响应系统的安装包，直接点下一步就行了。</p>
+
+<h2 id="第三方工具安装">第三方工具安装</h2>
+
+<p>我们也可以通过 Homebrew 之类的第三方工具安装：</p>
+
+<pre><code class="language-zsh">brew update &amp;&amp; brew upgrade
+brew install go
+</code></pre>
+
+<h1 id="gopath-和工作空间">GOPATH 和工作空间</h1>
+
+<h2 id="gopath">GOPATH</h2>
+
+<p>从 go 1.8 开始，GOPATH 环境变量现在有一个默认值，在 Unix 上默认为 $HOME/go，如果 <code>$HOME</code> 目录下没有 <code>go</code> 这个目录则新建。</p>
+
+<p><code>$GOPATH</code> 目录约定有三个子目录：</p>
+
+<ul>
+<li>src 存放源代码（比如：.go .c .h .s等）</li>
+<li>pkg 编译后生成的文件（比如：.a）</li>
+<li>bin 编译后生成的可执行文件</li>
+</ul>
+
+<h2 id="代码结构">代码结构</h2>
+
+<p>GOPATH 下的 src 目录就是开发程序的主要目录，所有的源码都是放在这个目录下面，我们一般一个目录就是一个项目，例如: <code>$GOPATH/src/mymath</code> 表示 mymath 这个应用包或者可执行应用，这个根据 package 是 main 还是其他来决定，main 的话就是可执行应用，其他的话就是应用包。</p>
+
+<p>所以当新建应用或者一个代码包时都是在 src 目录下新建一个文件夹，文件夹名称一般是代码包名称。</p>
+
+<h2 id="编译应用">编译应用</h2>
+
+<p>如果是新建的是应用包，源码开头是 <code>package 包名</code>，应用包有两种方式安装：</p>
+
+<ol>
+<li>只要进入对应的应用包目录，然后执行go install，就可以安装了</li>
+<li>在任意的目录执行如下代码go install mymath</li>
+</ol>
+
+<p>安装完之后，我们可以进入如下目录</p>
+
+<pre><code class="language-zsh">cd $GOPATH/pkg/${GOOS}_${GOARCH}
+//可以看到如下文件
+mymath.a
+</code></pre>
+
+<p>调用应用包的方法是可以在可执行应用里直接 <code>import</code>：</p>
+
+<pre><code class="language-zsh">package main
+
+import (
+  &quot;mymath&quot;
+  &quot;fmt&quot;
+)
+
+func main() {
+  fmt.Printf(&quot;Hello, world.  Sqrt(2) = %v\n&quot;, mymath.Sqrt(2))
+}
+</code></pre>
+
+<p>如何编译程序呢？进入该应用目录，然后执行go build，那么在该目录下面会生成一个mathapp的可执行文件</p>
+
+<pre><code class="language-zsh">./mathapp
+</code></pre>
+
+<p>安装该应用，进入该目录执行go install,那么在$GOPATH/bin/下增加了一个可执行文件mathapp。</p>
+
+<h2 id="获取远程包">获取远程包</h2>
+
+<pre><code class="language-zsh">go get github.com/astaxie/beedb
+</code></pre>
+
+<p>go get 本质上可以理解为首先第一步是通过源码工具 clone 代码到 src 下面，然后执行 <code>go install</code></p>
+
+<h1 id="go-命令">Go 命令</h1>
+
+<p>直接在终端键入 <code>go</code> 可以看到 Go 支持的完整命令，我们常用以下的几条命令：</p>
+
+<ol>
+<li><code>go build</code> 用于编译代码；
+
+<ul>
+<li>如果是普通包，当你执行 <code>go build</code> 之后，它不会产生任何文件。如果你需要在$GOPATH/pkg下生成相应的文件，那就得执行go install。</li>
+<li>如果是 main 包，当你执行 <code>go build</code> 之后，它就会在当前目录下生成一个可执行文件。如果你需要在 <code>$GOPATH/bin</code> 下生成相应的文件，需要执行 <code>go install</code>，或者使用 <code>go build -o 路径/a.exe</code>。</li>
+</ul></li>
+<li><code>go clean</code> 用来移除当前源码包和关联源码包里面编译生成的文件，一般利用这个命令清除编译文件，然后 GitHub 提交源码；</li>
+<li><code>go fmt</code> 可以帮你格式化你写好的代码文件，使你写代码的时候不需要关心格式，你只需要在写完之后执行 <code>go fmt &lt;文件名&gt;.go</code>，你的代码就被修改成了标准格式；</li>
+<li><code>go get</code> 用来动态获取远程代码包；</li>
+<li><code>go install</code> 这个命令在内部实际上分成了两步操作：第一步是生成结果文件(可执行文件或者.a包)，第二步会把编译好的结果移到 $GOPATH/pkg 或者 $GOPATH/bin；</li>
+<li><code>godoc</code> 在命令行执行 godoc -http=:端口号 比如godoc -http=:8080。然后在浏览器中打开127.0.0.1:8080，你将会看到一个golang.org的本地copy版本，<code>godoc</code> 后面还可以跟上包名函数之类的，不过我不经常用；</li>
+</ol>
+
+<p>go 还提供其它一些工具命令：</p>
+
+<pre><code class="language-zsh">go version 查看go当前的版本
+go env 查看当前go的环境变量
+go list 列出当前全部安装的package
+go run 编译并运行Go程序
+</code></pre>
+
+<h1 id="开发工具">开发工具</h1>
+
+<h2 id="vs-code">VS Code</h2>
+
+<p>我是在 VS Code 里写 Go 代码，首先要在扩展里搜索 Go 这个插件并安装，然后在首选项-&gt;设置-&gt;用户设置-&gt;扩展-&gt;找到 Go configuration 打开 settings.json，在这个文件中加入下面这些配置项：</p>
+
+<pre><code class="language-json">{
+  &quot;go.buildOnSave&quot;: true,
+  &quot;go.lintOnSave&quot;: true,
+  &quot;go.vetOnSave&quot;: true,
+  &quot;go.buildFlags&quot;: [],
+  &quot;go.lintFlags&quot;: [],
+  &quot;go.vetFlags&quot;: [],
+  &quot;go.coverOnSave&quot;: false,
+  &quot;go.useCodeSnippetsOnFunctionSuggest&quot;: false,
+  &quot;go.formatOnSave&quot;: true,
+  //goimports
+  &quot;go.formatTool&quot;: &quot;goreturns&quot;,
+}
+</code></pre>
+
+<p>然后打开命令行，利用新版 Shadowsocks 选项里的 <code>Copy HTTP Proxy Shell Export Line</code> 来在命令行走代理，把复制到剪贴板的 Export 命令粘贴到命令行里执行，然后再执行如下几条命令来安装依赖包支持：</p>
+
+<pre><code class="language-zsh">go get -u -v github.com/nsf/gocode
+go get -u -v github.com/rogpeppe/godef
+go get -u -v github.com/zmb3/gogetdoc
+go get -u -v github.com/golang/lint/golint
+go get -u -v github.com/lukehoban/go-outline
+go get -u -v sourcegraph.com/sqs/goreturns
+go get -u -v golang.org/x/tools/cmd/gorename
+go get -u -v github.com/tpng/gopkgs
+go get -u -v github.com/newhook/go-symbols
+go get -u -v golang.org/x/tools/cmd/guru
+</code></pre>
+
+<p>至此，我们就配置好了 Go 开发环境。</p>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
