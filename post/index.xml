@@ -17,7 +17,7 @@
       <pubDate>Thu, 20 Sep 2018 13:47:52 +0800</pubDate>
       
       <guid>http://ijs.me/2018/09/20/create-react-app-proxy/</guid>
-      <description>我们通过 create-react-app 新建项目在本地开发时，通常需求请求数据 API，而数据 API 大多数是会遇到跨域问题的，在线上生产环境我们可以通过 Nginx 配置反向代理到我们 build 之后的项目目录，可是在本地应该怎么解决跨域问题了，当然我们在本地也可以配置 Nginx 反向代理了，但是我们的 create-react-app 在本地开发时已经开了一个端口启动了一个 devServer 了，所以我们配置 Nginx 反向代理的话就需要再配置一个端口，把这个端口的反向代理到 create-react-app 启动的这个端口上，这种方法比较繁琐，而且还可能会遇到问题。
+      <description>我们通过 create-react-app 新建项目在本地开发时，通常需求请求数据 API，而数据 API 大多数是会遇到跨域问题的，在线上生产环境我们可以通过 Nginx 配置反向代理到我们 build 之后的项目目录，可是在本地应该怎么解决跨域问题了，当然我们在本地也可以配置 Nginx 反向代理了，但是我们的 create-react-app 在本地开发时已经开了一个端口启动了一个 devServer 了，所以我们配置 Nginx 反向代理的话就需要再配置一个端口，把这个端口的反向代理到 create-react-app 启动的这个端口上，以前的一篇文章 Nginx 解决本地开发启动 Server 跨域问题 详细讲了这种方法，这种方法比较繁琐，而且还可能会遇到问题。
 create-react-app 为我们提供一个可配置的 proxy 选项，我们只需要在 package.json 文件里加入这个字段并正确配置就可以了。
 当我们所有的请求都只是请求同一个域名的 API 时，我们这样写：
 &amp;quot;proxy&amp;quot;: &amp;quot;https://api-domain.com&amp;quot;  比如我们使用 fetch 发请求时，devServer 就会把本地的请求都代理到 proxy 指定的域名 https://api-domain.com 上，那么如果我们项目请求 API 有多个域名怎么办呢？
