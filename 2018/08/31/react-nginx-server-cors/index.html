@@ -25,7 +25,24 @@
       <span class="blog-post-date">August 31, 2018</span>
     </div>
     <div class="blog-post-content">
-        
+        <p>当我们本地使用开发项目启动了一个 server 后依然打算用 Nginx 反向代理解决 API 跨越问题时，可以这样做：比如我们本地项目的 server 启动的端口是 8000，没有跨域请求 API 时，我们直接在本地访问 <a href="http://localhost:8000/">http://localhost:8000/</a> 来访问我们的项目，当我们遇到跨域问题该怎么办呢，我们在服务器上一般通过 Nginx 反向代理到我们项目 <code>build</code> 之后的路径上，那么在我们本地应该怎么做呢？我们在本地 Nginx 可以再监听一个额外的端口，比如 8001，把这个端口的 <code>/</code> 请求代理到我们的 <code>http://localhost:8000/</code> 上，把 <code>/api</code> 请求代理到我们的 API 域名上，Nginx 配置如下：</p>
+
+<pre><code>server {
+  listen 8001;
+  server_name localhost;
+  location / {
+    proxy_pass http://localhost:8000;
+  }
+  location /api/ {
+    proxy_pass http://api-domain.com;
+  }
+}
+</code></pre>
+
+<p>这样我们平时开发就访问 <code>http://localhost:8001/</code> 来查看我们的项目。</p>
+
+<p>当我们使用 webpack 或者 webpack 基础上构建的脚手架时，更好的办法是使用 <code>proxy</code> 字段来在本地解决 API 跨域的问题，比如我的另一篇文章 <a href="https://ijs.me/2018/09/20/create-react-app-proxy/">Create React App 通过 Proxy 在本地跨域请求 API</a> 介绍了使用 create-react-app 这个使用了 webpack 的脚手架配置 API 代理的方法。</p>
+
     </div>
   </main>
 
