@@ -25,7 +25,25 @@
       <span class="blog-post-date">August 14, 2018</span>
     </div>
     <div class="blog-post-content">
-        
+        <pre><code class="language-js">function addCommaNumber(num) {
+  let newStr = &quot;&quot;;
+  let numStr = num.toString();
+  let count = 1
+
+  for (let i = numStr.length - 1; i &gt;= 0; i--) {
+    if (count % 3 === 0 &amp;&amp; i !== 0) {
+      newStr = ',' + numStr.charAt(i) + newStr;
+    } else {
+      newStr = numStr.charAt(i) + newStr;
+    }
+
+    count++;
+  }
+
+  return newStr;
+}
+</code></pre>
+
     </div>
   </main>
 

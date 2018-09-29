@@ -423,7 +423,7 @@ git submodule add -b master git@github.com:cuidezhu/cuidezhu.github.io.git publi
       <pubDate>Tue, 14 Aug 2018 23:55:31 +0800</pubDate>
       
       <guid>http://ijs.me/2018/08/14/number-add-comma/</guid>
-      <description></description>
+      <description>function addCommaNumber(num) { let newStr = &amp;quot;&amp;quot;; let numStr = num.toString(); let count = 1 for (let i = numStr.length - 1; i &amp;gt;= 0; i--) { if (count % 3 === 0 &amp;amp;&amp;amp; i !== 0) { newStr = &#39;,&#39; + numStr.charAt(i) + newStr; } else { newStr = numStr.charAt(i) + newStr; } count++; } return newStr; }  </description>
     </item>
     
     <item>
