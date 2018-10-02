@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Oct 2018 23:58:49 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 02 Oct 2018 23:57:23 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript中 &amp; 和 &amp;&amp; 的不同</title>
+      <link>http://ijs.me/2018/10/02/javascript-and-bitwise-difference/</link>
+      <pubDate>Tue, 02 Oct 2018 23:57:23 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/10/02/javascript-and-bitwise-difference/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Nginx 反向代理配置</title>
