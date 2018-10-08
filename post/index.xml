@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Oct 2018 23:40:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Oct 2018 00:00:03 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Eclipse Usage</title>
+      <link>http://ijs.me/2018/10/08/eclipse-usage/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:03 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/10/08/eclipse-usage/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>初识容器与 Docker</title>
@@ -36,7 +45,8 @@ yarn global add create-react-app  </description>
       <pubDate>Fri, 05 Oct 2018 23:59:27 +0800</pubDate>
       
       <guid>http://ijs.me/2018/10/05/java-foundation/</guid>
-      <description></description>
+      <description> Java 版本 Java 主要分为三个版本：
+ Java SE Java SE（即 Java Platform, Standard Edition）是 Java 的标准版，主要用于桌面应用程序的开发，同时也是 Java 的基础、JDBC（Java 数据库连接性）操作、I/O（输入/输出）网络通信、多线程等技术。 Java EE Java EE（即 Java Platform, Enterprise Edition）是 Java 的企业版，主要用于开发企业级分布式网络程序，如电子商务网站和 ERP（企业资源规划）系统，其核心是 EJB（企业 Java 组件模型）。 Java ME Java ME 主要应用于嵌入式系统开发。  </description>
     </item>
     
     <item>
