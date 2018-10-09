@@ -48,12 +48,16 @@ Run `npm config delete prefix` or `nvm use --delete-prefix v8.9.1 --silent` to u
 <pre><code class="language-zsh">rm -R /usr/local/bin/npm /usr/local/lib/node_modules/npm/bin/npm-cli.js
 </code></pre>
 
-<p>随后发现终端又报另一个兼容性问题，因为我在使用 nvm 之前用 Homebrew 安装过 no de，所以我们需要删除之前使用 Homebrew 安装的 node：</p>
+<p>随后发现终端又报另一个兼容性问题，因为我在使用 nvm 之前用 Homebrew 安装过 node，所以我们需要删除之前使用 Homebrew 安装的 node：</p>
 
 <pre><code class="language-zsh">brew uninstall --ignore-dependencies node
 </code></pre>
 
 <p>然后在 VS Code 里启动终端就不会报 &ldquo;prefix&rdquo; 相关的错误了。</p>
+
+<blockquote>
+<p>参考文档：<a href="https://github.com/Microsoft/vscode-docs/blob/master/docs/editor/integrated-terminal.md#why-is-nvm-complaining-about-a-prefix-option-when-the-integrated-terminal-is-launched">vscode-docs</a></p>
+</blockquote>
 
     </div>
   </main>
