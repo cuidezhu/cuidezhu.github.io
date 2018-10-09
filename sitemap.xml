@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/10/09/vs-code-terminal-nvm-complaining-prefix-option/</loc>
+    <lastmod>2018-10-09T11:05:28+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/10/08/eclipse-usage/</loc>
     <lastmod>2018-10-08T00:00:03+08:00</lastmod>
   </url>
@@ -514,7 +519,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-10-08T00:00:03+08:00</lastmod>
+    <lastmod>2018-10-09T11:05:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -525,7 +530,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-10-08T00:00:03+08:00</lastmod>
+    <lastmod>2018-10-09T11:05:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   

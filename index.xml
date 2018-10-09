@@ -6,10 +6,24 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Oct 2018 00:00:03 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Oct 2018 11:05:28 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>解决 VS Code 终端启动时 nvm 提示 prefix option 错误</title>
+      <link>http://ijs.me/2018/10/09/vs-code-terminal-nvm-complaining-prefix-option/</link>
+      <pubDate>Tue, 09 Oct 2018 11:05:28 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/10/09/vs-code-terminal-nvm-complaining-prefix-option/</guid>
+      <description>升级 macOS Mojave 新系统后，发现在 VS Code 启动终端时，每次都会提示 &amp;ldquo;prefix&amp;rdquo; 错误：
+nvm is not compatible with the npm config &amp;quot;prefix&amp;quot; option: currently set to &amp;quot;/usr/local&amp;quot; Run `npm config delete prefix` or `nvm use --delete-prefix v8.9.1 --silent` to unset it  解决办法：
+首先需要找到老的 node_modules 的位置：
+ls -la /usr/local/bin | grep npm  终端会列出路径：
+lrwxr-xr-x 1 mac admin 46 8 29 15:40 npx -&amp;gt; /usr/local/lib/node_modules/npm/bin/npx-cli.js  然后我们删除这些文件：
+rm -R /usr/local/bin/npm /usr/local/lib/node_modules/npm/bin/npm-cli.js  随后发现终端又报另一个兼容性问题，因为我在使用 nvm 之前用 Homebrew 安装过 no de，所以我们需要删除之前使用 Homebrew 安装的 node：</description>
+    </item>
     
     <item>
       <title>Eclipse Usage</title>
