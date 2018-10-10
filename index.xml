@@ -6,10 +6,21 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Oct 2018 11:05:28 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Oct 2018 23:54:59 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git 忽略已经提交的文件</title>
+      <link>http://ijs.me/2018/10/10/git-update-index/</link>
+      <pubDate>Wed, 10 Oct 2018 23:54:59 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/10/10/git-update-index/</guid>
+      <description>对于已经提交的文件，即使我们把这个文件(或文件夹)加到了 .gitignore 里，Git还是会追踪该文件。
+所以我们可以用如下这条命令来取消追踪 PATH 文件：
+git update-index --assume-unchanged PATH  PATH为要忽略的文件夹或文件，文件夹的末尾需要加 / 。</description>
+    </item>
     
     <item>
       <title>解决 VS Code 终端启动时 nvm 提示 prefix option 错误</title>
