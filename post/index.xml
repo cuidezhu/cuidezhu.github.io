@@ -6,10 +6,31 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Oct 2018 23:59:32 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 16 Oct 2018 16:32:10 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C 语言指针变量</title>
+      <link>http://ijs.me/2018/10/16/c-pointer-variable/</link>
+      <pubDate>Tue, 16 Oct 2018 16:32:10 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/10/16/c-pointer-variable/</guid>
+      <description>指针的概念 我们知道，计算机中所有的数据都必须放在内存中，为了正确访问这些数据，我们必须为每个字节编上号码，每个字节的编号是唯一的，根据编号可以准确的找到某个内存。
+我们将内存中字节的编号称为地址（Address）或指针（Pointer）。地址从 0 开始一次增加，以十六进制表示，C 语言输出十六进制形式为 %#X。
+一切都是地址 CPU 访问内存时需要的是地址，而不是变量名和函数名！变量名和函数名只是地址的一种助记符，当源文件被编译和链接成可执行程序后，它们都会被替换成地址。编译和链接过程的一项重要任务就是找到这些名称所对应的地址。
+需要注意的是，虽然变量名、函数名、字符串名和数组名在本质上是一样的，它们都是地址的助记符，但在编写代码的过程中，我们认为变量名表示的是数据本身，而函数名、字符串名和数组名表示的是代码块或数据块的首地址。
+定义指针变量 数据在内存中的地址也称为指针，如果一个变量存储了一份数据的指针，我们就称它为指针变量。
+在C语言中，允许用一个变量来存放指针，这种变量称为指针变量。指针变量的值就是某份数据的地址。
+定义指针变量与定义普通变量非常类似，不过要在变量名前面加星号*，格式为：
+datatype *name;  或者
+datatype *name = value;  * 表示这是一个指针变量，datatype 表示该指针变量所指向的数据的类型。例如：
+int *p1;  p1 是一个指向 int 类型数据的指针变量，至于 p1 究竟指向哪一份数据，应该由赋予它的值决定。再如：
+int a = 100, b = 200; int *p_a = &amp;amp;a; p_a = &amp;amp;b;  p_a 需要的一个地址，a 前面必须要加取地址符 &amp;amp;，否则是不对的。
+* 是一个特殊符号，表明一个变量是指针变量，定义 p1、p2 时必须带 *。而给 p1、p2 赋值时，因为已经知道了它是一个指针变量，就没必要多此一举再带上 *，后边可以像使用普通变量一样来使用指针变量。也就是说，定义指针变量时必须带 *，给指针变量赋值时不能带 *。
+p_a 的类型是 int*， 而不是 int。</description>
+    </item>
     
     <item>
       <title>React 代码规范</title>

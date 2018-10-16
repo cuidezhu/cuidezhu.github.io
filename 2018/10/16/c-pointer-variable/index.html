@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <title>C 语言指针变量</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122652961-1');
+  </script>
+
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>C 语言指针变量</h1>
+      <span class="blog-post-date">October 16, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<h2 id="指针的概念">指针的概念</h2>
+
+<p>我们知道，计算机中所有的数据都必须放在内存中，为了正确访问这些数据，我们必须为每个字节编上号码，每个字节的编号是唯一的，根据编号可以准确的找到某个内存。</p>
+
+<p>我们将内存中字节的编号称为地址（Address）或指针（Pointer）。地址从 0 开始一次增加，以十六进制表示，C 语言输出十六进制形式为 <code>%#X</code>。</p>
+
+<h2 id="一切都是地址">一切都是地址</h2>
+
+<p>CPU 访问内存时需要的是地址，而不是变量名和函数名！变量名和函数名只是地址的一种助记符，当源文件被编译和链接成可执行程序后，它们都会被替换成地址。编译和链接过程的一项重要任务就是找到这些名称所对应的地址。</p>
+
+<p>需要注意的是，虽然变量名、函数名、字符串名和数组名在本质上是一样的，它们都是地址的助记符，但在编写代码的过程中，我们认为变量名表示的是数据本身，<strong>而函数名、字符串名和数组名表示的是代码块或数据块的首地址</strong>。</p>
+
+<h2 id="定义指针变量">定义指针变量</h2>
+
+<p>数据在内存中的地址也称为指针，如果一个变量存储了一份数据的指针，我们就称它为指针变量。</p>
+
+<p>在C语言中，允许用一个变量来存放指针，这种变量称为指针变量。指针变量的值就是某份数据的地址。</p>
+
+<p>定义指针变量与定义普通变量非常类似，不过要在变量名前面加星号*，格式为：</p>
+
+<pre><code class="language-c">datatype *name;
+</code></pre>
+
+<p>或者</p>
+
+<pre><code class="language-c">datatype *name = value;
+</code></pre>
+
+<p><code>*</code> 表示这是一个指针变量，datatype 表示该指针变量所指向的数据的类型。例如：</p>
+
+<pre><code class="language-c">int *p1;
+</code></pre>
+
+<p>p1 是一个指向 int 类型数据的指针变量，至于 p1 究竟指向哪一份数据，应该由赋予它的值决定。再如：</p>
+
+<pre><code class="language-c">int a = 100, b = 200;
+int *p_a = &amp;a;
+p_a = &amp;b;
+</code></pre>
+
+<p>p_a 需要的一个地址，a 前面必须要加取地址符 &amp;，否则是不对的。</p>
+
+<p><code>*</code> 是一个特殊符号，表明一个变量是指针变量，定义 p1、p2 时必须带 <code>*</code>。而给 p1、p2 赋值时，因为已经知道了它是一个指针变量，就没必要多此一举再带上 <code>*</code>，后边可以像使用普通变量一样来使用指针变量。也就是说，定义指针变量时必须带 <code>*</code>，给指针变量赋值时不能带 <code>*</code>。</p>
+
+<p>p_a 的类型是 <code>int*</code>， 而不是 <code>int</code>。</p>
+
+<h2 id="通过指针变量取得数据">通过指针变量取得数据</h2>
+
+<p>指针变量存储了数据的地址，通过指针变量能够获得该地址上的数据，格式为：</p>
+
+<pre><code class="language-c">*pointer;
+</code></pre>
+
+<p>这里的 * 称为指针运算符，用来取得某个地址上的数据，请看下面的例子：</p>
+
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main(){
+  int a = 15;
+  int *p = &amp;a;
+  printf(&quot;%d, %d\n&quot;, a, *p);  //两种方式都可以输出a的值
+  return 0;
+}
+</code></pre>
+
+<p>运行结果：</p>
+
+<p>15, 15</p>
+
+<p>假设 a 的地址是 0X1000，p 指向 a 后，p 本身的值也会变为 0X1000，*p 表示获取地址 0X1000 上的数据，也即变量 a 的值。从运行结果看，*p 和 a 是等价的。</p>
+
+<p>上节我们说过，CPU 读写数据必须要知道数据在内存中的地址，普通变量和指针变量都是地址的助记符，虽然通过 *p 和 a 获取到的数据一样，但它们的运行过程稍有不同：a 只需要一次运算就能够取得数据，而 *p 要经过两次运算，多了一层“间接”。</p>
+
+<p>假设变量 a、p 的地址分别为 0X1000、0XF0A0，程序被编译和链接后，a、p 被替换成相应的地址。使用 *p 的话，要先通过地址 0XF0A0 取得变量 p 本身的值，这个值是变量 a 的地址，然后再通过这个值取得变量 a 的数据，前后共有两次运算；而使用 a 的话，可以通过地址 0X1000 直接取得它的数据，只需要一步运算。</p>
+
+<p><strong>也就是说，使用指针是间接获取数据，使用变量名是直接获取数据，前者比后者的代价要高。</strong></p>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
