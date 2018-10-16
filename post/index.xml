@@ -38,7 +38,16 @@ p_a 的类型是 int*， 而不是 int。</description>
       <pubDate>Mon, 15 Oct 2018 23:59:32 +0800</pubDate>
       
       <guid>http://ijs.me/2018/10/15/react-code-guide/</guid>
-      <description></description>
+      <description>根据编码实践总结出如下编写 React 代码规范：
+ 所有的语句不应加分号，React 使用 JSX 语法，因为不管加不加分号最终 Babel 转译成 ES5 时都会加上分号，而加分号还需分别什么时候加什么时候不加，所以现在 React 项目推崇不加分号；
+ 组件名、JS 文件名使用大驼峰命名法，以英文意思为依据，如 LoginControl；
+ JS 变量名命名采用小驼峰命名法，如 currentDay；
+ JS 函数命名采用小驼峰命名法，如 fetchData()；
+ CSS class 命名采用短横线命名法，如 commits-detail；
+ 所有的 CSS 均使用 SCSS 编写，如果某个块只需要一个 CSS 属性，也可以把 CSS 直接加到 JS 文件里，如 style={{ marginBottom: 15 }} ，注意在 JSX 里写 CSS 需要把属性名的的短横线变成小驼峰命名法；
+ 代码缩进均使用两个空格缩进，务必把编辑器的 Tab 键设置为两个空格；
+ state or 类属性？与渲染 UI 直接相关的使用 state，只是组件内的变量可用类属性如 this.age = 18；
+ 后端返回对象判空方法: Object.keys(this.state.result).length !== 0 然后使用三目运算符决定是否渲染 UI 或者显示 Loading 效果；</description>
     </item>
     
     <item>
