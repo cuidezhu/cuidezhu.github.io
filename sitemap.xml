@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/10/18/css-modules/</loc>
+    <lastmod>2018-10-18T23:59:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/10/17/go-main-init-function/</loc>
     <lastmod>2018-10-17T15:42:29+08:00</lastmod>
   </url>
@@ -559,7 +564,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-10-17T15:42:29+08:00</lastmod>
+    <lastmod>2018-10-18T23:59:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -570,7 +575,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-10-17T15:42:29+08:00</lastmod>
+    <lastmod>2018-10-18T23:59:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

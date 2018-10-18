@@ -6,10 +6,22 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Oct 2018 15:42:29 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 18 Oct 2018 23:59:00 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS Modules 及其在 React 中实践</title>
+      <link>http://ijs.me/2018/10/18/css-modules/</link>
+      <pubDate>Thu, 18 Oct 2018 23:59:00 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/10/18/css-modules/</guid>
+      <description>在样式开发过程中，有两个问题比较突出：
+ 全局污染 —— CSS 文件中的选择器是全局生效的，不同文件中的同名选择器，根据 build 后生成文件中的先后顺序，后面的样式会将前面的覆盖；
+ 选择器复杂 —— 为了避免上面的问题，我们在编写样式的时候不得不小心翼翼，类名里会带上限制范围的标识，变得越来越长，多人开发时还很容易导致命名风格混乱，一个元素上使用的选择器个数也可能越来越多。
+  </description>
+    </item>
     
     <item>
       <title>Go 语言的 main 和 init 函数</title>
