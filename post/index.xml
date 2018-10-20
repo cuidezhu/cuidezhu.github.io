@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Oct 2018 16:29:45 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 20 Oct 2018 23:52:49 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ES6 引入的新的 JavaScript 数据类型 Symbol</title>
+      <link>http://ijs.me/2018/10/20/es6-symbol/</link>
+      <pubDate>Sat, 20 Oct 2018 23:52:49 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/10/20/es6-symbol/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>在 React Router 的 Link 中用 query state 和 search 三种方式传参数的差异</title>
