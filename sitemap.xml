@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/10/21/using-web-workers/</loc>
+    <lastmod>2018-10-21T23:51:02+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/10/20/es6-symbol/</loc>
     <lastmod>2018-10-20T23:52:49+08:00</lastmod>
   </url>
@@ -574,7 +579,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-10-20T23:52:49+08:00</lastmod>
+    <lastmod>2018-10-21T23:51:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -585,7 +590,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-10-20T23:52:49+08:00</lastmod>
+    <lastmod>2018-10-21T23:51:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   

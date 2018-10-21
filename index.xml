@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Oct 2018 23:52:49 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Oct 2018 23:51:02 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Web Workers 的使用</title>
+      <link>http://ijs.me/2018/10/21/using-web-workers/</link>
+      <pubDate>Sun, 21 Oct 2018 23:51:02 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/10/21/using-web-workers/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ES6 引入的新的 JavaScript 数据类型 Symbol</title>
