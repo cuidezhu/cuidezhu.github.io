@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Oct 2018 23:37:01 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Oct 2018 23:58:44 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Table 的 border-collapse 和 border-spacing</title>
+      <link>http://ijs.me/2018/10/24/table-border-collapse-border-spacing/</link>
+      <pubDate>Wed, 24 Oct 2018 23:58:44 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/10/24/table-border-collapse-border-spacing/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>inline-block 元素垂直对齐问题</title>
