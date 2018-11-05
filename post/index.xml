@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Nov 2018 23:52:29 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Nov 2018 23:59:21 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Node.js Foundation</title>
+      <link>http://ijs.me/2018/11/04/node.js-foundation/</link>
+      <pubDate>Sun, 04 Nov 2018 23:59:21 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/04/node.js-foundation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Geth Cmd</title>
+      <link>http://ijs.me/2018/11/03/geth-cmd/</link>
+      <pubDate>Sat, 03 Nov 2018 23:59:31 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/03/geth-cmd/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Web3.js 基本用法</title>
