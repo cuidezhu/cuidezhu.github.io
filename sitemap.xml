@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/11/08/finite-state-machine/</loc>
+    <lastmod>2018-11-08T00:00:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ijs.me/2018/11/06/settimeout-sort/</loc>
+    <lastmod>2018-11-06T23:57:41+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/11/05/gitflow-workflow/</loc>
     <lastmod>2018-11-05T23:59:38+08:00</lastmod>
   </url>
@@ -644,7 +654,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-11-05T23:59:38+08:00</lastmod>
+    <lastmod>2018-11-08T00:00:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -655,7 +665,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-11-05T23:59:38+08:00</lastmod>
+    <lastmod>2018-11-08T00:00:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   

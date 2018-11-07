@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Nov 2018 23:59:38 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Nov 2018 00:00:22 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>有限状态机</title>
+      <link>http://ijs.me/2018/11/08/finite-state-machine/</link>
+      <pubDate>Thu, 08 Nov 2018 00:00:22 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/08/finite-state-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>巧用 setTimeout 进行排序</title>
+      <link>http://ijs.me/2018/11/06/settimeout-sort/</link>
+      <pubDate>Tue, 06 Nov 2018 23:57:41 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/06/settimeout-sort/</guid>
+      <description>原理：把数组每一项的值当作 setTimeout 的时间参数，根据数值大小延迟不同的时间输出值（或放到新数组里），达到排序目的。</description>
+    </item>
     
     <item>
       <title>Gitflow Workflow</title>
