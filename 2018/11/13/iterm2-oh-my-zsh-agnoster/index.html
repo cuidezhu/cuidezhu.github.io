@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <title>iTerm2 &#43; oh-my-zsh &#43; agnoster 打造完美终端</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122652961-1');
+  </script>
+
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>iTerm2 &#43; oh-my-zsh &#43; agnoster 打造完美终端</h1>
+      <span class="blog-post-date">November 13, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<h2 id="安装-iterm2">安装 iTerm2</h2>
+
+<p>首先我们安装 iTerm2，去 <a href="https://iterm2.com/index.html">iTerm2 官网</a> 下载安装即可。</p>
+
+<h2 id="切换默认终端为-zsh">切换默认终端为 zsh</h2>
+
+<p>首先通过 <code>cat /etc/shells</code> 来查看当前系统可以使用哪些 shell：</p>
+
+<pre><code class="language-zsh"># List of acceptable shells for chpass(1).
+# Ftpd will not allow users to connect who are not using
+# one of these shells.
+
+/bin/bash
+/bin/csh
+/bin/ksh
+/bin/sh
+/bin/tcsh
+/bin/zsh
+</code></pre>
+
+<p>通过 <code>echo $SHELL</code> 命令可以查看当前正在使用的 shell。</p>
+
+<p>如果当前的 shell 不是 zsh，可以通过 <code>chsh -s /bin/zsh</code> 来把 shell 切换为 zsh，终端重启之后将生效。</p>
+
+<h2 id="安装-oh-my-zsh">安装 oh-my-zsh</h2>
+
+<p>根据 GitHub 上的 <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> 仓库说明的方法安装即可：</p>
+
+<pre><code class="language-zsh">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
+</code></pre>
+
+<p>注意我们在终端运行需要从 GitHub 下载内容的命令时，可能需要科学上网，可以用最新版的 Shadowsocks 的 <code>复制终端代理命令</code> 选项，然后在终端里执行复制的命令，就可以在终端里走代理了，这大概是最简单的终端走代理的方法，重新打开终端时代理会失效。</p>
+
+<h2 id="配置-agnoster-主题">配置 agnoster 主题</h2>
+
+<p>agnoster 主题依赖于 <a href="https://ethanschoonover.com/solarized/">Solarized</a> 配色方案和 Meslo LG 字体。</p>
+
+<h3 id="安装-solarized-配色">安装 Solarized 配色</h3>
+
+<p>首先我们来安装 <a href="https://ethanschoonover.com/solarized/">Solarized</a> 配色方案，先去 <a href="https://ethanschoonover.com/solarized/">Solarized 官网</a> 把配色文件下载下来，然后解压下载下来的文件夹得到 solarized 文件夹，打开这个文件夹后找到 iterm2-colors-solarized 文件夹打开，双击 Solarized Dark.itermcolors 文件即可安装深色主题的配色方案，然后进入iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Colors -&gt; Color Presets 选择 Solarized Dark 即可。</p>
+
+<h3 id="安装-powerline-fonts">安装 Powerline fonts</h3>
+
+<p>首先把 Powerline fonts 仓库 clone 到本地，随意进入一个文件夹，比如 <code>cd ~/Documents</code>，然后执行：</p>
+
+<pre><code class="language-zsh">git clone git@github.com:powerline/fonts.git
+</code></pre>
+
+<p>然后安装字体，执行下面两条命令：</p>
+
+<pre><code class="language-zsh">cd fonts
+./install.sh
+</code></pre>
+
+<p>安装好字体之后我们来设置 iTerm2 的字体，进入 iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Text，在 Font 区域点击 Change Font 按钮，然后找到并选中 Meslo LG S for Powerline字体，字体大小也可以改为 13 号字体，个人感觉 13 号字体比 12 号字体更舒服。</p>
+
+<h3 id="安装-agnoster-主题">安装 agnoster 主题</h3>
+
+<p>最新版的 oh-my-zsh 已经自带了好多主题，可以查看 <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes">主题预览</a> 的列表，选一种你喜欢的，这里我们使用 agnoster 这个主题。</p>
+
+<pre><code class="language-zsh">vim ~/.zshrc
+</code></pre>
+
+<p>然后把 <code>ZSH_THEME</code> 字段的值改为 <code>ZSH_THEME=&quot;agnoster&quot;</code>，修改完成后执行 <code>source .zshrc</code>，我们发现修改已经生效了。</p>
+
+<h2 id="安装高亮插件">安装高亮插件</h2>
+
+<p>我们可以直接使用 Homebrew 来安装 zsh 的语法高亮插件 <a href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting</a>：</p>
+
+<pre><code class="language-zsh">brew install zsh-syntax-highlighting
+</code></pre>
+
+<p>并将</p>
+
+<pre><code class="language-zsh">source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+</code></pre>
+
+<p>这一句加到你的 <code>~/.zshrc</code> 文件中的最后一行，执行 <code>source ~/.zshrc</code> 后就会发现终端已经带语法高亮效果了。</p>
+
+<h2 id="设置透明度和背景">设置透明度和背景</h2>
+
+<p>首先设置透明度，进入 iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Window -&gt; Window Appearance 中的 Transparency 的滑动输入条，滑到一个你喜欢的透明度即可。</p>
+
+<p>然后我们设置背景图片，我这里用的是微软的 Surface Studio 的 4K 壁纸，需要可以去 <a href="https://pan.baidu.com/s/18jNrULbr05npD0Z_ht28Kg">百度云</a> 下载，进入 iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Window -&gt; BackGround Image 勾选 BackGround image 然后选择你下载下来的图片即可。</p>
+
+<h2 id="设置打开关闭-iterm2-快捷键">设置打开关闭 iTerm2 快捷键</h2>
+
+<p>进入 iTerm2 -&gt; Preferences -&gt; Keys 然后在 Hotkey 那里选中 <code>show/hide all windows with a system-wide hotkey</code>，然后录入你要用的快捷键，这里我用的是 <code>Ctrl + T</code> 快捷键。然后就可以通过按 <code>Ctrl + T</code> 来打开和关闭 iTerm2 了。</p>
+
+<p>最终效果如下：</p>
+
+<p><img src="/img/2018/11/iTerm2.png" alt="iTerm2" /></p>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
