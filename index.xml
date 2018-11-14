@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Nov 2018 16:07:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Nov 2018 12:01:59 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git 理解工作区、暂存区、版本库和 stage unstage 状态</title>
+      <link>http://ijs.me/2018/11/14/git-workspace-staging-area-and-local-repository-stage-unstage/</link>
+      <pubDate>Wed, 14 Nov 2018 12:01:59 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/14/git-workspace-staging-area-and-local-repository-stage-unstage/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>iTerm2 &#43; oh-my-zsh &#43; agnoster 打造完美终端</title>
