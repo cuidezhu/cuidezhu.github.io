@@ -17,7 +17,8 @@
       <pubDate>Wed, 14 Nov 2018 12:01:59 +0800</pubDate>
       
       <guid>http://ijs.me/2018/11/14/git-workspace-staging-area-and-local-repository-stage-unstage/</guid>
-      <description></description>
+      <description>首先我们来理解下 Git 工作区、暂存区和版本库概念
+ 工作区：就是你在电脑里能看到的目录。 暂存区：英文叫stage, 或index。一般存放在 &amp;ldquo;.git目录下&amp;rdquo; 下的index文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。 版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。  </description>
     </item>
     
     <item>
