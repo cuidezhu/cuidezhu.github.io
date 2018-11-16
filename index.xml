@@ -6,10 +6,21 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Nov 2018 23:59:54 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 16 Nov 2018 19:18:34 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>在 VS Code 中使用 Prettier 来格式化前端代码</title>
+      <link>http://ijs.me/2018/11/16/prettier-code-formatter/</link>
+      <pubDate>Fri, 16 Nov 2018 19:18:34 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/16/prettier-code-formatter/</guid>
+      <description>我们平时写代码经常需要保持一定的风格，而 Prettier 可以很好的帮我们格式化 JavaScript / TypeScript / CSS，Prettier 甚至支持格式化 SCSS 代码，而我们如果使用官方的 sass-convert 往往会遇到这个工具自身的兼容性问题。
+首先我们在 VS Code 里安装 Prettier， 然后我们进行一些个性化配置，打开 VS Code 的配置文件 settings.json，然后在其中加入下面内容：
+&amp;quot;editor.formatOnSave&amp;quot;: true, &amp;quot;prettier.jsxSingleQuote&amp;quot;: true, &amp;quot;prettier.semi&amp;quot;: false  然后每次保存的时候就会自动格式化代码了，你也可以通过 CMD + Shift + P -&amp;gt; Format Document 来手动进行格式化代码。</description>
+    </item>
     
     <item>
       <title>React Navigation</title>
