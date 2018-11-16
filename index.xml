@@ -787,12 +787,18 @@ git config --global user.name 你的目标用户名； git config --global user.
     </item>
     
     <item>
-      <title>终端实用的几个快捷键</title>
-      <link>http://ijs.me/2018/08/22/terminal-practical-practical-shortcut/</link>
+      <title>zsh 终端快捷键</title>
+      <link>http://ijs.me/2018/08/22/zsh-terminal-shortcut/</link>
       <pubDate>Wed, 22 Aug 2018 22:56:22 +0800</pubDate>
       
-      <guid>http://ijs.me/2018/08/22/terminal-practical-practical-shortcut/</guid>
-      <description></description>
+      <guid>http://ijs.me/2018/08/22/zsh-terminal-shortcut/</guid>
+      <description>⌃ + u：清空当前行 ⌃ + a：移动到行首 ⌃ + e：移动到行尾 ⌃ + f：向前移动 ⌃ + b：向后移动 ⌃ + p：上一条命令 ⌃ + n：下一条命令 ⌃ + r：搜索历史命令 ⌃ + y：召回最近用命令删除的文字 ⌃ + h：删除光标之前的字符 ⌃ + d：删除光标所指的字符 ⌃ + w：删除光标之前的单词 ⌃ + k：删除从光标到行尾的内容 ⌃ + t：交换光标和之前的字符
+ ⌘ + Click：可以打开文件，文件夹和链接
+ ⌘ + n：新建窗口
+ ⌘ + t：新建标签页
+ ⌘ + w：关闭当前页
+ ⌘ + 数字 &amp;amp; ⌘ + 方向键：切换标签页
+ ⌥⌘ + 数字：切换窗口</description>
     </item>
     
     <item>
