@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/11/17/mvc-mvp-mvvm/</loc>
+    <lastmod>2018-11-17T23:57:10+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/11/16/prettier-code-formatter/</loc>
     <lastmod>2018-11-16T19:18:34+08:00</lastmod>
   </url>
@@ -694,7 +699,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-11-16T19:18:34+08:00</lastmod>
+    <lastmod>2018-11-17T23:57:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -705,7 +710,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-11-16T19:18:34+08:00</lastmod>
+    <lastmod>2018-11-17T23:57:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
