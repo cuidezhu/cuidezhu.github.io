@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Nov 2018 23:59:31 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 19 Nov 2018 23:56:54 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Service Worker 用途</title>
+      <link>http://ijs.me/2018/11/19/service-worker/</link>
+      <pubDate>Mon, 19 Nov 2018 23:56:54 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/19/service-worker/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Javascript 设计模式之装饰器模式</title>
