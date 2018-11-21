@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Nov 2018 23:56:54 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Nov 2018 23:55:54 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 Fetch 发网络请求</title>
+      <link>http://ijs.me/2018/11/20/javascript-fetch/</link>
+      <pubDate>Tue, 20 Nov 2018 23:55:54 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/20/javascript-fetch/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Service Worker 用途</title>
