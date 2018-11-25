@@ -6,10 +6,28 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Nov 2018 23:57:35 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 24 Nov 2018 23:59:32 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript Design Pattern Facade Pattern</title>
+      <link>http://ijs.me/2018/11/24/javascript-design-pattern-facade-pattern/</link>
+      <pubDate>Sat, 24 Nov 2018 23:59:32 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/24/javascript-design-pattern-facade-pattern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript Design Pattern Proxy Pattern</title>
+      <link>http://ijs.me/2018/11/23/javascript-design-pattern-proxy-pattern/</link>
+      <pubDate>Fri, 23 Nov 2018 20:41:13 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/23/javascript-design-pattern-proxy-pattern/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>JS 装饰器</title>
