@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Nov 2018 23:59:32 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 25 Nov 2018 23:58:13 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 TradingView 画加密货币行情图</title>
+      <link>http://ijs.me/2018/11/25/tradingview-cryptocurrency-btc-market-chart/</link>
+      <pubDate>Sun, 25 Nov 2018 23:58:13 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/25/tradingview-cryptocurrency-btc-market-chart/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>JavaScript Design Pattern Facade Pattern</title>
