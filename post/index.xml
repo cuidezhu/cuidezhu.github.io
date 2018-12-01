@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Nov 2018 22:15:22 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Nov 2018 19:38:04 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Phone Localhost</title>
+      <link>http://ijs.me/2018/11/30/phone-localhost/</link>
+      <pubDate>Fri, 30 Nov 2018 19:38:04 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/11/30/phone-localhost/</guid>
+      <description>查看局域网 IP ifconfig en0</description>
+    </item>
     
     <item>
       <title>当引入的主 JS 文件加载失败时引入备用的 JS 文件</title>
