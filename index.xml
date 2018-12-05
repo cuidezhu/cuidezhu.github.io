@@ -6,10 +6,23 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Dec 2018 23:59:46 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 05 Dec 2018 19:13:45 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Rename Branch</title>
+      <link>http://ijs.me/2018/12/05/git-rename-branch/</link>
+      <pubDate>Wed, 05 Dec 2018 19:13:45 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/12/05/git-rename-branch/</guid>
+      <description> 假定现在的分支名称为 oldName，想要修改为 newName
+本地分支重命名 git branch -m oldName newName  远程分支重命名 1、重命名远程分支对应的本地分支
+git branch -m oldName newName  2、删除远程分支
+git push --delete origin oldName  3、把本地分支上传并且把本地分支与远程分支关联
+git push --set-upstream origin newName  </description>
+    </item>
     
     <item>
       <title>Immutable JS</title>
