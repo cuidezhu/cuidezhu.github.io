@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <title>解决因含有恶意代码的 flatmap-stream 包被删导致项目安装依赖错误</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122652961-1');
+  </script>
+
+</head>
+<body>
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>解决因含有恶意代码的 flatmap-stream 包被删导致项目安装依赖错误</h1>
+      <span class="blog-post-date">December 6, 2018</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<p>最近同事在开发一个之前的 React 项目时，发现安装一个 <code>cookie</code> npm 包会报错，然后我紧接着发现那个项目无论安装什么包都会报错，把项目的 <code>node_modules</code> 目录删除后重新 <code>yarn install</code> 时也会报相同的错误：</p>
+
+<pre><code class="language-zsh">error http://registry.npm.taobao.org/flatmap-stream/download/flatmap-stream-0.1.1.tgz: Extracting tar content of undefined failed, the file appears to be corrupt: &quot;Unexpected end of data&quot;
+</code></pre>
+
+<p>看到错误相信，想到最近 <code>event-stream</code> 引入了含有恶意代码的 <code>flatmap-stream</code> 盗取用户的比特币的新闻。于是查看项目中是否有引入 <code>flatmap-stream</code> 这个包：</p>
+
+<pre><code class="language-zsh">yarn why flatmap-stream
+</code></pre>
+
+<p><img src="/img/2018/12/flatmap-stream.png" alt="flatmap-stream" /></p>
+
+<p>可以看到包的依赖顺序为 <code>npm-run-all#ps-tree#event-stream#flatmap-stream</code>，最终是<code>npm-run-all</code>这个包用到了<code>flatmap-stream</code> 这个包，而这个包因某个版本含有病毒被 NPM 官方删除了。所以会导致下载时 404 错误。</p>
+
+<p>注意如果你同事那里有报错，而你的电脑上安装依赖时没有报错，可能时因为你电脑上有 Yarn 的缓存，可以先清空 Yarn 的缓存：</p>
+
+<pre><code class="language-zsh">yarn cache clean
+</code></pre>
+
+<p>然后删除项目的 <code>node_modules</code> 目录，再重新 <code>yarn install</code> 时就会报和你同事相同的 <code>flatmap-stream</code> 错误了。</p>
+
+<p>再删除 <code>node_modules</code> 之前，我看了一下 <code>node_modules</code> 下的 <code>flatmap-stream</code> 包下面内容，并没有发现恶意代码，估计之前病毒作者只在某个版本下的 index.min.js 里写入了恶意代码，使 index.js 和 index.min.js 内容不一致，而因为恶意代码在 index.min.js 里，所以不会被人轻易发现。</p>
+
+<h2 id="解决方法">解决方法</h2>
+
+<p>发现新版本的 <code>npm-run-all</code> 包已经解决了 <code>event-stream</code> 包被注入恶意代码的问题。所以我们只要升级 <code>npm-run-all</code> 这个包就好了。</p>
+
+<pre><code class="language-zsh">yarn upgrade npm-run-all
+</code></pre>
+
+<p>然后重新 <code>yarn install</code> 就不会报错了，解决了 <code>flatmap-stream</code> 被删除导致的安装依赖报错的问题。</p>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

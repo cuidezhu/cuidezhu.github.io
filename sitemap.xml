@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/12/06/yarn-flatmap-stream/</loc>
+    <lastmod>2018-12-06T17:23:02+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/12/05/git-rename-branch/</loc>
     <lastmod>2018-12-05T19:13:45+08:00</lastmod>
   </url>
@@ -779,7 +784,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-12-05T19:13:45+08:00</lastmod>
+    <lastmod>2018-12-06T17:23:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -790,7 +795,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-12-05T19:13:45+08:00</lastmod>
+    <lastmod>2018-12-06T17:23:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
