@@ -6,10 +6,20 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Dec 2018 23:47:19 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Dec 2018 22:45:49 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>zsh 遇到 permission 警告信息</title>
+      <link>http://ijs.me/2018/12/20/zsh-permission/</link>
+      <pubDate>Thu, 20 Dec 2018 22:45:49 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/12/20/zsh-permission/</guid>
+      <description>今天在一台新的电脑上安装 zsh 和 oh-my-zsh 时遇到刚打开时出现如下警告信息：
+[oh-my-zsh] Insecure completion-dependent directories detected: drwxr-xr-x 3 501 admin 96 8 13 14:09 /usr/local/share/zsh drwxr-xr-x 6 501 admin 192 8 13 14:23 /usr/local/share/zsh/site-functions lrwxr-xr-x 1 501 admin 39 8 13 14:18 /usr/local/share/zsh/site-functions/_brew -&amp;gt; ../../../Homebrew/completions/zsh/_brew lrwxr-xr-x 1 501 admin 44 8 13 14:18 /usr/local/share/zsh/site-functions/_brew_cask -&amp;gt; ../../../Homebrew/completions/zsh/_brew_cask lrwxr-xr-x 1 501 admin 56 8 13 14:23 /usr/local/share/zsh/site-functions/_git -&amp;gt; ../../../Cellar/git/2.18.0/share/zsh/site-functions/_git [oh-my-zsh] For safety, we will not load completions from these directories until [oh-my-zsh] you fix their permissions and ownership and restart zsh.</description>
+    </item>
     
     <item>
       <title>在 React 项目中使用 Echarts</title>
