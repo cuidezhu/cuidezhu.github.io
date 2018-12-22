@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Dec 2018 23:56:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Dec 2018 23:56:44 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go 语言类型断言</title>
+      <link>http://ijs.me/2018/12/22/go-type-assertion/</link>
+      <pubDate>Sat, 22 Dec 2018 23:56:44 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/12/22/go-type-assertion/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>如何画深度图</title>
