@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Dec 2018 23:56:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Dec 2018 19:17:56 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>几种常见的 POST 数据请求格式</title>
+      <link>http://ijs.me/2018/12/23/post-content-type/</link>
+      <pubDate>Sun, 23 Dec 2018 19:17:56 +0800</pubDate>
+      
+      <guid>http://ijs.me/2018/12/23/post-content-type/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Go 语言类型断言</title>
