@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2018/12/31/react-ref/</loc>
+    <lastmod>2018-12-31T23:44:50+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2018/12/30/es6-generator/</loc>
     <lastmod>2018-12-30T23:38:46+08:00</lastmod>
   </url>
@@ -884,7 +889,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2018-12-30T23:38:46+08:00</lastmod>
+    <lastmod>2018-12-31T23:44:50+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -895,7 +900,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2018-12-30T23:38:46+08:00</lastmod>
+    <lastmod>2018-12-31T23:44:50+08:00</lastmod>
     <priority>0</priority>
   </url>
   
