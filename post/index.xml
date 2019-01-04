@@ -17,7 +17,10 @@
       <pubDate>Thu, 03 Jan 2019 23:58:26 +0800</pubDate>
       
       <guid>http://ijs.me/2019/01/03/what-node.js/</guid>
-      <description></description>
+      <description>使用场景：
+I/O 密集：文件操作、网络操作、数据库
+Node.js 在处理高并发，I/O 密集场景性能优势明显。
+高并发简单地说就是在单位时间内访问量特别大就是高并发，高并发解决办法：</description>
     </item>
     
     <item>
