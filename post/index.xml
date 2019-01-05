@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jan 2019 23:58:26 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 04 Jan 2019 23:34:16 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SQLite 常用操作</title>
+      <link>http://ijs.me/2019/01/04/sqlite-tutorial/</link>
+      <pubDate>Fri, 04 Jan 2019 23:34:16 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/01/04/sqlite-tutorial/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Node.js 优势</title>
