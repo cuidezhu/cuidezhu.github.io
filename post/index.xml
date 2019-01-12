@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Jan 2019 23:58:25 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Jan 2019 23:59:20 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>聊一聊互联网寒冬</title>
+      <link>http://ijs.me/2019/01/11/winter-of-internet/</link>
+      <pubDate>Fri, 11 Jan 2019 23:59:20 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/01/11/winter-of-internet/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>2019 年初的 Angular</title>
