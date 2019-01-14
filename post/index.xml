@@ -6,10 +6,21 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Jan 2019 21:30:23 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jan 2019 14:57:46 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>mozjpeg 编译错误解决</title>
+      <link>http://ijs.me/2019/01/14/mozjpeg-pre-build-compile-error-fix/</link>
+      <pubDate>Mon, 14 Jan 2019 14:57:46 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/01/14/mozjpeg-pre-build-compile-error-fix/</guid>
+      <description>在对某个项目执行 npm install 时出现如下错误：
+&amp;gt; mozjpeg@4.1.1 postinstall /Users/dezhu/Code/wrw/node_modules/mozjpeg &amp;gt; node lib/install.js ⚠ The `/Users/dezhu/Code/wrw/node_modules/mozjpeg/vendor/cjpeg` binary doesn&#39;t seem to work correctly ⚠ mozjpeg pre-build test failed ℹ compiling from source ✖ Error: autoreconf -fiv &amp;amp;&amp;amp; ./configure --disable-shared --prefix=&amp;quot;/Users/dezhu/Code/wrw/node_modules/mozjpeg/vendor&amp;quot; --bindir=&amp;quot;/Users/dezhu/Code/wrw/node_modules/mozjpeg/vendor&amp;quot; --libdir=&amp;quot;/Users/dezhu/Code/wrw/node_modules/mozjpeg/vendor&amp;quot; &amp;amp;&amp;amp; make --jobs=12 &amp;amp;&amp;amp; make install --jobs=12 Command failed: autoreconf -fiv /bin/sh: autoreconf: command not found at ChildProcess.exithandler (child_process.js:294:12) at ChildProcess.emit (events.js:182:13) at maybeClose (internal/child_process.js:962:16) at Process.ChildProcess._handle.onexit (internal/child_process.js:251:5)  经过搜索，发现可以通过如下方式解决。
+首先更新 Xcode Command Line Tools 到最新版本，然后执行下面这几条命令：</description>
+    </item>
     
     <item>
       <title>一个项目推送到 多个 Git 仓库</title>
