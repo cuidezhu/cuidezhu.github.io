@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Jan 2019 14:57:46 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jan 2019 14:58:50 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用七牛云作为博客图床配合 PicGo 上传图片</title>
+      <link>http://ijs.me/2019/01/15/qiniu-blog-picgo/</link>
+      <pubDate>Tue, 15 Jan 2019 14:58:50 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/01/15/qiniu-blog-picgo/</guid>
+      <description> 实名认证 PicGo </description>
+    </item>
     
     <item>
       <title>mozjpeg 编译错误解决</title>
