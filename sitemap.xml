@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2019/01/16/wepy-mini-program/</loc>
+    <lastmod>2019-01-16T23:41:12+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2019/01/15/qiniu-blog-picgo/</loc>
     <lastmod>2019-01-15T14:58:50+08:00</lastmod>
   </url>
@@ -954,7 +959,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2019-01-15T14:58:50+08:00</lastmod>
+    <lastmod>2019-01-16T23:41:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -965,7 +970,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2019-01-15T14:58:50+08:00</lastmod>
+    <lastmod>2019-01-16T23:41:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Jan 2019 14:58:50 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jan 2019 23:41:12 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 WePY 开发微信小程序</title>
+      <link>http://ijs.me/2019/01/16/wepy-mini-program/</link>
+      <pubDate>Wed, 16 Jan 2019 23:41:12 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/01/16/wepy-mini-program/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>使用七牛云作为博客图床配合 PicGo 上传图片</title>
