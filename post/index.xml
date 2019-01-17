@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Jan 2019 23:41:12 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jan 2019 23:32:05 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nginx 服务器安装 SSL 证书</title>
+      <link>http://ijs.me/2019/01/17/nginx-https/</link>
+      <pubDate>Thu, 17 Jan 2019 23:32:05 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/01/17/nginx-https/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>使用组件化开发框架 WePY 开发微信小程序</title>
