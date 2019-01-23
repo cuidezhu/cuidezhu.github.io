@@ -6,10 +6,21 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jan 2019 23:59:39 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 23 Jan 2019 19:51:02 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>macOS 上的那些神器</title>
+      <link>http://ijs.me/2019/01/23/macos-artifact/</link>
+      <pubDate>Wed, 23 Jan 2019 19:51:02 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/01/23/macos-artifact/</guid>
+      <description>Paste 剪贴板工具，Paste 为您保存您的历史拷贝内容，让你可以随时快速粘贴之前拷贝的内容，界面和系统融为一体，仿佛内置应用，支持快捷键。
+Dash 文档离线查看工具，支持的语言非常全。
+Magnet 分屏神器，尤其适合双屏人士，支持快速在两个屏幕之间移动窗口等。</description>
+    </item>
     
     <item>
       <title>Go HTTP</title>
