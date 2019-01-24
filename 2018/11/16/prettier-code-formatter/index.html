@@ -31,10 +31,13 @@
 
 <pre><code class="language-json">  &quot;editor.formatOnSave&quot;: true,
   &quot;prettier.jsxSingleQuote&quot;: true,
-  &quot;prettier.semi&quot;: false
+  &quot;prettier.semi&quot;: false,
+  &quot;prettier.proseWrap&quot;: &quot;preserve&quot;
 </code></pre>
 
 <p>然后每次保存的时候就会自动格式化代码了，你也可以通过 <code>CMD + Shift + P -&gt; Format Document</code> 来手动进行格式化代码。</p>
+
+<p>之前发现 Prettier 在格式化 JSX 代码时，有些 HTML 标签比如 <code>&lt;p&gt;</code> 标签里的内容有时会分为两行显示，这样直接把内容换行会导致显示多一个空格的问题，后来经过一番搜索发现 <code>settings.json</code> 里加一句 <code>&quot;prettier.proseWrap&quot;: &quot;preserve&quot;</code> 就好了，意为原本是否换行保持不变。</p>
 
     </div>
   </main>

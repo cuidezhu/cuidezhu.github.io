@@ -623,7 +623,8 @@ git push --set-upstream origin newName  </description>
       <guid>http://ijs.me/2018/11/16/prettier-code-formatter/</guid>
       <description>我们平时写代码经常需要保持一定的风格，而 Prettier 可以很好的帮我们格式化 JavaScript / TypeScript / CSS，Prettier 甚至支持格式化 SCSS 代码，而我们如果使用官方的 sass-convert 往往会遇到这个工具自身的兼容性问题。
 首先我们在 VS Code 里安装 Prettier， 然后我们进行一些个性化配置，打开 VS Code 的配置文件 settings.json，然后在其中加入下面内容：
-&amp;quot;editor.formatOnSave&amp;quot;: true, &amp;quot;prettier.jsxSingleQuote&amp;quot;: true, &amp;quot;prettier.semi&amp;quot;: false  然后每次保存的时候就会自动格式化代码了，你也可以通过 CMD + Shift + P -&amp;gt; Format Document 来手动进行格式化代码。</description>
+&amp;quot;editor.formatOnSave&amp;quot;: true, &amp;quot;prettier.jsxSingleQuote&amp;quot;: true, &amp;quot;prettier.semi&amp;quot;: false, &amp;quot;prettier.proseWrap&amp;quot;: &amp;quot;preserve&amp;quot;  然后每次保存的时候就会自动格式化代码了，你也可以通过 CMD + Shift + P -&amp;gt; Format Document 来手动进行格式化代码。
+之前发现 Prettier 在格式化 JSX 代码时，有些 HTML 标签比如 &amp;lt;p&amp;gt; 标签里的内容有时会分为两行显示，这样直接把内容换行会导致显示多一个空格的问题，后来经过一番搜索发现 settings.json 里加一句 &amp;quot;prettier.proseWrap&amp;quot;: &amp;quot;preserve&amp;quot; 就好了，意为原本是否换行保持不变。</description>
     </item>
     
     <item>
