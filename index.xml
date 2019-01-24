@@ -60,7 +60,7 @@ import React, { Component } from &#39;react&#39; import { withRouter } from &#39
       <pubDate>Sat, 19 Jan 2019 23:01:56 +0800</pubDate>
       
       <guid>http://ijs.me/2019/01/19/macos-c-cpp/</guid>
-      <description></description>
+      <description>安装微软官方推出的 VSCode 插件 C/C++，该插件提供了代码格式化，自动补全等功能。</description>
     </item>
     
     <item>
