@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Jan 2019 23:29:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jan 2019 21:54:54 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chrome 插件开发</title>
+      <link>http://ijs.me/2019/01/28/chrome-extension-tutorial/</link>
+      <pubDate>Mon, 28 Jan 2019 21:54:54 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/01/28/chrome-extension-tutorial/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>macOS App Store 更新软件失败问题</title>
