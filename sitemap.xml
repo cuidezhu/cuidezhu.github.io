@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2019/01/31/node.js-unit-testing/</loc>
+    <lastmod>2019-01-31T23:59:04+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2019/01/30/react-global-variable/</loc>
     <lastmod>2019-01-30T22:26:36+08:00</lastmod>
   </url>
@@ -1024,7 +1029,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2019-01-30T22:26:36+08:00</lastmod>
+    <lastmod>2019-01-31T23:59:04+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1035,7 +1040,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2019-01-30T22:26:36+08:00</lastmod>
+    <lastmod>2019-01-31T23:59:04+08:00</lastmod>
     <priority>0</priority>
   </url>
   
