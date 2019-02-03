@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Jan 2019 23:59:04 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 Feb 2019 22:47:07 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript 生成时间戳及其在网络请求中的应用</title>
+      <link>http://ijs.me/2019/02/03/javascript-timestamp/</link>
+      <pubDate>Sun, 03 Feb 2019 22:47:07 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/02/03/javascript-timestamp/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Node.js 单元测试</title>
