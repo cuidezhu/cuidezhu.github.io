@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Feb 2019 22:47:07 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 Feb 2019 23:58:41 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mobile Code</title>
+      <link>http://ijs.me/2019/02/04/mobile-code/</link>
+      <pubDate>Mon, 04 Feb 2019 23:58:41 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/02/04/mobile-code/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>JavaScript 生成时间戳及其在网络请求中的应用</title>
