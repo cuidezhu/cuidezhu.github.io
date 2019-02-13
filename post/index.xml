@@ -211,7 +211,7 @@ import React, { Component } from &#39;react&#39; import { withRouter } from &#39
  绑定域名 七牛融合 CDN 测试域名（以 clouddn.com/qiniucdn.com/qiniudn.com/qnssl.com/qbox.me 结尾），每个域名每日限总流量 10GB，每个测试域名自创建起 30 个自然日后系统会自动回收，仅供测试使用。
 所以我们需要绑定我们自己的域名，绑定加速的域名必须先完成在中国大陆的 ICP 备案。
 在绑定域名页加速域名字段填写一个你已备案的域名的二级域名，比如 cdn.xxx.com，覆盖范围我选了全球。
-然后会提示你：
+点击创建然后会提示你：
  加速域名 cdn.xxx.com 添加成功！配置部署中。 需要到域名解析服务商完成 CNAME 绑定，绑定后加速服务正式生效。如何配置 CNAME CNAME: cdn.xxx.com.qiniudns.com
  我们去我们购买域名的服务提供商控制台的域名解析里添加解析记录：
 添加好 CNAME 记录后，我们去七牛云的融合 CDN -&amp;gt; 域名管理可以看到我们绑定的域名，现在状态为处理中，一般 10 分钟左右就成功了，等域名状态变为成功后域名就可以使用了。</description>
