@@ -36,24 +36,21 @@
     <div class="blog-post-content">
         
 
-<p>前面的文章 <a href="https://ijs.me/2018/07/14/mini-redux-implemention/">迷你 Redux 实现</a> 我们实现了一个简单的 Redux, 那么我们怎么在 React 项目里使用我们自制的 Redux 呢？我们可以显式传递 Store，但更优雅的方式是使用 react-redux，这篇文章会实现我们自己的 react-redux。</p>
+<p>前面的文章 <a href="http://ijs.me/2018/07/14/mini-redux-implemention/">迷你 Redux 实现</a> 我们实现了一个简单的 Redux, 那么我们怎么在 React 项目里使用我们自制的 Redux 呢？我们可以显式传递 Store，但更优雅的方式是使用 react-redux，这篇文章会实现我们自己的 react-redux。</p>
 
 <h2 id="显式传递-store">显式传递 Store</h2>
 
 <p>我们可以手动用 subscribe 订阅 ReactDOM.render 来将把 redux 和 react 结合起来，将 Store 集成到 UI 中最合乎直觉逻辑的做法是显式地将它作为属性在组件树中向下传递。例如下面的 index.js 文件中渲染一个 App 组件并传递 Store:</p>
 
-<pre><code class="language-js">import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './components/App'
-import { counter } from './index.redux'
+<pre><code class="language-js">import React from &quot;react&quot;
+import ReactDOM from &quot;react-dom&quot;
+import App from &quot;./components/App&quot;
+import { counter } from &quot;./index.redux&quot;
 
 const store = createStore(counter)
 
-const render = () =&gt; 
-  ReactDOM.render(
-    &lt;App store={store} /&gt;,
-    document.getElementById('root')
-  )
+const render = () =&gt;
+  ReactDOM.render(&lt;App store={store} /&gt;, document.getElementById(&quot;root&quot;))
 
 store.subscribe(render)
 
@@ -66,14 +63,14 @@ render()
 
 <p>但这种方法需要属性在每层组件树中传递，就像上面的实例，我们需要把 Store 首先作为属性传递给 App 组件，App 组件再把 Store 作为属性传递给它的子组件，最后才在 App 的自组件内使用传递来的属性。如何克服这种在每一层级都传递属性的缺点呢？再看下面这个例子：</p>
 
-<pre><code class="language-js">import React from 'react'
+<pre><code class="language-js">import React from &quot;react&quot;
 
 class Sidebar extends React.Component {
   render() {
     return (
       &lt;div&gt;
         &lt;p&gt;侧边栏&lt;/p&gt;
-        &lt;Navbar user={this.props.user}&gt;&lt;/Navbar&gt;
+        &lt;Navbar user={this.props.user} /&gt;
       &lt;/div&gt;
     )
   }
@@ -81,19 +78,17 @@ class Sidebar extends React.Component {
 
 class Navbar extends React.Component {
   render() {
-    return (
-      &lt;div&gt;{this.props.user}的导航栏&lt;/div&gt;
-    )
+    return &lt;div&gt;{this.props.user}的导航栏&lt;/div&gt;
   }
 }
 
 class Page extends React.Component {
   render() {
-    const user = 'Jack'
+    const user = &quot;Jack&quot;
     return (
       &lt;div&gt;
         &lt;p&gt;我是{user}&lt;/p&gt;
-        &lt;Sidebar user={user}&gt;&lt;/Sidebar&gt;
+        &lt;Sidebar user={user} /&gt;
       &lt;/div&gt;
     )
   }
@@ -112,15 +107,15 @@ export default Page
 
 <p>把上面的例子用 Context 改造如下：</p>
 
-<pre><code class="language-js">import React from 'react'
-import PropTypes from 'prop-types'
+<pre><code class="language-js">import React from &quot;react&quot;
+import PropTypes from &quot;prop-types&quot;
 
 class Sidebar extends React.Component {
   render() {
     return (
       &lt;div&gt;
         &lt;p&gt;侧边栏&lt;/p&gt;
-        &lt;Navbar&gt;&lt;/Navbar&gt;
+        &lt;Navbar /&gt;
       &lt;/div&gt;
     )
   }
@@ -132,9 +127,7 @@ class Navbar extends React.Component {
   }
   render() {
     console.log(this.context)
-    return (
-      &lt;div&gt;{this.context.user}的导航栏&lt;/div&gt;
-    )
+    return &lt;div&gt;{this.context.user}的导航栏&lt;/div&gt;
   }
 }
 
@@ -144,7 +137,7 @@ class Page extends React.Component {
   }
   constructor(props) {
     super(props)
-    this.state = {user: 'Jack'}
+    this.state = { user: &quot;Jack&quot; }
   }
   getChildContext() {
     return this.state
@@ -153,7 +146,7 @@ class Page extends React.Component {
     return (
       &lt;div&gt;
         &lt;p&gt;我是{this.state.user}&lt;/p&gt;
-        &lt;Sidebar&gt;&lt;/Sidebar&gt;
+        &lt;Sidebar /&gt;
       &lt;/div&gt;
     )
   }
@@ -164,9 +157,9 @@ export default Page
 
 <h2 id="实现-react-redux">实现 react-redux</h2>
 
-<pre><code class="language-js">import React from 'react'
-import PropTypes from 'prop-types'
-import { bindActionCreators } from './mini-redux';
+<pre><code class="language-js">import React from &quot;react&quot;
+import PropTypes from &quot;prop-types&quot;
+import { bindActionCreators } from &quot;./mini-redux&quot;
 
 // connect负责链接组件，給到redux里的数据放到组件的属性里
 // 1. 负责接受一个组件，把state里的一些数据放进去，返回一个组件
@@ -182,39 +175,45 @@ import { bindActionCreators } from './mini-redux';
 // }
 
 // 双层箭头函数的写法
-export const connect = (mapStateToProps=state=&gt;state, mapDispatchToProps={}) =&gt; (WrapComponent) =&gt; {
+export const connect = (
+  mapStateToProps = state =&gt; state,
+  mapDispatchToProps = {}
+) =&gt; WrapComponent =&gt; {
   return class ConnectComponent extends React.Component {
-      static contextTypes = {
-        store: PropTypes.object
-      }
+    static contextTypes = {
+      store: PropTypes.object
+    }
 
-      constructor(props, context) {
-        super(props)
-        this.state = {
-          props: {}
-        }
+    constructor(props, context) {
+      super(props)
+      this.state = {
+        props: {}
       }
+    }
 
-      componentDidMount() {
-        const store = this.context.store
-        store.subscribe(() =&gt; this.update())
-        this.update()
-      }
+    componentDidMount() {
+      const store = this.context.store
+      store.subscribe(() =&gt; this.update())
+      this.update()
+    }
 
-      update() {
-        // 获取 mapStateToProps 和 mapDispatchToProps 放入 this.props里
-        const { store }= this.context
-        const stateProps = mapStateToProps(store.getState())
-        // 方法不能直接给，因为需要dispatch, 直接执行方法无意义，要store.dispatch(action)才有意义
-        const dispatchProps = bindActionCreators(mapDispatchToProps, store.dispatch)
-        this.setState({
-          props: {...this.state.props, ...stateProps, ...dispatchProps}
-        })
-      }
+    update() {
+      // 获取 mapStateToProps 和 mapDispatchToProps 放入 this.props里
+      const { store } = this.context
+      const stateProps = mapStateToProps(store.getState())
+      // 方法不能直接给，因为需要dispatch, 直接执行方法无意义，要store.dispatch(action)才有意义
+      const dispatchProps = bindActionCreators(
+        mapDispatchToProps,
+        store.dispatch
+      )
+      this.setState({
+        props: { ...this.state.props, ...stateProps, ...dispatchProps }
+      })
+    }
 
-      render() {
-        return &lt;WrapComponent {...this.state.props}&gt;&lt;/WrapComponent&gt;
-      }
+    render() {
+      return &lt;WrapComponent {...this.state.props} /&gt;
+    }
   }
 }
 
@@ -224,10 +223,10 @@ export class Provider extends React.Component {
   static childContextTypes = {
     store: PropTypes.object
   }
-  
+
   // 把store存到context里，让子组件可取
   getChildContext() {
-    return {store: this.store}
+    return { store: this.store }
   }
 
   constructor(props, context) {
@@ -241,7 +240,6 @@ export class Provider extends React.Component {
     return this.props.children
   }
 }
-
 </code></pre>
 
 <p>我们可以看到官方的 react-redux 的 Provider 也是类似的实现方法 <a href="https://github.com/reduxjs/react-redux/blob/master/src/components/Provider.js">react-redux/src/components/Provider.js</a>。</p>
