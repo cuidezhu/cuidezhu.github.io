@@ -6,10 +6,22 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Feb 2019 15:33:53 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 Feb 2019 11:53:10 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>博客切回 HTTP 访问</title>
+      <link>http://ijs.me/2019/02/14/blog-http/</link>
+      <pubDate>Thu, 14 Feb 2019 11:53:10 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/02/14/blog-http/</guid>
+      <description>我的博客是搭建在 GitHub Pages 上的，并且使用了 Custom domain（自定义域名），一开始我在仓库的 Settings 里勾选了 Enforce HTTPS，这样即使你在浏览器里输入 ijs.me，也会自动访问 https://ijs.me。GitHub 为我们提供了免费的证书，用的是 Let’s Encrypt 提供的免费证书，免费证书有效期比较短，每隔几个月会更新一次。
+我的网站引用了一些 Cloudflare 上的 CSS 和 JS 文件，Cloudflare 在国外访问速度较快，但是在国内速度就太慢了，我就把用的这几个 Cloudflare 上的 CSS 和 JS 文件放到了七牛上，我用的是七牛免费的 HTTP 流量。在 HTTPS 网站上引用这些 HTTP 开头的文件 URL 会遇到已阻止载入混合活动内容错误，导致 CSS 和 JS 文件加载失败。
+所以为了方便，我把网站取消了 Enforce HTTPS，使用 HTTPS 如果是自己的证书还要担心证书到期问题，用 HTTP 访问网站更方便。
+经过实测，我们在博客文章里做的一些网站站内的一些内链，原先为 HTTPS 开头的，也需要改为 HTTP，否则该文章会自动用 HTTPS 访问，引用的一些第三方网站的 HTTPS URL 则不受影响。</description>
+    </item>
     
     <item>
       <title>HTTP 强缓存和协商缓存</title>
@@ -2057,8 +2069,8 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d  然后打开 Emacs �
       <guid>http://ijs.me/2018/05/30/react-redux-devtools/</guid>
       <description>用 Redux 配合 React 开发项目时遇到一个奇怪的问题，项目只能在 Chrome 浏览器下正确运行，其它的浏览器都会报如下错误：TypeError: undefined is not an object (evaluating &#39;b.apply&#39;)
 猜测可能是由 Redux 引起的，于是搜索一番，找到了这个 Github Issues, 原来是因为只有我的 Chrome 浏览器装了 Redux DevTools 这个插件，而其它浏览器都没装，所以下面的代码会报错，
-const store = createStore(reducers, compose( applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ &amp;amp;&amp;amp; window.__REDUX_DEVTOOLS_EXTENSION__() ))  正确的做法是：
-const store = createStore(reducers, compose( applyMiddleware(thunk), window.devToolsExtension ? window.devToolsExtension() : f=&amp;gt;f ))  这样项目就不会在 Chrome 之外的浏览器报错了。</description>
+const store = createStore( reducers, compose( applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ &amp;amp;&amp;amp; window.__REDUX_DEVTOOLS_EXTENSION__() ) )  正确的做法是：
+const store = createStore( reducers, compose( applyMiddleware(thunk), window.devToolsExtension ? window.devToolsExtension() : f =&amp;gt; f ) )  这样项目就不会在 Chrome 之外的浏览器报错了。</description>
     </item>
     
     <item>
@@ -2068,16 +2080,14 @@ const store = createStore(reducers, compose( applyMiddleware(thunk), window.devT
       
       <guid>http://ijs.me/2018/05/18/github-index-layout/</guid>
       <description>GitHub 首页的改版好蛋疼，原先的右栏换成了左栏，左栏换成了右栏。看着好别扭，原先的看习惯了，于是想把 Github 的首页布局改回去。
-更新： 发现用 Stylish-为任意网站自定义主题 更方便，Stylish 改变 UI 时不会闪一下，而且Stylish支持正则表达式匹配网址。
-下载好Stylish后，点插件图标，然后点右上角的菜单图标，新建样式，
+更新： 发现用 Stylish-为任意网站自定义主题 更方便，Stylish 改变 UI 时不会闪一下，而且 Stylish 支持正则表达式匹配网址。
+下载好 Stylish 后，点插件图标，然后点右上角的菜单图标，新建样式，
 然后把下面这行 css 复制到代码部分，
-.column { float: right; }  底部应用对象选择：与该正则表达式匹配的网址，input框里填入 https://github.com/(orgs/.*|$) 然后点保存就好了。
-旧方法 首先我是用的 Chrome 浏览器，下载 Tampermonkey ,Tampermonkey 也有其它浏览器版本，可以去 官网 下载你使用的浏览器对应版本。然后打开GitHub首页，点击插件图标，点添加新脚本。
+.column { float: right; }  底部应用对象选择：与该正则表达式匹配的网址，input 框里填入 https://github.com/(orgs/.*|$) 然后点保存就好了。
+旧方法 首先我是用的 Chrome 浏览器，下载 Tampermonkey ,Tampermonkey 也有其它浏览器版本，可以去 官网 下载你使用的浏览器对应版本。然后打开 GitHub 首页，点击插件图标，点添加新脚本。
 在新打开的页面中，添加下面一行代码：
 document.getElementsByClassName(&#39;column&#39;)[0].style.float=&amp;quot;right&amp;quot;  改下 @match, 在https://github.com/ 后添加 *, 由于 @match 应该是不支持正则表达式中的 ?, 只支持个通配符 * match_patterns, 所以想匹配 https://github.com/orgs/xxx 其中xxx代表任意字符只能加个 * 了，不过这样做满足了匹配首页和 orgs 页面的要求，由于其它页面并没有 column 这个 class,所以对其它页面无影响。
-按 Ctrl + S 保存，然后就可以看到 Github 首页布局恢复了。
-完整的代码如下:
-// ==UserScript== // @name New Userscript // @namespace http://tampermonkey.</description>
+按 Ctrl + S 保存，然后就可以看到 Github 首页布局恢复了。</description>
     </item>
     
     <item>
