@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"
+      name="viewport"
+    />
+    <title>Ant Design 同一个页面内多个表单校验冲突解决</title>
+    <link rel="stylesheet" href="http://static.intj.top/tomorrow.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://static.intj.top/main.css"
+    />
+    
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "UA-122652961-1")
+    </script>
+  </head>
+  <body></body>
+</html>
+
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>Ant Design 同一个页面内多个表单校验冲突解决</h1>
+      <span class="blog-post-date">February 15, 2019</span>
+    </div>
+    <div class="blog-post-content">
+        <p>遇到这样一种场景，某个页面比较复杂，页面本身是一个表单，然后 Modal 里是另外一个表单，如果我们写在同一个组件里。在表单校验时就会发生两个表单会同时校验的问题。</p>
+
+<p>这时我们需要把一个表单抽离出来成一个独立的组件。然后主页面和弹窗之间的数据通信可以通过 <code>props</code> 来解决。</p>
+
+<p>例如：</p>
+
+<pre><code class="language-js">class Modal extends Component {
+
+  handleModalSubmit = e =&gt; {
+    e.preventDefault()
+    this.props.form.validateFields((err, values) =&gt; {
+      values.id = this.props.id
+      if (!err) {
+        request(``).then(res =&gt; {
+
+        })
+      }
+    })
+  }
+  render() {
+    return (
+      &lt;Form onSubmit={this.handleModalSubmit}&gt;
+      &lt;/Form&gt;
+  }
+}
+
+const WrappedModal = Form.create()(Modal)
+
+class MainPage extends Component {
+  render() {
+    return (
+      &lt;Form onSubmit={this.handleSubmit}&gt;
+        &lt;Modal
+          title='弹窗表单'
+          visible={this.state.visible}
+          onCancel={this.handleCancel}&gt;
+          &lt;WrappedModal id={this.state.id} /&gt;
+        &lt;/Modal&gt;
+      &lt;/Form&gt;
+    )
+  }
+}
+</code></pre>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="http://static.intj.top/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
