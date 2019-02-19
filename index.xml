@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Feb 2019 19:50:32 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Feb 2019 23:58:22 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React 中 key 的作用原理</title>
+      <link>http://ijs.me/2019/02/19/react-item-key/</link>
+      <pubDate>Tue, 19 Feb 2019 23:58:22 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/02/19/react-item-key/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ant Design 同一个页面内多个表单校验冲突解决</title>
