@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ijs.me/2019/02/24/2019-front-end-stack/</loc>
+    <lastmod>2019-02-24T23:55:47+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ijs.me/2019/02/19/react-item-key/</loc>
     <lastmod>2019-02-19T23:58:22+08:00</lastmod>
   </url>
@@ -1059,7 +1064,7 @@
   
   <url>
     <loc>http://ijs.me/post/</loc>
-    <lastmod>2019-02-19T23:58:22+08:00</lastmod>
+    <lastmod>2019-02-24T23:55:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1070,7 +1075,7 @@
   
   <url>
     <loc>http://ijs.me/</loc>
-    <lastmod>2019-02-19T23:58:22+08:00</lastmod>
+    <lastmod>2019-02-24T23:55:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
