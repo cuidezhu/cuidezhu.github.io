@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Feb 2019 23:55:47 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2019 23:58:04 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>人生重新出发</title>
+      <link>http://ijs.me/2019/03/04/life-re-starts/</link>
+      <pubDate>Mon, 04 Mar 2019 23:58:04 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/03/04/life-re-starts/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>2019 年前端技术栈</title>
