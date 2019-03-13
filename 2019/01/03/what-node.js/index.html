@@ -6,7 +6,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"
       name="viewport"
     />
-    <title>Node.js 优势</title>
+    <title>Node.js 概念及优势</title>
     <link rel="stylesheet" href="http://static.intj.top/tomorrow.min.css" />
     <link
       rel="stylesheet"
@@ -34,11 +34,27 @@
 
   <main class="container" role="main">
     <div class="article-head">
-      <h1>Node.js 优势</h1>
+      <h1>Node.js 概念及优势</h1>
       <span class="blog-post-date">January 3, 2019</span>
     </div>
     <div class="blog-post-content">
-        <p>使用场景：</p>
+        <p>Node.js 是构建在 Chrome&rsquo;s V8 JavaScript 引擎上的运行时，Node.js 并不是一门语言，JavaScript 才是语言，而  Node.js 是一个 JavaScript runtime，类似于 Java 语言的 JRE，是一个运行时。</p>
+
+<ul>
+<li><p>阻塞：I/O 时进程休眠等待 I/O 完成后进行下一步。</p></li>
+
+<li><p>非阻塞 I/O：I/O 时函数立即返回，进程不等待 I/O 完成。</p></li>
+</ul>
+
+<p>事件驱动：</p>
+
+<ul>
+<li><p>I/O 等异步操作结束后的通知，发射一个事件，然后调用相应的事件处理程序。</p></li>
+
+<li><p>内部实现是用观察者模式实现的。</p></li>
+</ul>
+
+<p>使用场景：</p>
 
 <p>I/O 密集：文件操作、网络操作、数据库</p>
 
