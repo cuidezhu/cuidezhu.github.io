@@ -6,10 +6,23 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Mar 2019 23:51:38 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2019 22:43:42 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Node.js 所用的模块规范 -- CommonJS 规范</title>
+      <link>http://ijs.me/2019/04/01/node.js-modules-commonjs/</link>
+      <pubDate>Mon, 01 Apr 2019 22:43:42 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/04/01/node.js-modules-commonjs/</guid>
+      <description>我们先来看一个例子，新建一个 01_run.js 文件：
+console.log(&amp;quot;This is a test.&amp;quot;);  在终端中打开该文件所在目录，执行调试 node --inspect-brk 01_run.js，然后在 Chrome 浏览器打开地址 chrome://inspect/，就可以看到我们的文件的 Target，点击 inspect，在打开的调试工具窗口中就可以看到实际执行的代码为：
+(function(exports, require, module, __filename, __dirname) { console.log(&amp;quot;This is a test.&amp;quot;); });  外面包裹的函数都是 Node.js 内部帮我们做的，exports 参数代表模块的输出， require 表示需要引用别的模块时调用的 function, module 代表模块本身,module 里面还有一个exports 属性， __filename 就是该文件的路径（绝对路径）, __dirname 是该文件所在文件夹的路径（绝对路径）。
+exports 参数是 module.exports 的简写，当 exports 在文件中被当作变量赋值时，则该简写就不成立了，参考 exports shortcut。
+module.exports.hello = true; // Exported from require of module exports = { hello: false }; // Not exported, only available in the module  CommonJS 规范：</description>
+    </item>
     
     <item>
       <title>npx 是什么</title>

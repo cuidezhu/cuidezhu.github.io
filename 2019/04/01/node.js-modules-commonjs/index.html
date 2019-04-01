@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"
+      name="viewport"
+    />
+    <title>Node.js 所用的模块规范 -- CommonJS 规范</title>
+    <link rel="stylesheet" href="http://static.intj.top/tomorrow.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/main.css"
+    />
+    
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "UA-122652961-1")
+    </script>
+  </head>
+  <body></body>
+</html>
+
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>Node.js 所用的模块规范 -- CommonJS 规范</h1>
+      <span class="blog-post-date">April 1, 2019</span>
+    </div>
+    <div class="blog-post-content">
+        <p>我们先来看一个例子，新建一个 <code>01_run.js</code> 文件：</p>
+
+<pre><code class="language-js">console.log(&quot;This is a test.&quot;);
+</code></pre>
+
+<p>在终端中打开该文件所在目录，执行调试 <code>node --inspect-brk 01_run.js</code>，然后在 Chrome 浏览器打开地址 <code>chrome://inspect/</code>，就可以看到我们的文件的 Target，点击 <code>inspect</code>，在打开的调试工具窗口中就可以看到实际执行的代码为：</p>
+
+<pre><code class="language-js">(function(exports, require, module, __filename, __dirname) {
+  console.log(&quot;This is a test.&quot;);
+});
+</code></pre>
+
+<p>外面包裹的函数都是 Node.js 内部帮我们做的，<code>exports</code> 参数代表模块的输出， <code>require</code> 表示需要引用别的模块时调用的 function, <code>module</code> 代表模块本身,<code>module</code> 里面还有一个<code>exports</code> 属性， <code>__filename</code> 就是该文件的路径（绝对路径）, <code>__dirname</code> 是该文件所在文件夹的路径（绝对路径）。</p>
+
+<p><code>exports</code> 参数是 <code>module.exports</code> 的简写，当 <code>exports</code> 在文件中被当作变量赋值时，则该简写就不成立了，参考 <a href="https://nodejs.org/docs/latest/api/modules.html#modules_exports_shortcut">exports shortcut</a>。</p>
+
+<pre><code class="language-js">module.exports.hello = true; // Exported from require of module
+exports = { hello: false };  // Not exported, only available in the module
+</code></pre>
+
+<p>CommonJS 规范：</p>
+
+<ul>
+<li><p>每个文件是一个模块，一个文件内也只能有一个模块，有自己的作用域</p></li>
+
+<li><p>在模块内部 <code>module</code> 变量代表模块本身</p></li>
+
+<li><p><code>module.exports</code> 属性代表模块对外接口</p></li>
+</ul>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="http://static.intj.top/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
