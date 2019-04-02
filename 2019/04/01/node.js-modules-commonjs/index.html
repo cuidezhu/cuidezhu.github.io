@@ -68,6 +68,24 @@ exports = { hello: false };  // Not exported, only available in the module
 <li><p><code>module.exports</code> 属性代表模块对外接口</p></li>
 </ul>
 
+<p>require 规则：</p>
+
+<ul>
+<li><p><code>/</code> 表示绝对路径， <code>./</code> 表示相对于当前文件的</p></li>
+
+<li><p>支持 js, json, node 拓展名，不写依次尝试，如果都找不到就会报错</p></li>
+
+<li><p>不写路径则认为是 <code>build-in</code> 模块或者各级 <code>node_modules</code> 内的第三方模块</p></li>
+</ul>
+
+<p>require 特性：</p>
+
+<ul>
+<li><p>module 被加载的时候执行，加载后缓存</p></li>
+
+<li><p>一旦出现某个模块被循环加载，就只输出已经执行的部分，还未执行的部分不会输出</p></li>
+</ul>
+
     </div>
   </main>
 
