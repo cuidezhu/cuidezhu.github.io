@@ -6,10 +6,21 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2019 22:43:42 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Apr 2019 23:44:13 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>为 MacTeX 配置中文支持</title>
+      <link>http://ijs.me/2019/04/03/mactex-chinese/</link>
+      <pubDate>Wed, 03 Apr 2019 23:44:13 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/04/03/mactex-chinese/</guid>
+      <description>MacTeX 自带了名为 TeXShop 的编辑器，我们打开 TeXShop，然后打开偏好设置，把编码改为 UTF-8，
+然后切换到排版，把默认指令选为“采用键入的指令”，
+我们在写带有中文的文档时，在 .tex 文档中加入 \usepackage{xeCJK} 就能处理中文了。</description>
+    </item>
     
     <item>
       <title>Node.js 所用的模块规范 -- CommonJS 规范</title>
