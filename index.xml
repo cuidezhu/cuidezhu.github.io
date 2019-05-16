@@ -6,10 +6,19 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Apr 2019 23:44:13 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2019 23:56:25 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>setTimeout(fn, 0) 意味着什么</title>
+      <link>http://ijs.me/2019/05/16/settimeout-fn-0/</link>
+      <pubDate>Thu, 16 May 2019 23:56:25 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/05/16/settimeout-fn-0/</guid>
+      <description>当你定义 setTimeout 那一刻起（不管时间是不是0），JS 并不会直接去执行这段代码，而是把它扔到一个事件队列里面，当页面中所有同步任务都干完了以后，才会去执行事件队列里面的代码。</description>
+    </item>
     
     <item>
       <title>为 MacTeX 配置中文支持</title>
