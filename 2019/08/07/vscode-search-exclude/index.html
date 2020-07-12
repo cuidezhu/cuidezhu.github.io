@@ -8,7 +8,7 @@
     />
     <meta name="keywords" content="老崔博客，技术博客，前端，前端开发技术，全栈">
     <meta name="description" content="记录学习，知识笔记，每天提高一点点。">
-    <title>React 接入微信公众平台 JS-SDK 实现分享定制</title>
+    <title>VS Code 搜索排除</title>
     <link rel="stylesheet" href="https://static.intj.top/tomorrow.min.css" />
     <link
       rel="stylesheet"
@@ -35,11 +35,29 @@
 
   <main class="container" role="main">
     <div class="article-head">
-      <h1>React 接入微信公众平台 JS-SDK 实现分享定制</h1>
-      <span class="blog-post-date">November 28, 2018</span>
+      <h1>VS Code 搜索排除</h1>
+      <span class="blog-post-date">August 7, 2019</span>
     </div>
     <div class="blog-post-content">
-        
+        <p>我们在使用 VS Code 的全局搜索时，比如全局搜索一个前端项目，竟然会带上打包后的 <code>/dist</code>, <code>/node_modules</code> 等目录一起搜索，这样会带来很多无关的搜索结果，而且还会让 VS Code 程序卡死，我们可以使用 VS Code 的搜索排除功能来解决这个问题。</p>
+
+<p>我们可以以一个项目为中心来决定搜索时排除哪些文件夹，打开 Workspace 的 settings.json 文件，在该文件中加入下列内容：</p>
+
+<pre><code class="language-json">{
+    // 搜索排除
+    &quot;search.exclude&quot;: {
+        &quot;**/.git&quot;: true,
+        &quot;**/node_modules&quot;: true,
+        &quot;**/bower_components&quot;: true,
+        &quot;**/tmp&quot;: true
+    },
+}
+</code></pre>
+
+<p>然后确保您没有关闭搜索排除功能。 在搜索区域中，展开“要排除的文件”输入框，并确保选中齿轮图标。</p>
+
+<p>再次搜索时，就会发现搜索结果干净了，没有干扰结果啦。</p>
+
     </div>
   </main>
 

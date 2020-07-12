@@ -9,7 +9,7 @@
     <meta name="keywords" content="老崔博客，技术博客，前端，前端开发技术，全栈">
     <meta name="description" content="记录学习，知识笔记，每天提高一点点。">
     <title>使用七牛云作为博客图床配合 PicGo 上传图片</title>
-    <link rel="stylesheet" href="http://static.intj.top/tomorrow.min.css" />
+    <link rel="stylesheet" href="https://static.intj.top/tomorrow.min.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -63,7 +63,7 @@
 
 <p>首先我们在对象存储栏目里新建一个存储空间，存储区域根据你的需要选一个，访问控制选为公开空间。</p>
 
-<p><img src="http://static.intj.top/1550037887368.jpg" alt="新建存储空间" /></p>
+<p><img src="https://static.intj.top/1550037887368.jpg" alt="新建存储空间" /></p>
 
 <blockquote>
 <p>公开空间，可通过文件对象的 URL 直接访问。如果要使用七牛云存储的镜像存储功能，请设置空间的属性为公有。</p>
@@ -81,7 +81,7 @@
 
 <p>在绑定域名页加速域名字段填写一个你已备案的域名的二级域名，比如 <code>cdn.xxx.com</code>，覆盖范围我选了全球。</p>
 
-<p><img src="http://static.intj.top/1550026052738.jpg" alt="创建域名" /></p>
+<p><img src="https://static.intj.top/1550026052738.jpg" alt="创建域名" /></p>
 
 <p>点击创建然后会提示你：</p>
 
@@ -93,11 +93,11 @@ CNAME: cdn.xxx.com.qiniudns.com</p>
 
 <p>我们去我们购买域名的服务提供商控制台的域名解析里添加解析记录：</p>
 
-<p><img src="http://static.intj.top/1550026320275.jpg" alt="CNAME 绑定" /></p>
+<p><img src="https://static.intj.top/1550026320275.jpg" alt="CNAME 绑定" /></p>
 
 <p>添加好 CNAME 记录后，我们去七牛云的融合 CDN -&gt; 域名管理可以看到我们绑定的域名，现在状态为处理中，一般 10 分钟左右就成功了，等域名状态变为成功后域名就可以使用了。</p>
 
-<p><img src="http://static.intj.top/1550026506784.jpg" alt="域名管理" /></p>
+<p><img src="https://static.intj.top/1550026506784.jpg" alt="域名管理" /></p>
 
 <h2 id="picgo">PicGo</h2>
 
@@ -111,11 +111,11 @@ CNAME: cdn.xxx.com.qiniudns.com</p>
 
 <p>以上的前置工作都做完了，然后我们打开 PicGo 的详细窗口，点击图床设置，选择七牛图床，然后会让我们填写一些密钥信息。我们打开七牛云的个人中心 -&gt; 密钥管理，然后我们可以看到一些密钥信息。</p>
 
-<p><img src="http://static.intj.top/1550027375039.jpg" alt="密钥管理" /></p>
+<p><img src="https://static.intj.top/1550027375039.jpg" alt="密钥管理" /></p>
 
 <p>把 AccessKey/SecretKey 复制到 PicGo 中，设定访问网址就是我们已备案的域名，我们应该填之前在域名解析时设置的二级域名，注意添加 <code>http://</code> 前缀。</p>
 
-<p><img src="http://static.intj.top/1550037972134.jpg" alt="图床设置" /></p>
+<p><img src="https://static.intj.top/1550037972134.jpg" alt="图床设置" /></p>
 
 <p>在 PicGo 中填好信息后，我们点击确定，然后点击设为默认图床，PicGo 提示设置成功。</p>
 
@@ -136,7 +136,7 @@ CNAME: cdn.xxx.com.qiniudns.com</p>
       <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
     </a>
   </footer>
-  <script src="http://static.intj.top/highlight.min.js"></script>
+  <script src="https://static.intj.top/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

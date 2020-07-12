@@ -9,7 +9,7 @@
     <meta name="keywords" content="老崔博客，技术博客，前端，前端开发技术，全栈">
     <meta name="description" content="记录学习，知识笔记，每天提高一点点。">
     <title>redux-thunk 中间件的实现</title>
-    <link rel="stylesheet" href="http://static.intj.top/tomorrow.min.css" />
+    <link rel="stylesheet" href="https://static.intj.top/tomorrow.min.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -43,14 +43,14 @@
 
 <h2 id="同步中间件">同步中间件</h2>
 
-<p><img src="http://static.intj.top/20190214151132.png" alt="redux-middleware-sync" /></p>
+<p><img src="https://static.intj.top/20190214151132.png" alt="redux-middleware-sync" /></p>
 
 <p>通过 redux 暴露出的 applyMiddleware，我们可以得到一个新的 dispatch.
 所以 applyMiddleware 的实际效果可以看做是：dispatch =&gt; newdispatch</p>
 
 <h2 id="异步中间件">异步中间件</h2>
 
-<p><img src="http://static.intj.top/20190214151022.png" alt="redux-middleware-async" /></p>
+<p><img src="https://static.intj.top/20190214151022.png" alt="redux-middleware-async" /></p>
 
 <p>对于异步的情况，我们拿 redux-thunk 为例，它会对传入的 action 进行判断，如果是 function 的话。则去把我们的 action 执行，这个执行的就是我们的 delay 代码。然后在最里面执行 dispatch()。所以我们的箭头又重新回到最上面，这一次就相当于同步的使用了。</p>
 
@@ -76,7 +76,7 @@ export default thunk
       <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
     </a>
   </footer>
-  <script src="http://static.intj.top/highlight.min.js"></script>
+  <script src="https://static.intj.top/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

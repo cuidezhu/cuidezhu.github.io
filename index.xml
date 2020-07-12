@@ -6,10 +6,22 @@
     <description>Recent content on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 May 2019 23:56:25 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2019 11:39:03 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VS Code 搜索排除</title>
+      <link>http://ijs.me/2019/08/07/vscode-search-exclude/</link>
+      <pubDate>Wed, 07 Aug 2019 11:39:03 +0800</pubDate>
+      
+      <guid>http://ijs.me/2019/08/07/vscode-search-exclude/</guid>
+      <description>我们在使用 VS Code 的全局搜索时，比如全局搜索一个前端项目，竟然会带上打包后的 /dist, /node_modules 等目录一起搜索，这样会带来很多无关的搜索结果，而且还会让 VS Code 程序卡死，我们可以使用 VS Code 的搜索排除功能来解决这个问题。
+我们可以以一个项目为中心来决定搜索时排除哪些文件夹，打开 Workspace 的 settings.json 文件，在该文件中加入下列内容：
+{ // 搜索排除 &amp;quot;search.exclude&amp;quot;: { &amp;quot;**/.git&amp;quot;: true, &amp;quot;**/node_modules&amp;quot;: true, &amp;quot;**/bower_components&amp;quot;: true, &amp;quot;**/tmp&amp;quot;: true }, }  然后确保您没有关闭搜索排除功能。 在搜索区域中，展开“要排除的文件”输入框，并确保选中齿轮图标。
+再次搜索时，就会发现搜索结果干净了，没有干扰结果啦。</description>
+    </item>
     
     <item>
       <title>setTimeout(fn, 0) 意味着什么</title>
