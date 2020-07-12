@@ -72,24 +72,25 @@ function.call(thisArg, arg1, arg2, ...)
 <ol>
 <li>都是用来改变函数的this对象的指向的。</li>
 <li>第一个参数都是this要指向的对象。</li>
-<li>都可以利用后续参数传参。</li>
-</ol>
+
+<li><p>都可以利用后续参数传参。</p>
 
 <pre><code class="language-js">var xw={
-  name: &quot;小王&quot;,
-  gender: &quot;男&quot;,
-  age: 24,
-  say: function() {
-    alert(this.name+&quot; , &quot;+this.gender+&quot; ,今年&quot;+this.age);
-  }
+name: &quot;小王&quot;,
+gender: &quot;男&quot;,
+age: 24,
+say: function() {
+alert(this.name+&quot; , &quot;+this.gender+&quot; ,今年&quot;+this.age);
+}
 }
 var xh={
-  name: &quot;小红&quot;,
-  gender: &quot;女&quot;,
-  age: 18
+name: &quot;小红&quot;,
+gender: &quot;女&quot;,
+age: 18
 }
 xw.say();
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>输出的是： <code>小王 , 男 ,今年24</code>。</p>
 
