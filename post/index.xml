@@ -57,42 +57,6 @@ module.exports.hello = true; // Exported from require of module exports = { hell
     </item>
     
     <item>
-      <title>npx 是什么</title>
-      <link>http://ijs.me/2019/03/09/what-npx/</link>
-      <pubDate>Sat, 09 Mar 2019 23:51:38 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/03/09/what-npx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>人生重新出发</title>
-      <link>http://ijs.me/2019/03/04/life-re-starts/</link>
-      <pubDate>Mon, 04 Mar 2019 23:58:04 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/03/04/life-re-starts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>2019 年前端技术栈</title>
-      <link>http://ijs.me/2019/02/24/2019-front-end-stack/</link>
-      <pubDate>Sun, 24 Feb 2019 23:55:47 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/02/24/2019-front-end-stack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React 中 key 的作用原理</title>
-      <link>http://ijs.me/2019/02/19/react-item-key/</link>
-      <pubDate>Tue, 19 Feb 2019 23:58:22 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/02/19/react-item-key/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Ant Design 同一个页面内多个表单校验冲突解决</title>
       <link>http://ijs.me/2019/02/15/ant-design-two-form/</link>
       <pubDate>Fri, 15 Feb 2019 19:50:32 +0800</pubDate>
@@ -133,15 +97,6 @@ If-None-Match的 header 会将上次返回的Etag发送给服务器，询问该�
     </item>
     
     <item>
-      <title>Mobile Code</title>
-      <link>http://ijs.me/2019/02/04/mobile-code/</link>
-      <pubDate>Mon, 04 Feb 2019 23:58:41 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/02/04/mobile-code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>JavaScript 生成时间戳及其在网络请求中的应用</title>
       <link>http://ijs.me/2019/02/03/javascript-timestamp/</link>
       <pubDate>Sun, 03 Feb 2019 22:47:07 +0800</pubDate>
@@ -156,69 +111,6 @@ let timestamp1 = Date.parse(new Date()) // 精确到秒 let timestamp2 = new Dat
     </item>
     
     <item>
-      <title>Node.js 单元测试</title>
-      <link>http://ijs.me/2019/01/31/node.js-unit-testing/</link>
-      <pubDate>Thu, 31 Jan 2019 23:59:04 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/31/node.js-unit-testing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React 项目中引入全局变量</title>
-      <link>http://ijs.me/2019/01/30/react-global-variable/</link>
-      <pubDate>Wed, 30 Jan 2019 22:26:36 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/30/react-global-variable/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>图片懒加载的实现</title>
-      <link>http://ijs.me/2019/01/29/picture-lazy-load/</link>
-      <pubDate>Tue, 29 Jan 2019 23:53:17 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/29/picture-lazy-load/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Chrome 插件开发</title>
-      <link>http://ijs.me/2019/01/28/chrome-extension-tutorial/</link>
-      <pubDate>Mon, 28 Jan 2019 21:54:54 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/28/chrome-extension-tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>macOS App Store 更新软件失败问题</title>
-      <link>http://ijs.me/2019/01/26/macos-app-store-update/</link>
-      <pubDate>Sat, 26 Jan 2019 23:29:58 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/26/macos-app-store-update/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>WiFi Bluetooth Headset</title>
-      <link>http://ijs.me/2019/01/25/wifi-bluetooth-headset/</link>
-      <pubDate>Fri, 25 Jan 2019 23:58:21 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/25/wifi-bluetooth-headset/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>macOS 下开发 PHP</title>
-      <link>http://ijs.me/2019/01/24/macos-php/</link>
-      <pubDate>Thu, 24 Jan 2019 23:57:57 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/24/macos-php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>macOS 上的那些神器</title>
       <link>http://ijs.me/2019/01/23/macos-artifact/</link>
       <pubDate>Wed, 23 Jan 2019 19:51:02 +0800</pubDate>
@@ -228,15 +120,6 @@ let timestamp1 = Date.parse(new Date()) // 精确到秒 let timestamp2 = new Dat
 Dash 文档离线查看工具，支持的语言非常全。
 Magnet 分屏神器，尤其适合双屏人士，支持快速在两个屏幕之间移动窗口等。
 Expressions 写正则表达式神器，上面写正则，下面可以验证是否正确，旁边侧栏就是各种正则符号的文档。</description>
-    </item>
-    
-    <item>
-      <title>Go HTTP</title>
-      <link>http://ijs.me/2019/01/22/go-http/</link>
-      <pubDate>Tue, 22 Jan 2019 23:59:39 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/22/go-http/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -253,48 +136,12 @@ import React, { Component } from &#39;react&#39; import { withRouter } from &#39
     </item>
     
     <item>
-      <title>Git 同步 Fork 的仓库</title>
-      <link>http://ijs.me/2019/01/20/git-fork-merge-upstream/</link>
-      <pubDate>Sun, 20 Jan 2019 23:48:09 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/20/git-fork-merge-upstream/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>macOS 下编写 C 和 C&#43;&#43;</title>
       <link>http://ijs.me/2019/01/19/macos-c-cpp/</link>
       <pubDate>Sat, 19 Jan 2019 23:01:56 +0800</pubDate>
       
       <guid>http://ijs.me/2019/01/19/macos-c-cpp/</guid>
       <description>安装微软官方推出的 VSCode 插件 C/C++，该插件提供了代码格式化，自动补全等功能。</description>
-    </item>
-    
-    <item>
-      <title>LaTeX Mathematical Formula</title>
-      <link>http://ijs.me/2019/01/18/latex-mathematical-formula/</link>
-      <pubDate>Fri, 18 Jan 2019 23:59:14 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/18/latex-mathematical-formula/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nginx 服务器安装 SSL 证书</title>
-      <link>http://ijs.me/2019/01/17/nginx-https/</link>
-      <pubDate>Thu, 17 Jan 2019 23:32:05 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/17/nginx-https/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>使用组件化开发框架 WePY 开发微信小程序</title>
-      <link>http://ijs.me/2019/01/16/wepy-mini-program/</link>
-      <pubDate>Wed, 16 Jan 2019 23:41:12 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/16/wepy-mini-program/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -331,15 +178,6 @@ import React, { Component } from &#39;react&#39; import { withRouter } from &#39
       <description>在对某个项目执行 npm install 时出现如下错误：
 &amp;gt; mozjpeg@4.1.1 postinstall /Users/dezhu/Code/wrw/node_modules/mozjpeg &amp;gt; node lib/install.js ⚠ The `/Users/dezhu/Code/wrw/node_modules/mozjpeg/vendor/cjpeg` binary doesn&#39;t seem to work correctly ⚠ mozjpeg pre-build test failed ℹ compiling from source ✖ Error: autoreconf -fiv &amp;amp;&amp;amp; ./configure --disable-shared --prefix=&amp;quot;/Users/dezhu/Code/wrw/node_modules/mozjpeg/vendor&amp;quot; --bindir=&amp;quot;/Users/dezhu/Code/wrw/node_modules/mozjpeg/vendor&amp;quot; --libdir=&amp;quot;/Users/dezhu/Code/wrw/node_modules/mozjpeg/vendor&amp;quot; &amp;amp;&amp;amp; make --jobs=12 &amp;amp;&amp;amp; make install --jobs=12 Command failed: autoreconf -fiv /bin/sh: autoreconf: command not found at ChildProcess.exithandler (child_process.js:294:12) at ChildProcess.emit (events.js:182:13) at maybeClose (internal/child_process.js:962:16) at Process.ChildProcess._handle.onexit (internal/child_process.js:251:5)  经过搜索，发现可以通过如下方式解决。
 首先更新 Xcode Command Line Tools 到最新版本，然后执行下面这几条命令：</description>
-    </item>
-    
-    <item>
-      <title>一个项目推送到 多个 Git 仓库</title>
-      <link>http://ijs.me/2019/01/13/git-push-two-repository/</link>
-      <pubDate>Sun, 13 Jan 2019 21:30:23 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/13/git-push-two-repository/</guid>
-      <description>邮箱问题 有可能我们两个项目提交人使用的不是同一个邮箱。</description>
     </item>
     
     <item>
@@ -391,42 +229,6 @@ UI 组件库 如果你喜欢谷歌的 Material Design 风格，那么使用 Angu
     </item>
     
     <item>
-      <title>使用 ESLint</title>
-      <link>http://ijs.me/2019/01/07/configuring-eslint/</link>
-      <pubDate>Mon, 07 Jan 2019 23:57:25 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/07/configuring-eslint/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Node.js 程序调试</title>
-      <link>http://ijs.me/2019/01/06/node.js-debug/</link>
-      <pubDate>Sun, 06 Jan 2019 23:55:11 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/06/node.js-debug/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>数据库索引实现原理</title>
-      <link>http://ijs.me/2019/01/05/sql-index/</link>
-      <pubDate>Sat, 05 Jan 2019 23:55:45 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/05/sql-index/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SQLite 常用操作</title>
-      <link>http://ijs.me/2019/01/04/sqlite-tutorial/</link>
-      <pubDate>Fri, 04 Jan 2019 23:34:16 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/04/sqlite-tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Node.js 概念及优势</title>
       <link>http://ijs.me/2019/01/03/what-node.js/</link>
       <pubDate>Thu, 03 Jan 2019 23:58:26 +0800</pubDate>
@@ -452,102 +254,12 @@ Node.js 在处理高并发，I/O 密集场景性能优势明显。
     </item>
     
     <item>
-      <title>从零开始实现一个图表库</title>
-      <link>http://ijs.me/2019/01/02/javascript-chart/</link>
-      <pubDate>Wed, 02 Jan 2019 23:54:15 +0800</pubDate>
-      
-      <guid>http://ijs.me/2019/01/02/javascript-chart/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>2019 新年展望</title>
       <link>http://ijs.me/2019/01/01/new-year-2019/</link>
       <pubDate>Tue, 01 Jan 2019 23:55:37 +0800</pubDate>
       
       <guid>http://ijs.me/2019/01/01/new-year-2019/</guid>
       <description>每天都要进步一点，不允许每天重复，不能穷忙，低头拉车的同时也要抬头看路。</description>
-    </item>
-    
-    <item>
-      <title>React 中 ref 的使用</title>
-      <link>http://ijs.me/2018/12/31/react-ref/</link>
-      <pubDate>Mon, 31 Dec 2018 23:44:50 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/31/react-ref/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ES6 Generator 函数</title>
-      <link>http://ijs.me/2018/12/30/es6-generator/</link>
-      <pubDate>Sun, 30 Dec 2018 23:38:46 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/30/es6-generator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HTML5 Drag Drop</title>
-      <link>http://ijs.me/2018/12/29/html5-drag-drop/</link>
-      <pubDate>Sat, 29 Dec 2018 23:57:27 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/29/html5-drag-drop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Html Body Background</title>
-      <link>http://ijs.me/2018/12/28/html-body-background/</link>
-      <pubDate>Fri, 28 Dec 2018 18:45:12 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/28/html-body-background/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript 垃圾回收</title>
-      <link>http://ijs.me/2018/12/25/javascript-garbage-collection/</link>
-      <pubDate>Tue, 25 Dec 2018 19:53:52 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/25/javascript-garbage-collection/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MongoDB 入门</title>
-      <link>http://ijs.me/2018/12/24/mongodb-introduction/</link>
-      <pubDate>Mon, 24 Dec 2018 23:02:27 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/24/mongodb-introduction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>几种常见的 POST 数据请求格式</title>
-      <link>http://ijs.me/2018/12/23/post-content-type/</link>
-      <pubDate>Sun, 23 Dec 2018 19:17:56 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/23/post-content-type/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go 语言类型断言</title>
-      <link>http://ijs.me/2018/12/22/go-type-assertion/</link>
-      <pubDate>Sat, 22 Dec 2018 23:56:44 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/22/go-type-assertion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>如何画深度图</title>
-      <link>http://ijs.me/2018/12/21/depth-chart/</link>
-      <pubDate>Fri, 21 Dec 2018 23:56:55 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/21/depth-chart/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -558,24 +270,6 @@ Node.js 在处理高并发，I/O 密集场景性能优势明显。
       <guid>http://ijs.me/2018/12/20/zsh-permission/</guid>
       <description>今天在一台新的电脑上安装 zsh 和 oh-my-zsh 时遇到刚打开时出现如下警告信息：
 [oh-my-zsh] Insecure completion-dependent directories detected: drwxr-xr-x 3 501 admin 96 8 13 14:09 /usr/local/share/zsh drwxr-xr-x 6 501 admin 192 8 13 14:23 /usr/local/share/zsh/site-functions lrwxr-xr-x 1 501 admin 39 8 13 14:18 /usr/local/share/zsh/site-functions/_brew -&amp;gt; ../../../Homebrew/completions/zsh/_brew lrwxr-xr-x 1 501 admin 44 8 13 14:18 /usr/local/share/zsh/site-functions/_brew_cask -&amp;gt; ../../../Homebrew/completions/zsh/_brew_cask lrwxr-xr-x 1 501 admin 56 8 13 14:23 /usr/local/share/zsh/site-functions/_git -&amp;gt; ../../../Cellar/git/2.18.0/share/zsh/site-functions/_git [oh-my-zsh] For safety, we will not load completions from these directories until [oh-my-zsh] you fix their permissions and ownership and restart zsh.</description>
-    </item>
-    
-    <item>
-      <title>在 React 项目中使用 Echarts</title>
-      <link>http://ijs.me/2018/12/18/react-echarts/</link>
-      <pubDate>Tue, 18 Dec 2018 23:47:19 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/18/react-echarts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>使用 Xcode 打包 ipa 步骤</title>
-      <link>http://ijs.me/2018/12/17/ios-xcode-ipa/</link>
-      <pubDate>Mon, 17 Dec 2018 23:34:13 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/17/ios-xcode-ipa/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -592,33 +286,6 @@ JavaScript 是单线程的，Node.js 也是单线程的，单线程只是针对�
     </item>
     
     <item>
-      <title>Go Method</title>
-      <link>http://ijs.me/2018/12/15/go-method/</link>
-      <pubDate>Sat, 15 Dec 2018 23:59:10 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/15/go-method/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Maker 和 Taker 区别</title>
-      <link>http://ijs.me/2018/12/14/maker-taker/</link>
-      <pubDate>Fri, 14 Dec 2018 23:51:27 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/14/maker-taker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>反转二叉树</title>
-      <link>http://ijs.me/2018/12/12/invert-binary-tree/</link>
-      <pubDate>Wed, 12 Dec 2018 23:58:30 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/12/invert-binary-tree/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>前后端联调因 cookie 问题导致 Tomcat 容器报错从而接口返回 500 错误</title>
       <link>http://ijs.me/2018/12/11/tomcat-cookies-500/</link>
       <pubDate>Tue, 11 Dec 2018 23:54:52 +0800</pubDate>
@@ -627,33 +294,6 @@ JavaScript 是单线程的，Node.js 也是单线程的，单线程只是针对�
       <description>最近接手了一个别人写的系统，发现所有有和后端接口交互的页面接口都会返回 500 错误。
 经过一番排查，最终发现这个系统最近加了个登陆逻辑，这个登陆是有和后端交互的，这个系统登陆当时是这样处理的，前端向后端发请求，后端返回一些字段，前端根据这些字段来设置 cookie，其中后端返回的一个字段为中文，而前后端都没对中文做处理，导致 cookie 的格式不对，所有的接口再向后端发请求时，Tomcat 容器那里会报 cookie 错误，导致请求返回 500。其实应该后端设置 cookie 的，前端设置 cookie 还得一个一个得设置。
 原因是 cookie 中不该有中文，有中文等特殊字符 Tomcat 容器那里会报 cookie 错误，可以把中文编码下再保存成 cookie，前后端都可以编码，JS 这里的处理是通过 encodeURIComponent(URIstring)对 URL 进行编码，decodeURIComponent() 函数可对 encodeURIComponent() 函数编码的 URI 进行解码。</description>
-    </item>
-    
-    <item>
-      <title>Go 语言数组（array）和切片（slice）</title>
-      <link>http://ijs.me/2018/12/10/go-array-slice/</link>
-      <pubDate>Mon, 10 Dec 2018 20:40:44 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/10/go-array-slice/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>什么是智能合约</title>
-      <link>http://ijs.me/2018/12/09/what-is-a-smart-contract/</link>
-      <pubDate>Sun, 09 Dec 2018 23:55:42 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/09/what-is-a-smart-contract/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端写入及解析 Cookie</title>
-      <link>http://ijs.me/2018/12/08/javascript-cookie/</link>
-      <pubDate>Sat, 08 Dec 2018 23:56:48 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/08/javascript-cookie/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -696,24 +336,6 @@ git push --set-upstream origin newName  </description>
     </item>
     
     <item>
-      <title>Immutable JS</title>
-      <link>http://ijs.me/2018/12/02/immutable-js/</link>
-      <pubDate>Sun, 02 Dec 2018 23:59:46 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/02/immutable-js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RxJS 使用场景</title>
-      <link>http://ijs.me/2018/12/01/rxjs-usage-scenarios/</link>
-      <pubDate>Sat, 01 Dec 2018 23:30:47 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/12/01/rxjs-usage-scenarios/</guid>
-      <description> 聊天室 加密货币交易所 </description>
-    </item>
-    
-    <item>
       <title>在手机端打开 PC 端启动的本地项目</title>
       <link>http://ijs.me/2018/11/30/phone-localhost/</link>
       <pubDate>Fri, 30 Nov 2018 19:38:04 +0800</pubDate>
@@ -734,114 +356,6 @@ git push --set-upstream origin newName  </description>
     </item>
     
     <item>
-      <title>React 接入微信公众平台 JS-SDK 实现分享定制</title>
-      <link>http://ijs.me/2018/11/28/weixin-share/</link>
-      <pubDate>Wed, 28 Nov 2018 23:58:22 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/28/weixin-share/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>使用 Next.js 做服务端渲染</title>
-      <link>http://ijs.me/2018/11/27/next.js-server-side-rendering/</link>
-      <pubDate>Tue, 27 Nov 2018 23:56:20 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/27/next.js-server-side-rendering/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>什么是消息队列</title>
-      <link>http://ijs.me/2018/11/26/message-queue/</link>
-      <pubDate>Mon, 26 Nov 2018 23:48:18 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/26/message-queue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>使用 TradingView 画加密货币行情图</title>
-      <link>http://ijs.me/2018/11/25/tradingview-cryptocurrency-btc-market-chart/</link>
-      <pubDate>Sun, 25 Nov 2018 23:58:13 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/25/tradingview-cryptocurrency-btc-market-chart/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript Design Pattern Facade Pattern</title>
-      <link>http://ijs.me/2018/11/24/javascript-design-pattern-facade-pattern/</link>
-      <pubDate>Sat, 24 Nov 2018 23:59:32 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/24/javascript-design-pattern-facade-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript Design Pattern Proxy Pattern</title>
-      <link>http://ijs.me/2018/11/23/javascript-design-pattern-proxy-pattern/</link>
-      <pubDate>Fri, 23 Nov 2018 20:41:13 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/23/javascript-design-pattern-proxy-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JS 装饰器</title>
-      <link>http://ijs.me/2018/11/22/js-decorator/</link>
-      <pubDate>Thu, 22 Nov 2018 23:57:35 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/22/js-decorator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>使用 Eclipse 调试 Java 程序</title>
-      <link>http://ijs.me/2018/11/21/eclipse-debug-java/</link>
-      <pubDate>Wed, 21 Nov 2018 23:58:19 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/21/eclipse-debug-java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>使用 Fetch 发网络请求</title>
-      <link>http://ijs.me/2018/11/20/javascript-fetch/</link>
-      <pubDate>Tue, 20 Nov 2018 23:55:54 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/20/javascript-fetch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Service Worker 用途</title>
-      <link>http://ijs.me/2018/11/19/service-worker/</link>
-      <pubDate>Mon, 19 Nov 2018 23:56:54 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/19/service-worker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript 设计模式之装饰器模式</title>
-      <link>http://ijs.me/2018/11/18/javascript-design-pattern-decorator-pattern/</link>
-      <pubDate>Sun, 18 Nov 2018 23:59:31 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/18/javascript-design-pattern-decorator-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>浅析MVC MVP 和 MVVM 架构模式</title>
-      <link>http://ijs.me/2018/11/17/mvc-mvp-mvvm/</link>
-      <pubDate>Sat, 17 Nov 2018 23:57:10 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/17/mvc-mvp-mvvm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>在 VS Code 中使用 Prettier 来格式化前端代码</title>
       <link>http://ijs.me/2018/11/16/prettier-code-formatter/</link>
       <pubDate>Fri, 16 Nov 2018 19:18:34 +0800</pubDate>
@@ -851,15 +365,6 @@ git push --set-upstream origin newName  </description>
 首先我们在 VS Code 里安装 Prettier， 然后我们进行一些个性化配置，打开 VS Code 的配置文件 settings.json，然后在其中加入下面内容：
 &amp;quot;editor.formatOnSave&amp;quot;: true, &amp;quot;prettier.jsxSingleQuote&amp;quot;: true, &amp;quot;prettier.semi&amp;quot;: false, &amp;quot;prettier.proseWrap&amp;quot;: &amp;quot;preserve&amp;quot;  然后每次保存的时候就会自动格式化代码了，你也可以通过 CMD + Shift + P -&amp;gt; Format Document 来手动进行格式化代码。
 之前发现 Prettier 在格式化 JSX 代码时，有些 HTML 标签比如 &amp;lt;p&amp;gt; 标签里的内容有时会分为两行显示，这样直接把内容换行会导致显示多一个空格的问题，后来经过一番搜索发现 settings.json 里加一句 &amp;quot;prettier.proseWrap&amp;quot;: &amp;quot;preserve&amp;quot; 就好了，意为原本是否换行保持不变。</description>
-    </item>
-    
-    <item>
-      <title>React Navigation</title>
-      <link>http://ijs.me/2018/11/15/react-navigation/</link>
-      <pubDate>Thu, 15 Nov 2018 23:59:54 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/15/react-navigation/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -887,120 +392,12 @@ sh -c &amp;quot;$(curl -fsSL https://raw.</description>
     </item>
     
     <item>
-      <title>Solidity 语言入门</title>
-      <link>http://ijs.me/2018/11/12/solidity-introduction/</link>
-      <pubDate>Mon, 12 Nov 2018 23:58:42 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/12/solidity-introduction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript Design Pattern Adapter Pattern</title>
-      <link>http://ijs.me/2018/11/10/javascript-design-pattern-adapter-pattern/</link>
-      <pubDate>Sat, 10 Nov 2018 23:55:51 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/10/javascript-design-pattern-adapter-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript Design Pattern Singleton Pattern</title>
-      <link>http://ijs.me/2018/11/09/javascript-design-pattern-singleton-pattern/</link>
-      <pubDate>Fri, 09 Nov 2018 23:57:51 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/09/javascript-design-pattern-singleton-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript Design Pattern Factory Pattern</title>
-      <link>http://ijs.me/2018/11/08/javascript-design-pattern-factory-pattern/</link>
-      <pubDate>Thu, 08 Nov 2018 23:59:12 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/08/javascript-design-pattern-factory-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>有限状态机</title>
-      <link>http://ijs.me/2018/11/08/finite-state-machine/</link>
-      <pubDate>Thu, 08 Nov 2018 00:00:22 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/08/finite-state-machine/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>巧用 setTimeout 进行排序</title>
       <link>http://ijs.me/2018/11/06/settimeout-sort/</link>
       <pubDate>Tue, 06 Nov 2018 23:57:41 +0800</pubDate>
       
       <guid>http://ijs.me/2018/11/06/settimeout-sort/</guid>
       <description>原理：把数组每一项的值当作 setTimeout 的时间参数，根据数值大小延迟不同的时间输出值（或放到新数组里），达到排序目的。</description>
-    </item>
-    
-    <item>
-      <title>Gitflow Workflow</title>
-      <link>http://ijs.me/2018/11/05/gitflow-workflow/</link>
-      <pubDate>Mon, 05 Nov 2018 23:59:38 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/05/gitflow-workflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Node.js Foundation</title>
-      <link>http://ijs.me/2018/11/04/node.js-foundation/</link>
-      <pubDate>Sun, 04 Nov 2018 23:59:21 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/04/node.js-foundation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Geth Cmd</title>
-      <link>http://ijs.me/2018/11/03/geth-cmd/</link>
-      <pubDate>Sat, 03 Nov 2018 23:59:31 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/03/geth-cmd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web3.js 基本用法</title>
-      <link>http://ijs.me/2018/11/02/web3.js-usage/</link>
-      <pubDate>Fri, 02 Nov 2018 23:52:29 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/02/web3.js-usage/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React Hooks 解读</title>
-      <link>http://ijs.me/2018/11/01/react-hooks/</link>
-      <pubDate>Thu, 01 Nov 2018 23:50:44 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/11/01/react-hooks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Chrome 浏览器下独有的 CSS 兼容问题</title>
-      <link>http://ijs.me/2018/10/31/chrome-css/</link>
-      <pubDate>Wed, 31 Oct 2018 23:58:57 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/31/chrome-css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CSS3 calc() 的用法</title>
-      <link>http://ijs.me/2018/10/29/css3-calc/</link>
-      <pubDate>Mon, 29 Oct 2018 23:58:33 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/29/css3-calc/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1011,69 +408,6 @@ sh -c &amp;quot;$(curl -fsSL https://raw.</description>
       <guid>http://ijs.me/2018/10/28/macos-latex-setup/</guid>
       <description>由于 MacTeX 提供的编辑器比较简单，所以我们使用 VS Code 来编写 LaTeX。
 VS Code 的 LaTeX Workshop 扩展 我们需要安装 VS Code 的扩展 LaTeX Workshop，LaTeX Workshop 为我们在 VS Code 里编写 LaTeX 提供了一个完整的工具集，包括以 PDF 格式查看，LaTeX 代码高亮，语法提示，LaTeX 文件格式化等。</description>
-    </item>
-    
-    <item>
-      <title>应用 HTML 锚点链接时 ::before 和 margin-top 设为负值的巧用</title>
-      <link>http://ijs.me/2018/10/26/html-anchor-link-before-margin-top-negative/</link>
-      <pubDate>Fri, 26 Oct 2018 23:02:14 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/26/html-anchor-link-before-margin-top-negative/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript 监听页面滚动</title>
-      <link>http://ijs.me/2018/10/25/javascript-window-scroll/</link>
-      <pubDate>Thu, 25 Oct 2018 23:59:42 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/25/javascript-window-scroll/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Table 的 border-collapse 和 border-spacing</title>
-      <link>http://ijs.me/2018/10/24/table-border-collapse-border-spacing/</link>
-      <pubDate>Wed, 24 Oct 2018 23:58:44 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/24/table-border-collapse-border-spacing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>inline-block 元素垂直对齐问题</title>
-      <link>http://ijs.me/2018/10/23/inline-block-vertical-align/</link>
-      <pubDate>Tue, 23 Oct 2018 23:37:01 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/23/inline-block-vertical-align/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript 自动分号插入机制</title>
-      <link>http://ijs.me/2018/10/22/javascript-automatic-semicolon-isertion/</link>
-      <pubDate>Mon, 22 Oct 2018 23:56:47 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/22/javascript-automatic-semicolon-isertion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web Workers 的使用</title>
-      <link>http://ijs.me/2018/10/21/using-web-workers/</link>
-      <pubDate>Sun, 21 Oct 2018 23:51:02 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/21/using-web-workers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ES6 引入的新的 JavaScript 数据类型 Symbol</title>
-      <link>http://ijs.me/2018/10/20/es6-symbol/</link>
-      <pubDate>Sat, 20 Oct 2018 23:52:49 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/20/es6-symbol/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1160,42 +494,6 @@ p_a 的类型是 int*， 而不是 int。</description>
     </item>
     
     <item>
-      <title>CSS 清除浮动</title>
-      <link>http://ijs.me/2018/10/14/css-clear-floats/</link>
-      <pubDate>Sun, 14 Oct 2018 23:59:29 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/14/css-clear-floats/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java 类和对象</title>
-      <link>http://ijs.me/2018/10/13/java-class-object/</link>
-      <pubDate>Sat, 13 Oct 2018 00:00:11 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/13/java-class-object/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CSS 背景修饰图标布局技巧</title>
-      <link>http://ijs.me/2018/10/12/css-background-position/</link>
-      <pubDate>Fri, 12 Oct 2018 23:58:37 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/12/css-background-position/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker Use Image</title>
-      <link>http://ijs.me/2018/10/11/docker-use-image/</link>
-      <pubDate>Thu, 11 Oct 2018 23:59:40 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/11/docker-use-image/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Git 忽略已经提交的文件</title>
       <link>http://ijs.me/2018/10/10/git-update-index/</link>
       <pubDate>Wed, 10 Oct 2018 23:54:59 +0800</pubDate>
@@ -1221,24 +519,6 @@ rm -R /usr/local/bin/npm /usr/local/lib/node_modules/npm/bin/npm-cli.js  随后�
     </item>
     
     <item>
-      <title>Eclipse Usage</title>
-      <link>http://ijs.me/2018/10/08/eclipse-usage/</link>
-      <pubDate>Mon, 08 Oct 2018 00:00:03 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/08/eclipse-usage/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>初识容器与 Docker</title>
-      <link>http://ijs.me/2018/10/07/acquaintance-docker/</link>
-      <pubDate>Sun, 07 Oct 2018 23:40:02 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/07/acquaintance-docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Create React App 2.0 新特性</title>
       <link>http://ijs.me/2018/10/06/create-react-app-2.0-new-feature/</link>
       <pubDate>Sat, 06 Oct 2018 23:58:29 +0800</pubDate>
@@ -1259,51 +539,6 @@ yarn global add create-react-app  </description>
     </item>
     
     <item>
-      <title>Sass 语法介绍</title>
-      <link>http://ijs.me/2018/10/04/sass-syntax/</link>
-      <pubDate>Thu, 04 Oct 2018 23:58:59 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/04/sass-syntax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go 基础</title>
-      <link>http://ijs.me/2018/10/03/go-foundation/</link>
-      <pubDate>Wed, 03 Oct 2018 23:52:16 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/03/go-foundation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript 中 &amp; 和 &amp;&amp; 的不同</title>
-      <link>http://ijs.me/2018/10/02/javascript-and-bitwise-difference/</link>
-      <pubDate>Tue, 02 Oct 2018 23:57:23 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/02/javascript-and-bitwise-difference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nginx 反向代理配置</title>
-      <link>http://ijs.me/2018/10/01/nginx-proxy-pass/</link>
-      <pubDate>Mon, 01 Oct 2018 23:58:49 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/10/01/nginx-proxy-pass/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>word-wrap: break-word 和 word-break: break-all 的不同</title>
-      <link>http://ijs.me/2018/09/30/word-wrap-word-break/</link>
-      <pubDate>Sun, 30 Sep 2018 23:50:21 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/30/word-wrap-word-break/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>修改 VS Code 内置终端字体</title>
       <link>http://ijs.me/2018/09/28/vs-code-terminal-fontfamily/</link>
       <pubDate>Fri, 28 Sep 2018 15:18:24 +0800</pubDate>
@@ -1312,15 +547,6 @@ yarn global add create-react-app  </description>
       <description>我的终端使用的是 Zsh，并且配置了 Zsh 的一个主题，这个主题需要安装字体来支持箭头效果，在 iTerm2 中我设置了这个字体，但是 VS Code 里这个箭头还是显示乱码，解决方法：
 打开 VS Code 的 settings.json 文件，加入下面一行，我那个主题用的是 Meslo LG M for Powerline 字体：
 &amp;quot;terminal.integrated.fontFamily&amp;quot;: &amp;quot;Meslo LG M for Powerline&amp;quot;,  这样 VS Code 内置的终端就能正确显示 Zsh 主题的箭头了。</description>
-    </item>
-    
-    <item>
-      <title>在编辑器中巧用正则表达式搜索</title>
-      <link>http://ijs.me/2018/09/27/regular-expression-editor-find/</link>
-      <pubDate>Thu, 27 Sep 2018 23:59:07 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/27/regular-expression-editor-find/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1335,42 +561,6 @@ defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO  回车，然后
 应用白边 第三方深色 UI 应用顶部有一条白边，打开终端，输入：defaults write -app 应用名 NSRequiresAquaSystemAppearance -bool No 回车，如：
 defaults write -app Google\ Chrome NSRequiresAquaSystemAppearance -bool No  针对有空格的应用名，如 Visual Studio Code，应使用 \ 来分割：Visual\ Studio\ Code
 之后重启对应应用即可 （该指令相当于让应用强行使用深色模式 UI，如果应用 /系统本身是浅色的，就没必要执行这个指令）</description>
-    </item>
-    
-    <item>
-      <title>React 遍历多层对象</title>
-      <link>http://ijs.me/2018/09/25/react-map-object/</link>
-      <pubDate>Tue, 25 Sep 2018 23:55:07 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/25/react-map-object/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recharts 的使用</title>
-      <link>http://ijs.me/2018/09/23/recharts-usage/</link>
-      <pubDate>Sun, 23 Sep 2018 23:57:39 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/23/recharts-usage/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript 设计原则</title>
-      <link>http://ijs.me/2018/09/22/javascript-design-principle/</link>
-      <pubDate>Sat, 22 Sep 2018 23:58:10 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/22/javascript-design-principle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>如何为 GitHub 上的项目贡献代码</title>
-      <link>http://ijs.me/2018/09/21/contribute-github/</link>
-      <pubDate>Fri, 21 Sep 2018 23:58:06 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/21/contribute-github/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1416,24 +606,6 @@ if (!!a) { // a 非空时才执行的代码 }  而不必写各种臃肿的判断
     </item>
     
     <item>
-      <title>Git 解决冲突</title>
-      <link>http://ijs.me/2018/09/17/git-conflict-fixed/</link>
-      <pubDate>Mon, 17 Sep 2018 23:37:46 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/17/git-conflict-fixed/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MobX 用法</title>
-      <link>http://ijs.me/2018/09/16/mobx-usage/</link>
-      <pubDate>Sun, 16 Sep 2018 22:44:28 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/16/mobx-usage/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>修改并发布 npm 包</title>
       <link>http://ijs.me/2018/09/13/modify-node-modules-package/</link>
       <pubDate>Thu, 13 Sep 2018 14:54:58 +0800</pubDate>
@@ -1450,24 +622,6 @@ npm config set registry https://registry.</description>
     </item>
     
     <item>
-      <title>使用 Leakcanary 分析 Android 和 Java 内存泄漏</title>
-      <link>http://ijs.me/2018/09/12/android-java-memory-leak-leakcanary/</link>
-      <pubDate>Wed, 12 Sep 2018 23:59:49 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/12/android-java-memory-leak-leakcanary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android 布局方式</title>
-      <link>http://ijs.me/2018/09/11/android-layout/</link>
-      <pubDate>Tue, 11 Sep 2018 23:55:39 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/11/android-layout/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>React Router V4 在 URL 中 传递和获取 &#39;?sort=name&#39; 形式的值</title>
       <link>http://ijs.me/2018/09/10/react-router-v4-get-parameter-search/</link>
       <pubDate>Mon, 10 Sep 2018 17:02:23 +0800</pubDate>
@@ -1480,51 +634,6 @@ npm config set registry https://registry.</description>
 &amp;lt;Link to={{ pathname: &#39;/courses&#39;, search: &#39;?sort=name&#39; }}/&amp;gt;  然后安装 query-string:
 yarn add query-string  在子页面中解析传来的参数：
 import queryString from &#39;query-string&#39; class New extends Component { constructor(props) { super(props); let urlParams = queryString.parse(this.props.location.search) } // ... }  这样我们就拿到了 URL 中的参数对象。</description>
-    </item>
-    
-    <item>
-      <title>JavaScript 中的 &amp; 和 &amp;&amp; 的区别</title>
-      <link>http://ijs.me/2018/09/09/javascript-and-difference/</link>
-      <pubDate>Sun, 09 Sep 2018 23:34:18 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/09/javascript-and-difference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>使用 Python 和 Requests, BeautifulSoup 写爬虫</title>
-      <link>http://ijs.me/2018/09/08/python-requests-beautifulsoup/</link>
-      <pubDate>Sat, 08 Sep 2018 23:48:24 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/08/python-requests-beautifulsoup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React 单页面应用登陆管理</title>
-      <link>http://ijs.me/2018/09/07/react-spa-login/</link>
-      <pubDate>Fri, 07 Sep 2018 23:36:15 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/07/react-spa-login/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>判断 Api 返回数据（对象，数组）为空的方法</title>
-      <link>http://ijs.me/2018/09/06/api-data-undefined/</link>
-      <pubDate>Thu, 06 Sep 2018 22:28:24 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/06/api-data-undefined/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RxJS 介绍</title>
-      <link>http://ijs.me/2018/09/05/rxjs-tutorial/</link>
-      <pubDate>Wed, 05 Sep 2018 23:52:50 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/09/05/rxjs-tutorial/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1560,60 +669,6 @@ Vim 是 vi 编辑器的加强版，增加了很多功能，默认 set compatible
       <description>当我们本地使用开发项目启动了一个 server 后依然打算用 Nginx 反向代理解决 API 跨越问题时，可以这样做：比如我们本地项目的 server 启动的端口是 8000，没有跨域请求 API 时，我们直接在本地访问 http://localhost:8000/ 来访问我们的项目，当我们遇到跨域问题该怎么办呢，我们在服务器上一般通过 Nginx 反向代理到我们项目 build 之后的路径上，那么在我们本地应该怎么做呢？我们在本地 Nginx 可以再监听一个额外的端口，比如 8001，把这个端口的 / 请求代理到我们的 http://localhost:8000/ 上，把 /api 请求代理到我们的 API 域名上，Nginx 配置如下：
 server { listen 8001; server_name localhost; location / { proxy_pass http://localhost:8000; } location /api/ { proxy_pass http://api-domain.com; } }  这样我们平时开发就访问 http://localhost:8001/ 来查看我们的项目。
 当我们使用 webpack 或者 webpack 基础上构建的脚手架时，更好的办法是使用 proxy 字段来在本地解决 API 跨域的问题，比如我的另一篇文章 Create React App 通过 Proxy 在本地跨域请求 API 介绍了使用 create-react-app 这个使用了 webpack 的脚手架配置 API 代理的方法。</description>
-    </item>
-    
-    <item>
-      <title>TypeScript 上手</title>
-      <link>http://ijs.me/2018/08/30/typescript-quickstart/</link>
-      <pubDate>Thu, 30 Aug 2018 23:36:45 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/30/typescript-quickstart/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>关于所见即所得（富文本）编辑器、HTML语义化和 Markdown 的思索</title>
-      <link>http://ijs.me/2018/08/29/wysiwyg-editor-semantic-html-markdown/</link>
-      <pubDate>Wed, 29 Aug 2018 23:56:18 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/29/wysiwyg-editor-semantic-html-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HTML5 Contenteditable 属性</title>
-      <link>http://ijs.me/2018/08/28/html5-contenteditable/</link>
-      <pubDate>Tue, 28 Aug 2018 23:57:11 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/28/html5-contenteditable/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>用 Python 把 JSON 转化成 Excel 表格输出</title>
-      <link>http://ijs.me/2018/08/27/python-json-excel/</link>
-      <pubDate>Mon, 27 Aug 2018 23:54:11 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/27/python-json-excel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mysql 常用命令总结</title>
-      <link>http://ijs.me/2018/08/25/mysql-common-use-command/</link>
-      <pubDate>Sat, 25 Aug 2018 10:00:10 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/25/mysql-common-use-command/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>WebSocket 心跳重连</title>
-      <link>http://ijs.me/2018/08/24/websocket-reconnect/</link>
-      <pubDate>Fri, 24 Aug 2018 23:58:06 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/24/websocket-reconnect/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1669,24 +724,6 @@ COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME node 44195 mac 20u IPv6 0xc20
     </item>
     
     <item>
-      <title>React 组件间通信</title>
-      <link>http://ijs.me/2018/08/19/react-components-communication/</link>
-      <pubDate>Sun, 19 Aug 2018 23:54:12 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/19/react-components-communication/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CSS 字体单位 px em rem</title>
-      <link>http://ijs.me/2018/08/18/css-font-size-px-em-rem/</link>
-      <pubDate>Sat, 18 Aug 2018 23:57:13 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/18/css-font-size-px-em-rem/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Git 子模块踩过的坑</title>
       <link>http://ijs.me/2018/08/17/git-submodule/</link>
       <pubDate>Fri, 17 Aug 2018 09:12:00 +0800</pubDate>
@@ -1698,24 +735,6 @@ COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME node 44195 mac 20u IPv6 0xc20
 比如我的博客系统的目录是 blog 目录，而生成的博客网站是 blog 目录下的 public 目录，我们已经在 Github 上建立了这两个远程仓库时，我们首先把上层目录 blog 对应的仓库 clone 到本地，我的博客系统是 hugo，当我运行 hugo 命令时，会在 blog 目录下生成一个 public 目录，这个下的文件需要提交到另外一个仓库来当作博客的根目录。这个 public 目录我们是不提交到 Github 上的
 我们删除以前生成的 .gitmodules 文件，把 public 从 blog 目录下的 .gitignore 文件里删掉，然后使用以下命令重新添加子模块：
 git submodule add -b master git@github.com:cuidezhu/cuidezhu.github.io.git public  然后把子模块的目录（public）添加到上层目录下的 .gitignore 文件里，这样我们就配置好子模块了，下次我们添加文章后重新运行 hugo 命令，就会重新出现 public 文件夹。</description>
-    </item>
-    
-    <item>
-      <title>JavaScript 模拟函数重载</title>
-      <link>http://ijs.me/2018/08/16/javascript-simulate-function-overloading/</link>
-      <pubDate>Thu, 16 Aug 2018 23:42:14 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/16/javascript-simulate-function-overloading/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript DOM 事件</title>
-      <link>http://ijs.me/2018/08/15/javascript-dom-event/</link>
-      <pubDate>Wed, 15 Aug 2018 23:56:48 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/15/javascript-dom-event/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1738,51 +757,6 @@ git submodule add -b master git@github.com:cuidezhu/cuidezhu.github.io.git publi
     </item>
     
     <item>
-      <title>JavaScript 异步操作的几种方式</title>
-      <link>http://ijs.me/2018/08/12/javascript-asynchronous/</link>
-      <pubDate>Sun, 12 Aug 2018 23:24:06 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/12/javascript-asynchronous/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript 实现继承的方式</title>
-      <link>http://ijs.me/2018/08/11/javascript-inheritance/</link>
-      <pubDate>Sat, 11 Aug 2018 23:32:30 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/11/javascript-inheritance/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>微信小程序适配 iPhone X</title>
-      <link>http://ijs.me/2018/08/10/miniprogram-iphonex/</link>
-      <pubDate>Fri, 10 Aug 2018 21:53:49 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/10/miniprogram-iphonex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>常见的 HTTP 状态码</title>
-      <link>http://ijs.me/2018/08/09/http-status-code/</link>
-      <pubDate>Thu, 09 Aug 2018 22:50:39 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/09/http-status-code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Flexbox 布局在 Web 和 React Native 中的应用</title>
-      <link>http://ijs.me/2018/08/08/css-flexbox-react-native-flexbox/</link>
-      <pubDate>Wed, 08 Aug 2018 23:24:55 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/08/css-flexbox-react-native-flexbox/</guid>
-      <description> Web React Native </description>
-    </item>
-    
-    <item>
       <title>微信小程序开发指南</title>
       <link>http://ijs.me/2018/08/07/miniprogram-dev/</link>
       <pubDate>Tue, 07 Aug 2018 20:43:14 +0800</pubDate>
@@ -1794,15 +768,6 @@ git submodule add -b master git@github.com:cuidezhu/cuidezhu.github.io.git publi
     </item>
     
     <item>
-      <title>CSS 中的 BFC（Block Formatting Context）的前因后果</title>
-      <link>http://ijs.me/2018/08/06/css-block-formatting-context/</link>
-      <pubDate>Mon, 06 Aug 2018 23:29:57 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/06/css-block-formatting-context/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>JavaScript 跨域问题解决方法</title>
       <link>http://ijs.me/2018/08/05/javascript-cross-domain-solution/</link>
       <pubDate>Sun, 05 Aug 2018 21:19:21 +0800</pubDate>
@@ -1811,15 +776,6 @@ git submodule add -b master git@github.com:cuidezhu/cuidezhu.github.io.git publi
       <description>只要协议，域名，端口有任何一个不同，都被当作跨域。
 以下情况会出现跨域：
  协议不同，http://a.com 和 https://a.com  </description>
-    </item>
-    
-    <item>
-      <title>Promise, setTimeout, setImmediate, process.nextTick 在 EventLoop 队列中执行顺序</title>
-      <link>http://ijs.me/2018/08/04/promise-settimeout-setimmediate-process.nexttick-eventloop/</link>
-      <pubDate>Sat, 04 Aug 2018 19:02:12 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/04/promise-settimeout-setimmediate-process.nexttick-eventloop/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1842,15 +798,6 @@ git submodule add -b master git@github.com:cuidezhu/cuidezhu.github.io.git publi
 npm i webpack@3.9.1 react  npm i 是 npm install 的别名，其它 npm install 的别名有 isntall, add，npm install 的后缀的意思可以看 官方文档：
  npm install saves any specified packages into dependencies by default. Additionally, you can control where and how they get saved with some additional flags:
 -P, &amp;ndash;save-prod: Package will appear in your dependencies. This is the default unless -D or -O are present.</description>
-    </item>
-    
-    <item>
-      <title>CSS position 为 relative absolute 和 fixed 对旁边元素的影响</title>
-      <link>http://ijs.me/2018/08/01/css-position-relative-absolute-fixed-influence-side-element/</link>
-      <pubDate>Wed, 01 Aug 2018 23:51:28 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/08/01/css-position-relative-absolute-fixed-influence-side-element/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1877,15 +824,6 @@ const minCoinChange = new minCoinChange([1, 5, 10, 25]) console.log(minCoinChang
     </item>
     
     <item>
-      <title>JavaScript 面向对象编程</title>
-      <link>http://ijs.me/2018/07/29/javascript-object-oriented-programming/</link>
-      <pubDate>Sun, 29 Jul 2018 23:15:29 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/07/29/javascript-object-oriented-programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>对比两个 JS 对象是否相等</title>
       <link>http://ijs.me/2018/07/28/compare-two-js-object/</link>
       <pubDate>Sat, 28 Jul 2018 23:42:47 +0800</pubDate>
@@ -1906,15 +844,6 @@ let obj = {name: 1, other: {title: &#39;react&#39;}} let obj1 = {name: 1, other:
     </item>
     
     <item>
-      <title>JavaScript Design Pattern</title>
-      <link>http://ijs.me/2018/07/25/javascript-design-pattern/</link>
-      <pubDate>Wed, 25 Jul 2018 23:37:59 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/07/25/javascript-design-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>React 服务端渲染（SSR）</title>
       <link>http://ijs.me/2018/07/24/react-server-side-rendering/</link>
       <pubDate>Tue, 24 Jul 2018 21:38:00 +0800</pubDate>
@@ -1925,15 +854,6 @@ babel-node 因为 Node 环境原生不支持 JSX，首先我们使用 babel-node
 yarn add babel-cli  然后我们在 package.json 里用 babel-node 来替代 Node，&amp;rdquo;scripts&amp;rdquo; 字段里加入下面一行：
 &amp;quot;scripts&amp;quot;: { &amp;quot;server&amp;quot;: &amp;quot;NODE_ENV=test nodemon --exec babel-node server/server.js&amp;quot;, }  现在我们的 Node 环境已经支持 es6 了，那么怎么支持 JSX 呢？我们在项目根目录下新建个 babel 的配置文件 .babelrc，然后把我们的 package.json 文件下的 babel 的配置复制到 .babelrc 文件中：
 { &amp;quot;presets&amp;quot;: [ &amp;quot;react-app&amp;quot; ], &amp;quot;plugins&amp;quot;: [ &amp;quot;transform-decorators-legacy&amp;quot;, [ &amp;quot;import&amp;quot;, { &amp;quot;libraryName&amp;quot;: &amp;quot;antd-mobile&amp;quot;, &amp;quot;style&amp;quot;: &amp;quot;css&amp;quot; } ] ] }  renderToString() 然后我们把 src/index.</description>
-    </item>
-    
-    <item>
-      <title>Web 安全 -- XSS</title>
-      <link>http://ijs.me/2018/07/23/web-security-xss/</link>
-      <pubDate>Mon, 23 Jul 2018 20:19:11 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/07/23/web-security-xss/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1971,15 +891,6 @@ function WrapperHello(Comp) { class WrapComp extends React.Component { render() 
     </item>
     
     <item>
-      <title>实现 MVVM 框架的双向数据绑定</title>
-      <link>http://ijs.me/2018/07/19/mvvm-two-way-data-binding/</link>
-      <pubDate>Thu, 19 Jul 2018 06:55:28 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/07/19/mvvm-two-way-data-binding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>实现 react-redux</title>
       <link>http://ijs.me/2018/07/18/react-redux-implementation/</link>
       <pubDate>Wed, 18 Jul 2018 20:45:52 +0800</pubDate>
@@ -1988,15 +899,6 @@ function WrapperHello(Comp) { class WrapComp extends React.Component { render() 
       <description>前面的文章 迷你 Redux 实现 我们实现了一个简单的 Redux, 那么我们怎么在 React 项目里使用我们自制的 Redux 呢？我们可以显式传递 Store，但更优雅的方式是使用 react-redux，这篇文章会实现我们自己的 react-redux。
 显式传递 Store 我们可以手动用 subscribe 订阅 ReactDOM.render 来将把 redux 和 react 结合起来，将 Store 集成到 UI 中最合乎直觉逻辑的做法是显式地将它作为属性在组件树中向下传递。例如下面的 index.js 文件中渲染一个 App 组件并传递 Store:
 import React from &amp;quot;react&amp;quot; import ReactDOM from &amp;quot;react-dom&amp;quot; import App from &amp;quot;./components/App&amp;quot; import { counter } from &amp;quot;./index.redux&amp;quot; const store = createStore(counter) const render = () =&amp;gt; ReactDOM.render(&amp;lt;App store={store} /&amp;gt;, document.getElementById(&amp;quot;root&amp;quot;)) store.subscribe(render) render()  在这个文件中，我们使用 counter 这个 reducer 处理函数来创建了一个 store，当 App 组件渲染完毕后，Store 会作为属性传递给它。每次 Store 发生变化后，render 函数就会被触发执行，这样就可以使用新的 State 数据高效地更新 UI 了。</description>
-    </item>
-    
-    <item>
-      <title>Webpack Code Splitting</title>
-      <link>http://ijs.me/2018/07/16/webpack-code-splitting/</link>
-      <pubDate>Mon, 16 Jul 2018 23:53:36 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/07/16/webpack-code-splitting/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -2038,15 +940,6 @@ createStore() 的第二个参数是可选的, 用于设置 state 初始状态。
 双向数据绑定优点：
  用户在视图上的修改会自动同步到数据模型中去，数据模型中值的变化也会立刻同步到视图中去； 无需进行和单向数据绑定的那些CRUD（Create，Retrieve，Update，Delete）操作； 在表单交互较多的场景下，会简化大量业务无关的代码。  双向数据绑定缺点：
  无法追踪局部状态的变化； “暗箱操作”，增加了出错时 debug 的难度； 由于组件数据变化来源入口变得可能不止一个，数据流转方向易紊乱，若再缺乏“管制”手段，血崩。  </description>
-    </item>
-    
-    <item>
-      <title>React Router 实现原理 &amp; 动手实现自己的 Router</title>
-      <link>http://ijs.me/2018/07/12/react-router-implementation/</link>
-      <pubDate>Thu, 12 Jul 2018 23:25:06 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/07/12/react-router-implementation/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -2297,15 +1190,6 @@ git checkout --patch A file  其中 file 可以换成某个文件夹 folder，�
       <description>为什么需要this React组件内的数据一般用state来存储，但是如果所有的除props之外的数据都用state来存储的话，前些天做项目时就发现一个问题。
 我遇到的那种场景，this.setState改变一个state的值，然后立即去fetch一个url中带有这个state参数的api，就会导致这个state的值是上一次的值，fetch到的数据是旧的，setState执行慢了一点点。本想加个setTimeout延迟几毫秒给解决掉，又一想，这样不是正经程序员所为，就把这个state改为this.x=‘123’这样的属性，这样就能解决setState异步执行带来的问题。
 也可以在 setState() 的回调函数里去解决 setState() 异步带来的问题。</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>http://ijs.me/2018/04/01/first-post/</link>
-      <pubDate>Sun, 01 Apr 2018 04:51:29 +0800</pubDate>
-      
-      <guid>http://ijs.me/2018/04/01/first-post/</guid>
-      <description> 测试 Hugo </description>
     </item>
     
   </channel>
