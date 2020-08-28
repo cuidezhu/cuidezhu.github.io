@@ -1093,26 +1093,20 @@
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>http://ijs.me/post/</loc>
     <lastmod>2019-08-07T11:39:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-=======
->>>>>>> 1ccd6bc33c14502d31f6b3dba76ae0569fa460e8
     <loc>http://ijs.me/tags/</loc>
     <priority>0</priority>
   </url>
   
-<<<<<<< HEAD
   <url>
     <loc>http://ijs.me/</loc>
     <lastmod>2019-08-07T11:39:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
-=======
->>>>>>> 1ccd6bc33c14502d31f6b3dba76ae0569fa460e8
 </urlset>
