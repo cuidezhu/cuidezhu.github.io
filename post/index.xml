@@ -6,10 +6,21 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Aug 2019 11:39:03 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2020 06:32:40 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>详解 Vue 原理</title>
+      <link>http://ijs.me/2020/09/01/explain-vue-principle/</link>
+      <pubDate>Tue, 01 Sep 2020 06:32:40 +0800</pubDate>
+      
+      <guid>http://ijs.me/2020/09/01/explain-vue-principle/</guid>
+      <description>组件化和 MVVM 模式 组件化其实很久以前就有的概念，Vue 也是把这个概念借鉴了过来，允许我们使用小型、独立和通常可复用的组件构建大型应用。传统组件，只是静态渲染，更新还要依赖于操作 DOM，而 Vue 和 React 这种现代话框架则是采用数据驱动视图的方式，Vue 是采用 MVVM 模式来实现，React 是通过 setState 来实现的。所谓数据驱动视图就是我们不再直接操作 Dom，想改页面上的什么东西，直接更改 Vue 或 React 里的数据就行了，Vue 和 React 框架本身根据数据来帮我们重新渲染视图，这使得我们的开发更加关注于数据和业务逻辑，降低程序开发的复杂度，使得出现了很多富客户端应用，所谓富客户端就是页面的功能非常复杂，具有很强交互性来给客户提供更高和更全方位的体验。
+Vue 的 MVVM 模式如下图所示：View 就是视图，也就是页面上的 DOM。Model 就是模型，可以理解为 Vue 组件里面的 Data，或者 Vuex 里面的数据。这两者之间通过 ViewModel 这一层来做关联，比如监听事件，通过 ViewModel 这一层，我们在 Model 修改时，就能执行页面渲染。而 View 这一层里面比如点击事件，各种 Dom 事件触发时就能修改 Model 这一层里面的数据。这就是数据驱动视图，不用直接操作视图，而是通过修改数据来操作的。MVVM 第一个 M 对应着Model，第二个字母 V 对应着 View，最后两个字母 VM 对应着 ViewModel。
+Vue 响应式 监听 data 变化 我们知道 Vue 组件 data 的数据一旦变化，立刻触发视图的更新。首先我们要如何知道 data 是发生了变化呢？实现数据驱动视图的第一步就是当 data 发生了变化，我们怎样第一时间知道？</description>
+    </item>
     
     <item>
       <title>VS Code 搜索排除</title>

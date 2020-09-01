@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <meta name="keywords" content="老崔博客，技术博客，前端，前端开发技术，全栈">
+    <meta name="description" content="记录学习，知识笔记，每天提高一点点。">
+    <title>详解 Vue 原理</title>
+    <link rel="stylesheet" href="https://static.intj.top/tomorrow.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://static.intj.top/main.css"
+    />
+    
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "UA-122652961-1")
+    </script>
+  </head>
+  <body>
+
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>详解 Vue 原理</h1>
+      <span class="blog-post-date">September 1, 2020</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<h2 id="组件化和-mvvm-模式">组件化和 MVVM 模式</h2>
+
+<p>组件化其实很久以前就有的概念，Vue 也是把这个概念借鉴了过来，允许我们使用小型、独立和通常可复用的组件构建大型应用。传统组件，只是静态渲染，更新还要依赖于操作 DOM，而 Vue 和 React 这种现代话框架则是采用数据驱动视图的方式，Vue 是采用 MVVM 模式来实现，React 是通过 setState 来实现的。所谓数据驱动视图就是我们不再直接操作 Dom，想改页面上的什么东西，直接更改 Vue 或 React 里的数据就行了，Vue 和 React 框架本身根据数据来帮我们重新渲染视图，这使得我们的开发更加关注于数据和业务逻辑，降低程序开发的复杂度，使得出现了很多富客户端应用，所谓富客户端就是页面的功能非常复杂，具有很强交互性来给客户提供更高和更全方位的体验。</p>
+
+<p>Vue 的 MVVM 模式如下图所示：View 就是视图，也就是页面上的 DOM。Model 就是模型，可以理解为 Vue 组件里面的 Data，或者 Vuex 里面的数据。这两者之间通过 ViewModel 这一层来做关联，比如监听事件，通过 ViewModel 这一层，我们在 Model 修改时，就能执行页面渲染。而 View 这一层里面比如点击事件，各种 Dom 事件触发时就能修改 Model 这一层里面的数据。这就是数据驱动视图，不用直接操作视图，而是通过修改数据来操作的。MVVM 第一个 M 对应着Model，第二个字母 V 对应着 View，最后两个字母 VM 对应着 ViewModel。</p>
+
+<p><img src="https://static.intj.top//20200901100345.png" alt="Vue MVVM" /></p>
+
+<h2 id="vue-响应式">Vue 响应式</h2>
+
+<h3 id="监听-data-变化">监听 data 变化</h3>
+
+<p>我们知道 Vue 组件 data 的数据一旦变化，立刻触发视图的更新。首先我们要如何知道 data 是发生了变化呢？实现数据驱动视图的第一步就是当 data 发生了变化，我们怎样第一时间知道？</p>
+
+<h4 id="监听对象">监听对象</h4>
+
+<p>核心 JavaScript API：Object.defineProperty()，Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。</p>
+
+<p>Vue 监听对象就是利用 Object.defineProperty() 的基本用法来实现监听的，get 是属性的 getter 函数，如果没有 getter，则为 undefined。当访问该属性时，会调用此函数。set 属性的 setter 函数，如果没有 setter，则为 undefined。当属性值被修改时，会调用此函数。：</p>
+
+<pre><code class="language-js">let data = {};
+let name = 'zhangsan'
+
+Object.defineProperty(data, 'name', {
+  get: function() {
+    console.log('get');
+    return name;
+  },
+  set: function(newVal) {
+    console.log('set');
+    name = newVal;
+  }
+});
+
+// 测试
+console.log(data.name); // get zhangsan
+data.name = 'lisi' // set
+</code></pre>
+
+<p>我们通过上面的代码可以看到访问和修改属性值的时候打印出来 <code>console.log</code> 内容，这样我们就实现了 JavaScript 对象变化时的监听。</p>
+
+<h4 id="监听复杂对象">监听复杂对象</h4>
+
+<p>如果一个对象的属性值还是对象的话，那么需要深度监听，需要递归到底，一次性计算量大，这是一个问题（Vue 3.0 会改善这个问题）。</p>
+
+<p>深度监听实现代码如下：</p>
+
+<pre><code class="language-js">// 触发更新视图
+function updateView() {
+  console.log('视图更新');
+}
+
+// 重新定义属性，监听起来
+function defineReactive(target, key, value) {
+  // 深度监听
+  observer(value);
+
+  // 核心 API
+  Object.defineProperty(target, key, {
+    get() {
+      return value;
+    },
+    set(newValue) {
+      if (newValue !== value) {
+        // 深度监听
+        observer(value);
+        // 设置新值
+        // 注意，value 一直在闭包内，此处设置完之后，再 get 时也是会获取最新的值
+        value = newValue;
+
+        // 触发更新视图
+        updateView();
+      }
+    }
+  })
+}
+
+// 监听对象属性
+function observer(target) {
+  if (typeof target !== 'object' || target === null) {
+    // 不是对象或数组
+    return target;
+  }
+
+  // 重新定义各个属性 (for in 也可以遍历数组)
+  for (let key in target) {
+    defineReactive(target, key, target[key]);
+  }
+}
+
+// 准备数据
+let data = {
+  name: 'zhangsan',
+  age: 20,
+  info: {
+    address: '北京'
+  },
+  nums: [10, 20, 30]
+}
+
+// 监听数据
+observer(data)
+
+// 测试
+data.name = 'lisi';
+data.age = 21;
+// data.age = { num: 21 }  针对 defineReactive 函数 set 时深度监听的情况
+// data.age.num = 22;
+data.x = '100';   // 新增属性，监听不到，因为流程不会走到 Object.defineProperty 里面 -- 所以有 Vue.set()
+delete data.name;    // 删除属性，监听不到 -- 所以有 Vue.delete()
+data.info.address = '上海'    // 深度监听
+data.nums.push(4)   // 监听数组
+</code></pre>
+
+<h4 id="监听数组">监听数组</h4>
+
+<h4 id="object-defineproperty-的一些缺点">Object.defineProperty() 的一些缺点</h4>
+
+<p>无法监听新增属性/删除属性（需要Vue.set Vue.delete）</p>
+
+<p>Vue 3.0 启用 Proxy 来实现响应式，但是 Proxy 有兼容性问题，且无法 polyfill，IE 11 不支持 Proxy，所以 Vue 3.0 可能会出现一个兼容 IE 11 的版本，把 Proxy 丢掉，还原到 Object.defineProperty()。</p>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="https://static.intj.top/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
