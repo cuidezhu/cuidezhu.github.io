@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <meta name="keywords" content="老崔博客，技术博客，前端，前端开发技术，全栈">
+    <meta name="description" content="记录学习，知识笔记，每天提高一点点。">
+    <title>前端路由原理</title>
+    <link rel="stylesheet" href="https://static.intj.top/tomorrow.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://static.intj.top/main.css"
+    />
+    
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122652961-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "UA-122652961-1")
+    </script>
+  </head>
+  <body>
+
+
+  <main class="container" role="main">
+    <div class="article-head">
+      <h1>前端路由原理</h1>
+      <span class="blog-post-date">September 24, 2020</span>
+    </div>
+    <div class="blog-post-content">
+        
+
+<p>现在我们稍微复杂一点的单页面应用（SPA），都需要路由， vue-router 也是 Vue 全家桶的标配之一。vue-router 默认 hash 模式，如果不想要很丑的 hash，我们可以用路由的 history 模式，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。</p>
+
+<p>网页 url 组成部分：</p>
+
+<pre><code class="language-js">// http://127.0.0.1:8881/01-hash.html?a=100&amp;b=20#/aaa/bbb
+location.protocol  // 'http:'
+location.hostname // '127.0.0.1'
+location.host   // '127.0.0.1:8881'
+location.port   // '8881'
+location.pathname   // '/01-hash.html'
+location.search   // '?a=100&amp;b=20'
+location.hash   // '#/aaa/bbb'
+</code></pre>
+
+<h2 id="hash-模式">hash 模式</h2>
+
+<p>hash 的特点：</p>
+
+<ul>
+<li>hash 变化会触发网页跳转，即浏览器的前进、后退</li>
+<li>hash 变化不会刷新页面，SPA 必需的特点</li>
+<li>hash 永远不会提交到 server 端（前端自生自灭）
+<br /></li>
+</ul>
+
+<pre><code class="language-html">&lt;p&gt;hash test&lt;p&gt;
+&lt;button id=&quot;btn1&quot;&gt;修改 hash&lt;/button&gt;
+
+&lt;script&gt;
+  // hash 变化，包括：
+  // a. JS 修改 url
+  // b. 手动修改 url 的 hash
+  // c. 浏览器前进、后退
+  window.onhashchange = (event) =&gt; {
+    console.log('old url', event.oldURL);
+    console.log('new url', event.newURL);
+
+    console.log('hash:', location.hash);
+  }
+
+  // 页面初次加载，获取hash
+  document.addEventListener('DOMContentLoaded', () =&gt; {
+    console.log('hash:', location.hash);
+  })
+
+  // JS 修改 url
+  document.getElementById('btn1').addEventListener('click', () =&gt; {
+    location.href = '#/user';
+  })
+&lt;/script&gt;
+</code></pre>
+
+<h2 id="html5-history-模式">HTML5 history 模式</h2>
+
+<ul>
+<li>用 url 规范的路由，但跳转时不刷新页面</li>
+<li>history.pushState</li>
+<li>window.onpopstate</li>
+</ul>
+
+<pre><code class="language-html">&lt;p&gt;history API test&lt;/p&gt;
+&lt;button id=&quot;btn1&quot;&gt;修改 url&lt;/button&gt;
+
+&lt;script&gt;
+// 页面初次加载，获取 path
+document.addEventListener('DOMContentLoaded', () =&gt; {
+  console.log('load', location.pathname);
+})
+
+// 打开一个新的路由
+// 注意用 pathState 方式，浏览器不会刷新页面
+document.getElementById('btn1').addEventListener('click', () =&gt; {
+  const state = { name: 'page1' };
+  console.log('切换路由到'， 'page1');
+  history.pushState(state, '', 'page1');
+})
+
+// 监听浏览器前进、后退
+window.onpopstate = (event) =&gt; {
+  console.log('onpopstate', event.state, location.pathname);
+}
+
+&lt;/script&gt;
+</code></pre>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/cuidezhu" target="_blank">
+      <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+  </footer>
+  <script src="https://static.intj.top/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -6,10 +6,22 @@
     <description>Recent content in Posts on 老崔博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 06:32:40 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2020 21:38:58 +0800</lastBuildDate>
     
 	<atom:link href="http://ijs.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>前端路由原理</title>
+      <link>http://ijs.me/2020/09/24/spa-router/</link>
+      <pubDate>Thu, 24 Sep 2020 21:38:58 +0800</pubDate>
+      
+      <guid>http://ijs.me/2020/09/24/spa-router/</guid>
+      <description>现在我们稍微复杂一点的单页面应用（SPA），都需要路由， vue-router 也是 Vue 全家桶的标配之一。vue-router 默认 hash 模式，如果不想要很丑的 hash，我们可以用路由的 history 模式，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
+网页 url 组成部分：
+// http://127.0.0.1:8881/01-hash.html?a=100&amp;amp;b=20#/aaa/bbb location.protocol // &#39;http:&#39; location.hostname // &#39;127.0.0.1&#39; location.host // &#39;127.0.0.1:8881&#39; location.port // &#39;8881&#39; location.pathname // &#39;/01-hash.html&#39; location.search // &#39;?a=100&amp;amp;b=20&#39; location.hash // &#39;#/aaa/bbb&#39;  hash 模式 hash 的特点：
+ hash 变化会触发网页跳转，即浏览器的前进、后退 hash 变化不会刷新页面，SPA 必需的特点 hash 永远不会提交到 server 端（前端自生自灭）   &amp;lt;p&amp;gt;hash test&amp;lt;p&amp;gt; &amp;lt;button id=&amp;quot;btn1&amp;quot;&amp;gt;修改 hash&amp;lt;/button&amp;gt; &amp;lt;script&amp;gt; // hash 变化，包括： // a.</description>
+    </item>
     
     <item>
       <title>详解 Vue 原理</title>
